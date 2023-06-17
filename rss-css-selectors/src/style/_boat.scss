@@ -1,0 +1,27 @@
+.boat-surface {
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 200px;
+  background-image: url('../assets/img/background/boat1.png');
+  background-repeat: no-repeat;
+  background-size: 400px 200px;
+  position: relative;
+}
+
+.boat {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+// img {
+//   height: 100%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   gap: 20px;
+// }

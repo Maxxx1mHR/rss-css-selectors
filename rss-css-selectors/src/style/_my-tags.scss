@@ -1,0 +1,65 @@
+// steering {
+//   display: block;
+//   width: 100px;
+//   height: 100px;
+//   background-image: url('../assets/icons/steering.png');
+//   background-size: 100px 100px;
+//   border-radius: 100%;
+// }
+
+// treasure {
+//   display: block;
+//   width: 100px;
+//   height: 100px;
+//   background-image: url('../assets/icons/treasure.png');
+//   background-size: 100px 100px;
+//   // border-radius: 100%;
+// }
+
+// mapcart {
+//   position: relative;
+//   display: block;
+//   width: 100px;
+//   height: 100px;
+//   background-image: url('../assets/icons/map.png');
+//   background-size: 100px 100px;
+//   // border-radius: 100%;
+// }
+
+// skull {
+//   display: block;
+//   position: absolute;
+//   width: 20px;
+//   height: 20px;
+//   background-image: url('../assets/icons/skull.png');
+//   background-size: 20px 20px;
+//   // border-radius: 100%;
+// }
+
+// .shadow {
+//   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+// }
+
+egg {
+  height: 100px;
+  width: 80px;
+  background-color: #ffffff;
+  // position: absolute;
+  // margin: auto;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  // box-shadow: 25px 0 rgba(0, 0, 0, 0.1);
+
+  // &:hover {
+  // transition: 0.2s;
+  // opacity: 0.8;
+  // border: 3px solid rgb(209, 202, 202);
+  // }
+}
+
+.hover {
+  border: 3px solid rgb(209, 202, 202);
+}
