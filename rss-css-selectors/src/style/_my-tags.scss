@@ -27,16 +27,17 @@
     padding: 0.5em;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     pointer-events: none;
-    opacity: 1;
+    opacity: 0;
     transition: 1s;
   }
   &:hover::after {
     content: attr(data-tooltip);
-    // opacity: 1;
+    opacity: 1;
   }
 }
-
-.help {
+.round_lighting-tag::after {
+  // background-color: #b3b3b3;
+  opacity: 1;
 }
 
 .test {

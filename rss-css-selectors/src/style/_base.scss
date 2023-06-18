@@ -1,3 +1,7 @@
+body {
+  background-color: rgb(167, 201, 216);
+}
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -12,17 +16,17 @@
 // }
 
 .background {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
+  // width: 100vw;
+  // height: 100vh;
+  // position: absolute;
   // content: '';
   // background: url('../assets/img/background/bg_map.jpg');
   // background-repeat: no-repeat;
   // background-size: 100% 100%;
-  background-color: rgb(255, 205, 205);
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
+  // background-color: rgb(167, 201, 216);
+  // top: 0;
+  // left: 0;
+  // bottom: 0;
+  // right: 0;
+  // z-index: -1;
 }

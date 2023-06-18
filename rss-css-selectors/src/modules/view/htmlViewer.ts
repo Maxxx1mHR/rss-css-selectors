@@ -1,9 +1,9 @@
 import { dataHTMLViewer } from '../data/dataExampleLayout';
 class htmlViewer {
-  addLayout() {
-    const htmlEditor: HTMLElement | null = document.querySelector('.editor__html');
+  addLayout(data: Record<string, string>, level: number) {
+    const htmlEditor: HTMLElement | null = document.querySelector('.html');
     if (htmlEditor) {
-      htmlEditor.innerHTML = dataHTMLViewer[1];
+      htmlEditor.innerHTML = data[level];
     }
   }
 }

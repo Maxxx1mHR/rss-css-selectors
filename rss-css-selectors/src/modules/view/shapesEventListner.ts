@@ -13,7 +13,7 @@ class shapesEventListner {
         if (code) {
           console.log('test');
           code.classList.add('test');
-          document.querySelector(`.round[data-id='${id}']`)?.classList.add('hover');
+          document.querySelector(`.round[data-id='${id}']`)?.classList.add('hover', 'round_lighting-tag');
         }
       }
     });
@@ -31,7 +31,7 @@ class shapesEventListner {
         if (code) {
           console.log('test');
           code.classList.remove('test');
-          document.querySelector(`.round[data-id='${id}']`)?.classList.remove('hover');
+          document.querySelector(`.round[data-id='${id}']`)?.classList.remove('hover', 'round_lighting-tag');
         }
       }
     });

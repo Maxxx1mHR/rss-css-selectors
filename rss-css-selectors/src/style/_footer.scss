@@ -1,0 +1,22 @@
+.footer {
+  // padding: 40px;
+}
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__img-git {
+  width: 100px;
+}
+
+.footer__year {
+  font-weight: 700;
+  font-size: 40px;
+  color: rgb(11, 93, 169);
+}
+
+.footer__img-rsschool {
+  width: 150px;
+}
