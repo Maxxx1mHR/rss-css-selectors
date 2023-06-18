@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RSS-CSS-Selectors</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css" />
+    <script src="./modules/lib/codemirror.js"></script>
+    <script src="./modules/lib/xml.js"></script>
   </head>
   <body>
     <div class="overlay"></div>
@@ -16,8 +19,12 @@
           <div class="boat-surface"></div>
         </div>
         <div class="editor">
-          <div class="div">CSS SELECTOR</div>
-          <div class="div">CODE EXAMPLE</div>
+          <div class="editor__css">CSS SELECTOR</div>
+          <div class="editor__html">
+            <!-- <pre>
+              <code class="html"></code>
+            </pre> -->
+          </div>
         </div>
       </div>
       <div class="menu">Aside</div>
@@ -27,6 +34,17 @@
     <div class="block-two"></div>
     <div class="block-three"></div>
 
+    <textarea id="edit"><p>test</p></textarea>
+
+    <script>
+      const editor = CodeMirror.fromTextArea(document.getElementById('edit'));
+    </script>
+
     <!-- <img src="assets/img/background/boat1.png" alt="" /> -->
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
   </body>
 </html>
