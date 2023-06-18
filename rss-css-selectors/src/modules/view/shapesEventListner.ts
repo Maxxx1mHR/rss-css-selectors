@@ -1,19 +1,36 @@
 class shapesEventListner {
   addHoverEffects() {
+    // События наведения на кружки
     document.addEventListener('mouseover', (event) => {
       if (event.target instanceof HTMLElement) {
         const round = event.target.closest('.round');
         const code = event.target.closest('.code');
+        const square = event.target.closest('.square');
+        const shape = event.target.closest('.shape');
+        const point = event.target.closest('.point');
         const id = event.target.dataset.id;
-        if (round) {
-          round.classList.add('hover');
-          console.log(id);
-          document.querySelector(`.code[data-id='${id}']`)?.classList.add('test');
+        // if (round) {
+        //   round.classList.add('hover');
+        //   document.querySelector(`.code[data-id='${id}']`)?.classList.add('lighting-code');
+        // }
+        // if (square) {
+        //   square.classList.add('hover');
+        //   document.querySelector(`.code[data-id='${id}']`)?.classList.add('lighting-code');
+        // }
+        if (shape) {
+          shape.classList.add('hover');
+          document.querySelector(`.shape[data-id='${id}']`)?.classList.add('lighting-code', 'lighting-tag');
         }
         if (code) {
-          console.log('test');
-          code.classList.add('test');
-          document.querySelector(`.round[data-id='${id}']`)?.classList.add('hover', 'round_lighting-tag');
+          code.classList.add('lighting-code');
+          document.querySelector(`.shape[data-id='${id}']`)?.classList.add('hover', 'lighting-tag');
+          // document.querySelector(`.round[data-id='${id}']`)?.classList.add('hover', 'lighting-tag');
+          // document.querySelector(`.square[data-id='${id}']`)?.classList.add('hover', 'lighting-tag');
+        }
+        if (point) {
+          // document.querySelector(`.shape[data-id='${id}']`)?.classList.remove('lighting-code');
+          // document.querySelector(`.shape[data-id='${id}']`)?.classList.remove('hover', 'lighting-tag', 'lighting-code');
+          // document.querySelector(`.point[data-id='${id}']`)?.classList.add('hover', 'lighting-tag');
         }
       }
     });
@@ -22,23 +39,37 @@ class shapesEventListner {
       if (event.target instanceof HTMLElement) {
         const round = event.target.closest('.round');
         const code = event.target.closest('.code');
+        const square = event.target.closest('.square');
+        const shape = event.target.closest('.shape');
         const id = event.target.dataset.id;
-
-        if (round) {
-          round.classList.remove('hover');
-          document.querySelector(`.code[data-id='${id}']`)?.classList.remove('test');
+        if (shape) {
+          shape.classList.remove('hover');
+          document.querySelector(`.shape[data-id='${id}']`)?.classList.remove('hover', 'lighting-code', 'lighting-tag');
         }
+        // if (round) {
+        //   round.classList.remove('hover');
+        //   document.querySelector(`.code[data-id='${id}']`)?.classList.remove('lighting-code');
+        // }
+        // if (square) {
+        //   square.classList.remove('hover');
+        //   document.querySelector(`.code[data-id='${id}']`)?.classList.remove('lighting-code');
+        // }
         if (code) {
-          console.log('test');
-          code.classList.remove('test');
-          document.querySelector(`.round[data-id='${id}']`)?.classList.remove('hover', 'round_lighting-tag');
+          code.classList.remove('lighting-code');
+          document.querySelector(`.shape[data-id='${id}']`)?.classList.remove('hover', 'lighting-tag');
+          // code.classList.remove('lighting-code');
+          // document.querySelector(`.round[data-id='${id}']`)?.classList.remove('hover', 'lighting-tag');
+          // document.querySelector(`.square[data-id='${id}']`)?.classList.remove('hover', 'lighting-tag');
         }
       }
     });
 
+    // События наведения на квадраты
     // document.addEventListener('mouseover', (event) => {
     //   if (event.target instanceof HTMLElement) {
-    //     const square = event.target.closest('square');
+    //     const square = event.target.closest('.square');
+    //     const code = event.target.closest('.code');
+    //     const id = event.target.dataset.id;
     //     if (square) {
     //       square.classList.add('hover');
     //     }
@@ -47,7 +78,7 @@ class shapesEventListner {
 
     // document.addEventListener('mouseout', (event) => {
     //   if (event.target instanceof HTMLElement) {
-    //     const square = event.target.closest('square');
+    //     const square = event.target.closest('.square');
     //     if (square) {
     //       square.classList.remove('hover');
     //     }
