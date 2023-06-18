@@ -20,6 +20,7 @@ class shapesEventListner {
         if (shape) {
           shape.classList.add('hover');
           document.querySelector(`.shape[data-id='${id}']`)?.classList.add('lighting-code', 'lighting-tag');
+          document.querySelector(`.code[data-id='${id}']`)?.classList.add('lighting-code');
         }
         if (code) {
           code.classList.add('lighting-code');
@@ -45,6 +46,7 @@ class shapesEventListner {
         if (shape) {
           shape.classList.remove('hover');
           document.querySelector(`.shape[data-id='${id}']`)?.classList.remove('hover', 'lighting-code', 'lighting-tag');
+          document.querySelector(`.code[data-id='${id}']`)?.classList.remove('lighting-code');
         }
         // if (round) {
         //   round.classList.remove('hover');
