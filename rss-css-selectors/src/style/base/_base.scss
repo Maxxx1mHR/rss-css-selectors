@@ -1,6 +1,9 @@
+html {
+  font-size: 10px;
+}
 html,
 body {
-  background-color: rgb(167, 201, 216);
+  background-color: $color-background-main;
   // display: flex;
   // flex-direction: column;
   height: 100%;
@@ -15,6 +18,9 @@ body {
 
 .container {
   padding: 0 40px;
+  @include media-tablet {
+    padding: 0 20px;
+  }
   // display: flex;
   // flex-direction: column;
   // height: 100%;
@@ -65,8 +71,8 @@ body {
   flex: 0 0 auto;
 }
 
-.wrapper {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row-reverse;
-}
+// .wrapper {
+//   display: flex;
+//   justify-content: space-between;
+//   flex-direction: row-reverse;
+// }

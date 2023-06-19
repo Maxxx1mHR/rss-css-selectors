@@ -51,6 +51,8 @@
 .editor__code-wrapper {
   display: flex;
   padding: 20px;
+  @extend %font-add;
+  @include font($size: 1.6rem);
 }
 
 .editor__list {
@@ -65,5 +67,4 @@
 
 pre {
   margin-top: -17px;
-  font-size: 16px;
 }

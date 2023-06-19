@@ -9,6 +9,9 @@
   z-index: 1;
   img {
     width: 50px;
+    &:hover {
+      scale: 0.8;
+    }
     @include media-tablet {
       width: 40px;
     }
@@ -32,7 +35,7 @@
   transition: all 0.6s;
   &.active {
     right: 0;
-    visibility: visible;
+    // visibility: visible;
     // opacity: 1;
   }
   @include media-laptop {
@@ -45,8 +48,9 @@
   width: 345px;
   background-color: #0f447b;
   height: 100%;
-  padding-top: 140px;
-  padding-left: 40px;
+  // padding-top: 140px;
+  // padding-left: 40px;
+  padding: 20px 20px;
   transition: all 0.6s;
   z-index: 1;
 }
@@ -54,11 +58,14 @@
 .menu__close {
   position: absolute;
   display: none;
-  top: 25px;
-  right: 25px;
+  top: 15px;
+  right: 15px;
   cursor: pointer;
   img {
     width: 50px;
+    &:hover {
+      scale: 0.8;
+    }
   }
   @include media-laptop {
     display: block;
@@ -67,4 +74,71 @@
 .menu__list {
   list-style-type: none;
   padding-left: 35px;
+}
+
+.menu__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 250px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.menu__level-switch {
+  display: flex;
+}
+
+.menu__level {
+  font-size: 24px;
+}
+
+.menu__prev {
+  width: 40px;
+  cursor: pointer;
+  &:hover {
+    scale: 1.1;
+  }
+}
+
+.menu__next {
+  width: 40px;
+  transform: rotate(-180deg);
+  cursor: pointer;
+  &:hover {
+    scale: 1.1;
+  }
+}
+
+.menu__description {
+  color: #fff;
+}
+.menu__description-title {
+  font-size: 18px;
+}
+.menu__description-task {
+  font-size: 14px;
+  color: rgb(119, 172, 200);
+  margin-bottom: 10px;
+}
+.menu__description-type {
+  padding: 5px;
+  display: inline-block;
+  background-color: rgb(127, 83, 83);
+  margin-bottom: 10px;
+}
+.menu__description-correction {
+  margin-bottom: 30px;
+}
+.menu__example {
+  margin-bottom: 30px;
+}
+.menu__example-title {
+  color: #fff;
+}
+.menu__levels-list {
+  list-style-type: none;
+}
+.menu__levels-item {
+  cursor: pointer;
 }
