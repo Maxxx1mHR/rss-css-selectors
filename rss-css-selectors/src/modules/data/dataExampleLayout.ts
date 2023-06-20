@@ -71,7 +71,7 @@ export const dataHTMLViewer = {
   &lt/div&gt`,
 };
 
-const dataLevelsGame = [
+export const dataLevelsGame = [
   {
     level: 1,
     taskName: 'Type Selector',
