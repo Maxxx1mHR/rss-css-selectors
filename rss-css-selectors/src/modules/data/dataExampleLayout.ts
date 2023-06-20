@@ -70,3 +70,60 @@ export const dataHTMLViewer = {
     &lt/round&gt</round>
   &lt/div&gt`,
 };
+
+const dataLevelsGame = [
+  {
+    level: 1,
+    taskName: 'Type Selector',
+    taskDescription: 'Select elements by their type',
+    attribute: 'A',
+    correction:
+      'Selects all elements of type A. Type refers to the type of tag, so div, p and ul are all different element types.',
+    example: 'div selects all div elements.',
+    dataExampleLayout: `<round data-id="1" class="shape round" data-tooltip="<round></round>"></round>
+      <round data-id="2" class="shape round" data-tooltip="<round></round>"></round>`,
+    dataHTMLViewer: `
+      &ltdiv class="boat"&gt
+        <round data-id="1" class="code">&ltround/&gt</round>
+        <round data-id="2" class="code">&ltround/&gt</round>
+      &lt/div&gt
+      `,
+  },
+  {
+    level: 2,
+    taskName: 'Type Selector',
+    taskDescription: 'Select elements by their type',
+    attribute: 'A',
+    correction:
+      'Selects all elements of type A. Type refers to the type of tag, so div, p and ul are all different element types.',
+    example: 'div selects all div elements.',
+    dataExampleLayout: `<square data-id="1" class="shape square"  data-tooltip="<square></square>"></square>
+    <round data-id="2" class="shape round" data-tooltip="<round></round>"></round>
+    <square data-id="3" class="shape square" data-tooltip="<square></square>"></square>`,
+    dataHTMLViewer: `
+    &ltdiv class="boat"&gt
+      <square data-id="1" id="border" class="code">&ltsquare id="border"/&gt</square>
+      <round data-id="2" class="code">&ltround/&gt</round>
+      <square data-id="3" class="code">&ltsquare/&gt</square>
+    &lt/div&gt
+    `,
+  },
+  {
+    level: 3,
+    taskName: 'ID Selector',
+    taskDescription: 'Select elements with an ID',
+    attribute: '#id',
+    correction: 'Selects the element with a specific id. You can also combine the ID selector with the type selector.',
+    example: '#cool selects any element with id="cool"',
+    dataExampleLayout: `<round data-id="1" id="border" class="shape round border" data-tooltip='<round id="border"></round>'></round>
+    <round data-id="2" class="shape round" data-tooltip="<round></round>"></round>
+    <square data-id="3" class="shape square" data-tooltip="<square></square>"></square>`,
+    dataHTMLViewer: `
+    &ltdiv class="boat"&gt
+      <square data-id="1" id="border" class="code">&ltsquare id="border"/&gt</square>
+      <round data-id="2" class="code">&ltround/&gt</round>
+      <square data-id="3" class="code">&ltsquare/&gt</square>
+    &lt/div&gt
+    `,
+  },
+];
