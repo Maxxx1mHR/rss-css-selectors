@@ -8,3 +8,9 @@ export interface IDataLevel {
   dataExampleLayout: string;
   dataHTMLViewer: string;
 }
+
+export interface IElement {
+  tag: string;
+  className: string[];
+  textContent: string;
+}

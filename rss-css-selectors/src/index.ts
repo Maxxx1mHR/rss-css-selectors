@@ -7,9 +7,10 @@ import Menu from './modules/components/menu';
 
 const blockExample = new exampleLayout();
 // blockExample.addLayout(dataExampleLayout, 5);
-blockExample.addLayout(dataLevelsGame, 0);
+blockExample.addLayout(dataLevelsGame, 2);
 const blockHTML = new htmlViewer();
 // blockHTML.addLayout(dataHTMLViewer, 5);
-blockHTML.addLayout(dataLevelsGame, 0);
+blockHTML.addLayout(dataLevelsGame, 2);
 const menu = new Menu();
 menu.addEventListner();
+menu.createView();

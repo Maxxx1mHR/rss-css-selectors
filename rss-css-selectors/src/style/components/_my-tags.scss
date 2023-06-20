@@ -1,6 +1,6 @@
 .hover {
-  filter: drop-shadow(5px 5px 5px rgb(255, 255, 255));
-  border: 2px solid white;
+  filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
+  // border: 2px solid white;
 }
 
 .shape {
@@ -34,7 +34,9 @@
 }
 
 .round {
-  background-color: #ff0000;
+  // background-color: #ff0000;
+  background-image: url('../../assets/icons/pirot/steering.png');
+  background-size: 70px 70px;
   border-radius: 100%;
 }
 
@@ -43,12 +45,16 @@
   color: $color-active;
 }
 
-.border {
-  border: 10px solid greenyellow;
+.square {
+  // background-color: #640303;
+  background-image: url('../../assets/icons/pirot/map.png');
+  background-size: 70px 70px;
 }
 
-.square {
-  background-color: #640303;
+.border {
+  // border: 10px solid greenyellow;
+  background-image: url('../../assets/icons/pirot/skull.png');
+  background-size: 70px 70px;
 }
 
 .point {
