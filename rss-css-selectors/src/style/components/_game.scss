@@ -8,11 +8,9 @@
 
 .game__title {
   text-align: center;
-  font-size: 40px;
-  color: rgb(51, 51, 142);
-  @include media-tablet {
-    font-size: 30px;
-  }
+  margin-bottom: 40px;
+  @extend %font-prim;
+  @include font($size: 3rem, $color: $color-primary, $weight: 700);
 }
 
 .wrapper-game {

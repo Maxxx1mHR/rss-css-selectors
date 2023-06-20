@@ -9,6 +9,7 @@
   z-index: 1;
   img {
     width: 50px;
+    transition: 0.5s all;
     &:hover {
       scale: 0.8;
     }
@@ -24,19 +25,23 @@
   height: 100vh;
   z-index: 1;
   transition: all 0.6s;
+  background-color: $color-primary;
+  border-left: 3px solid $color-border-light;
   &.active {
     right: 0;
   }
+  @extend %font-prim;
+  @include font($size: 2rem, $weight: 500);
   @include media-laptop {
     position: fixed;
+    height: 100vh;
     right: -100%;
   }
 }
 .menu__block {
   position: relative;
   width: 345px;
-  background-color: #0f447b;
-  height: 100%;
+  // height: 100%;
   padding: 20px 20px;
   transition: all 0.6s;
   z-index: 1;
@@ -50,6 +55,7 @@
   cursor: pointer;
   img {
     width: 50px;
+    transition: 0.5s all;
     &:hover {
       scale: 0.8;
     }
@@ -68,64 +74,98 @@
   justify-content: space-between;
   align-items: center;
   width: 250px;
-  color: #fff;
   margin-bottom: 20px;
+  // @include font($size: 2rem, $weight: 500);
 }
 
 .menu__level-switch {
   display: flex;
 }
 
-.menu__level {
-  font-size: 24px;
-}
-
 .menu__prev {
-  width: 40px;
+  width: 30px;
   cursor: pointer;
+  transition: 0.5s all;
   &:hover {
-    scale: 1.1;
+    scale: 1.2;
   }
 }
 
 .menu__next {
-  width: 40px;
+  width: 30px;
   transform: rotate(-180deg);
   cursor: pointer;
+  transition: 0.5s all;
   &:hover {
-    scale: 1.1;
+    scale: 1.2;
   }
 }
 
+.menu__task {
+  margin-bottom: 10px;
+  border-bottom: 2px solid $color-border-dark;
+}
+
 .menu__description {
-  color: #fff;
+  @include font($size: 1.8rem, $weight: 500);
 }
-.menu__description-title {
-  font-size: 18px;
-}
+// .menu__description-title {
+//   font-size: 18px;
+// }
 .menu__description-task {
-  font-size: 14px;
-  color: rgb(119, 172, 200);
+  @include font($size: 1.4rem, $color: $color-dark-text);
   margin-bottom: 10px;
 }
 .menu__description-type {
   padding: 5px;
   display: inline-block;
-  background-color: rgb(127, 83, 83);
+  background-color: $color-primary;
+  color: $color-dark-text;
   margin-bottom: 10px;
 }
 .menu__description-correction {
   margin-bottom: 30px;
+  @include font($size: 1.4rem, $color: $color-dark-text);
 }
 .menu__example {
   margin-bottom: 30px;
+  @include font($size: 1.8rem, $weight: 500);
 }
-.menu__example-title {
-  color: #fff;
+.menu__example-solution {
+  @include font($size: 1.4rem, $color: $color-dark-text);
+}
+.menu__levels-title {
+  margin-bottom: 10px;
 }
 .menu__levels-list {
   list-style-type: none;
+  padding-left: 25px;
+  @include font($size: 1.6rem, $color: $color-dark-text);
 }
+
 .menu__levels-item {
+  position: relative;
   cursor: pointer;
+  margin-bottom: 5px;
+  transition: 0.5s all;
+  &:hover {
+    color: $color-light-text;
+    // font-size: 2rem;
+    scale: 1.1;
+  }
+  &::before {
+    position: absolute;
+    content: '';
+    background-image: url('../../assets/icons/check.svg');
+    width: 20px;
+    height: 20px;
+    left: -25px;
+    background-size: cover;
+  }
+}
+
+.check_done {
+  &::before {
+    background-image: url('../../assets/icons/check-done.svg');
+  }
 }

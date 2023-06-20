@@ -30,3 +30,14 @@
   font-weight: 500;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Geometria';
+  src: url('../../assets/fonts/geometria/Geometria-Bold.eot');
+  src: local('../../assets/fonts/geometria/Geometria Bold'), local('Geometria-Bold'),
+    url('../../assets/fonts/geometria/Geometria-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../../assets/fonts/geometria/Geometria-Bold.woff') format('woff'),
+    url('../../assets/fonts/geometria/Geometria-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}

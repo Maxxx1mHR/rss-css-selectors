@@ -17,13 +17,15 @@
     white-space: nowrap;
     left: 10px;
     top: -70px;
-    background: #294156;
+    background-color: $color-primary;
     color: #fff;
     padding: 0.5em;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     pointer-events: none;
     opacity: 0;
     transition: 1s;
+    @extend %font-add;
+    @include font($size: 1.6rem);
   }
 }
 
@@ -32,13 +34,13 @@
 }
 
 .round {
-  background-color: #ee3c7d;
+  background-color: #ff0000;
   border-radius: 100%;
 }
 
 .lighting-code {
   transition: all 0.5s;
-  color: green;
+  color: $color-active;
 }
 
 .border {

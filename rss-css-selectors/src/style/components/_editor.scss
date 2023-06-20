@@ -4,7 +4,7 @@
   justify-content: space-between;
   border: 10px solid $color-border-dark;
   @extend %font-prim;
-  @include font(1.6rem, $color-light);
+  @include font(1.6rem, $color-light-text);
   @include media-tablet {
     flex-direction: column;
   }
@@ -15,12 +15,12 @@
   justify-content: space-between;
   padding: 20px;
   border: 3px solid $color-border-light;
-  background-color: $color-primary;
+  background-color: $color-primary-light;
 }
 
 .editor__css {
   width: 50%;
-  background-color: $color-background-light;
+  background-color: $color-secondary;
   @include media-tablet {
     width: 100%;
   }
@@ -35,7 +35,7 @@
 
 .editor__html {
   width: 50%;
-  background-color: $color-background-dark;
+  background-color: $color-primary;
   @include media-tablet {
     width: 100%;
   }
@@ -56,15 +56,15 @@
 
 .editor__list {
   padding-right: 5px;
-  border-right: 2px solid $color-primary;
+  border-right: 2px solid $color-primary-light;
   list-style-type: none;
 }
 
-pre {
+.editor__code {
   margin-top: -18px;
 }
 
-code {
+.editor__code-html {
   @extend %font-add;
   letter-spacing: 1.5px;
 }

@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 40px;
 }
 
 .footer__img-git {
@@ -12,11 +13,10 @@
 }
 
 .footer__year {
-  font-weight: 700;
-  font-size: 40px;
-  color: rgb(11, 93, 169);
+  @extend %font-prim;
+  @include font($size: 4rem, $color: $color-primary, $weight: 700);
   @include media-tablet {
-    font-size: 30px;
+    font-size: 3rem;
   }
 }
 
