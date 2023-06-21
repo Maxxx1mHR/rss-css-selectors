@@ -10,7 +10,9 @@ class ElementCreator {
   createElement(param: IElement) {
     this.element = document.createElement(param.tag);
     this.setCssClasses(param.className);
-    this.setTextContent(param.textContent);
+    if (param.textContent) {
+      this.setTextContent(param.textContent);
+    }
   }
 
   setCssClasses(cssClasses: string[]) {
@@ -23,12 +25,19 @@ class ElementCreator {
 
   setTextContent(text: string) {
     if (this.element) {
-      this.element.textContent = text;
+      this.element.innerHTML = text;
     }
   }
+
   appendNodeToDom(domNode: HTMLElement) {
     if (this.element) {
       domNode.append(this.element);
+    }
+  }
+
+  prependNodeToDom(domNode: HTMLElement) {
+    if (this.element) {
+      domNode.prepend(this.element);
     }
   }
 }

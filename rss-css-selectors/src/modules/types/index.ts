@@ -12,5 +12,5 @@ export interface IDataLevel {
 export interface IElement {
   tag: string;
   className: string[];
-  textContent: string;
+  textContent?: string;
 }
