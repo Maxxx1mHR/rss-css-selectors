@@ -1,4 +1,4 @@
-import { IElement } from '../types';
+import { IElement } from '../types/types';
 
 class ElementCreator {
   element: HTMLElement | null;

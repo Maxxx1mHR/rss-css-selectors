@@ -1,10 +1,13 @@
 import ElementCreator from '../components/element-creator';
 
-import { IDataLevel } from '../types';
+import { IDataLevel } from '../types/types';
 
 import shapesEventListner from './shapesEventListner';
 
-class exampleLayout {
+class BoatView {
+  constructor(data: IDataLevel[], level: number) {
+    this.createView(data, level);
+  }
   createView(data: IDataLevel[], level: number) {
     const hoverEffect = new shapesEventListner();
     hoverEffect.addHoverEffects();
@@ -16,4 +19,4 @@ class exampleLayout {
     boat.setTextContent(data[level].dataExampleLayout);
   }
 }
-export default exampleLayout;
+export default BoatView;

@@ -71,7 +71,7 @@
 //   &lt/div&gt`,
 // };
 
-export const dataLevelsGame = [
+export const dataGameLevels = [
   {
     level: 1,
     taskName: 'Type Selector',

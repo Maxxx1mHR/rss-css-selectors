@@ -1,16 +1,19 @@
 import './index.html';
 import './index.scss';
-import { dataLevelsGame } from './modules/data/dataExampleLayout';
-import exampleLayout from './modules/view/exampleLayout';
-import htmlViewer from './modules/view/htmlViewer';
-import Menu from './modules/components/menu';
+import App from './modules/components/app';
+import { dataGameLevels } from './modules/data/data-game-levels';
+import BoatView from './modules/view/boat-view';
+import HtmlView from './modules/view/html-view';
+import MenuView from './modules/view/menu-view';
 
-const blockExample = new exampleLayout();
+// const blockExample = new BoatView();
 
-blockExample.createView(dataLevelsGame, 4);
-const blockHTML = new htmlViewer();
+// blockExample.createView(dataGameLevels, 4);
 
-blockHTML.createView(dataLevelsGame, 4);
-const menu = new Menu();
-menu.addEventListner();
-menu.createView(dataLevelsGame, 4);
+// const blockHTML = new HtmlView();
+
+// blockHTML.createView(dataGameLevels, 4);
+// const menu = new MenuView();
+// menu.addEventListner();
+// menu.createView(dataGameLevels, 4);
+new App(dataGameLevels, 2);

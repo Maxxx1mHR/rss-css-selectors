@@ -1,7 +1,10 @@
 import ElementCreator from '../components/element-creator';
-import { IDataLevel } from '../types';
+import { IDataLevel } from '../types/types';
 
-class htmlViewer {
+class HtmlView {
+  constructor(data: IDataLevel[], level: number) {
+    this.createView(data, level);
+  }
   createView(data: IDataLevel[], level: number) {
     const code = new ElementCreator({
       tag: 'code',
@@ -12,4 +15,4 @@ class htmlViewer {
   }
 }
 
-export default htmlViewer;
+export default HtmlView;

@@ -1,7 +1,10 @@
-import { IDataLevel } from '../types';
-import ElementCreator from './element-creator';
+import { IDataLevel } from '../types/types';
+import ElementCreator from '../components/element-creator';
 
-class Menu {
+class MenuView {
+  constructor(data: IDataLevel[], level: number) {
+    this.createView(data, level);
+  }
   addEventListner() {
     document.addEventListener('click', (event) => {
       if (event.target instanceof HTMLElement) {
@@ -61,4 +64,4 @@ class Menu {
   }
 }
 
-export default Menu;
+export default MenuView;
