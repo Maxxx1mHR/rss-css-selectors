@@ -6,13 +6,11 @@ import htmlViewer from './modules/view/htmlViewer';
 import Menu from './modules/components/menu';
 
 const blockExample = new exampleLayout();
-// blockExample.addLayout(dataExampleLayout, 5);
-// blockExample.addLayout(dataLevelsGame, 0);
-blockExample.createView(dataLevelsGame, 0);
+
+blockExample.createView(dataLevelsGame, 4);
 const blockHTML = new htmlViewer();
-// blockHTML.addLayout(dataHTMLViewer, 5);
-// blockHTML.addLayout(dataLevelsGame, 0);
-blockHTML.createView(dataLevelsGame, 0);
+
+blockHTML.createView(dataLevelsGame, 4);
 const menu = new Menu();
 menu.addEventListner();
-menu.createView(dataLevelsGame, 0);
+menu.createView(dataLevelsGame, 4);
