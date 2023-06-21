@@ -80,12 +80,12 @@ export const dataLevelsGame = [
     correction:
       'Selects all elements of type <span>A</span>. Type refers to the type of tag, so <span>&ltdiv&gt</span>, <span>&ltp&gt</span> and <span>&ltul&gt</span> are all different element types.',
     example: '<span>div</span> selects all <span>&ltdiv&gt</span> elements',
-    dataExampleLayout: `<round data-id="1" class="shape round" data-tooltip="<round></round>"></round>
-      <round data-id="2" class="shape round" data-tooltip="<round></round>"></round>`,
+    dataExampleLayout: `<wheel data-id="1" class="shape wheel" data-tooltip="<wheel></wheel>"></wheel>
+      <wheel data-id="2" class="shape wheel" data-tooltip="<wheel></wheel>"></wheel>`,
     dataHTMLViewer: `
     &ltdiv class="boat"&gt
-    <round data-id="1" class="code">&ltround/&gt</round>
-    <round data-id="2" class="code">&ltround/&gt</round>
+    <wheel data-id="1" class="code">&wheel/&gt</wheel>
+    <wheel data-id="2" class="code">&wheel/&gt</wheel>
   &lt/div&gt
       `,
   },
@@ -97,14 +97,14 @@ export const dataLevelsGame = [
     correction:
       'Selects all elements of type <span>A</span>. Type refers to the type of tag, so <span>&ltdiv&gt</span>, <span>&ltp&gt</span> and <span>&ltul&gt</span> are all different element types.',
     example: '<span>div</span> selects all <span>&ltdiv&gt</span> elements',
-    dataExampleLayout: `<square data-id="1" class="shape square"  data-tooltip="<square></square>"></square>
-    <round data-id="2" class="shape round" data-tooltip="<round></round>"></round>
-    <square data-id="3" class="shape square" data-tooltip="<square></square>"></square>`,
+    dataExampleLayout: `<map data-id="1" class="shape map"  data-tooltip="<map></map>"></map>
+    <wheel data-id="2" class="shape wheel" data-tooltip="<wheel></wheel>"></wheel>
+    <map data-id="3" class="shape map" data-tooltip="<map></map>"></map>`,
     dataHTMLViewer: `
     &ltdiv class="boat"&gt
-    <square data-id="1" class="code">&ltsquare/&gt</square>
-    <round data-id="2" class="code">&ltround/&gt</round>
-    <square data-id="3" class="code">&ltsquare/&gt</square>
+    <map data-id="1" class="code">&map/&gt</map>
+    <wheel data-id="2" class="code">&wheel/&gt</wheel>
+    <map data-id="3" class="code">&map/&gt</map>
   &lt/div&gt
       `,
   },
@@ -116,14 +116,14 @@ export const dataLevelsGame = [
     correction:
       'Selects the element with a specific <span>id</span>. You can also combine the ID selector with the type selector.',
     example: '<span>#cool</span> selects any element with <span>id="cool"</span> elements',
-    dataExampleLayout: `<round data-id="1" id="border" class="shape round border" data-tooltip='<round id="border"></round>'></round>
-      <round data-id="2" class="shape round" data-tooltip="<round></round>"></round>
-      <square data-id="3" class="shape square" data-tooltip="<square></square>"></square>`,
+    dataExampleLayout: `<wheel data-id="1" id="first" class="shape wheel first" data-tooltip='<wheel id="first"></wheel>'></wheel>
+      <wheel data-id="2" class="shape wheel" data-tooltip="<wheel></wheel>"></wheel>
+      <map data-id="3" class="shape map" data-tooltip="<map></map>"></map>`,
     dataHTMLViewer: `
     &ltdiv class="boat"&gt
-    <square data-id="1" id="border" class="code">&ltsquare id="border"/&gt</square>
-    <round data-id="2" class="code">&ltround/&gt</round>
-    <square data-id="3" class="code">&ltsquare/&gt</square>
+    <wheel data-id="1" id="first" class="code">&wheel id="first"/&gt</wheel>
+    <wheel data-id="2" class="code">&wheel/&gt</wheel>
+    <map data-id="3" class="code">&map/&gt</map>
   &lt/div&gt
       `,
   },
@@ -136,18 +136,18 @@ export const dataLevelsGame = [
       'Selects all <span>B</span> inside of <span>A</span>. <span>B</span> is called a descendant because it is inside of another element.',
     example:
       '<span>p strong </span> selects all <span>&ltstrong&gt</span> elements that are inside of any <span>&lp&gt</span>',
-    dataExampleLayout: `<square data-id="1" class="shape square" data-tooltip="<square></square>"></square>
-    <round data-id="2" class="shape round" data-tooltip="<round></round>">
-      <point data-id="3" class="shape point" data-tooltip="<point></point>"></point>
-    </round>
-    <point data-id="4" class="shape point" data-tooltip="<point></point>"></point>`,
+    dataExampleLayout: `<map data-id="1" class="shape map" data-tooltip="<map></map>"></map>
+    <wheel data-id="2" class="shape wheel" data-tooltip="<wheel></wheel>">
+      <spyglass data-id="3" class="shape spyglass" data-tooltip="<spyglass></spyglass>"></spyglass>
+    </wheel>
+    <spyglass data-id="4" class="shape spyglass" data-tooltip="<spyglass></spyglass>"></spyglass>`,
     dataHTMLViewer: `
     &ltdiv class="boat"&gt
-    <square data-id="1" class="code">&ltsquare/&gt</square>
-    <round data-id="2" class="code">&ltround&gt
-      <point data-id="3" class="code">&ltpoint/&gt</point>
-    &lt/round&gt</round>
-    <point data-id="4" class="code">&ltpoint/&gt</point>
+    <map data-id="1" class="code">&map/&gt</map>
+    <wheel data-id="2" class="code">&wheel&gt
+      <spyglass data-id="3" class="code">&spyglass/&gt</spyglass>
+    &lt/wheel&gt</wheel>
+    <spyglass data-id="4" class="code">&spyglass/&gt</spyglass>
   &lt/div&gt
       `,
   },
@@ -159,26 +159,26 @@ export const dataLevelsGame = [
     correction: 'You can combine any selector with the descendent selector.',
     example:
       '<span>#cool span</span> selects all <span>&ltspan&gt</span> elements  that are inside of elements with <span>id="cool"</span>',
-    dataExampleLayout: `<square data-id="1" class="shape square" data-tooltip="<square></square>">
-    <blue data-id="2" class="shape blue" data-tooltip="<blue></blue>"></blue>
-  </square>
-  <round data-id="3" id="border" class="shape round border" data-tooltip='<round id="border"></round>'>
-    <rectangle data-id="4" class="shape rectangle" data-tooltip="<rectangle></rectangle>"></rectangle>
-  </round>
-  <round data-id="5" class="shape round" data-tooltip="<round></round>">
-    <rectangle data-id="6" class="shape rectangle" data-tooltip="<rectangle></rectangle>"></rectangle >
-  </round>`,
+    dataExampleLayout: `<map data-id="1" class="shape map" data-tooltip="<map></map>">
+    <sword data-id="2" class="shape sword" data-tooltip="<sword></sword>"></sword>
+  </map>
+  <wheel data-id="3" id="border" class="shape wheel border" data-tooltip='<wheel id="border"></wheel>'>
+    <bottle data-id="4" class="shape bottle" data-tooltip="<bottle></bottle>"></bottle>
+  </wheel>
+  <wheel data-id="5" class="shape wheel" data-tooltip="<wheel></wheel>">
+    <bottle data-id="6" class="shape bottle" data-tooltip="<bottle></bottle>"></bottle >
+  </wheel>`,
     dataHTMLViewer: `
     &ltdiv class="boat"&gt
-    <square data-id="1" class="code">&ltsquare&gt
-      <blue data-id="2" class="code">&ltblue/&gt</blue>
-    &ltsquare/&gt</square><round data-id="3" id="border" class="code">
-    &ltround id="border"&gt
-      <rectangle data-id="4" class="code">&ltrectangle/&gt</rectangle>
-    &lt/round&gt</round>
-    <round data-id="5" class="code">&ltround&gt
-      <rectangle data-id="6" class="code">&lt/rectangle/&gt</rectangle >
-    &lt/round&gt</round>
+    <map data-id="1" class="code">&map&gt
+      <sword data-id="2" class="code">&sword/&gt</sword>
+    &map/&gt</map><wheel data-id="3" id="border" class="code">
+    &wheel id="border"&gt
+      <bottle data-id="4" class="code">&bottle/&gt</bottle>
+    &lt/wheel&gt</wheel>
+    <wheel data-id="5" class="code">&wheel&gt
+      <bottle data-id="6" class="code">&lt/bottle/&gt</bottle >
+    &lt/wheel&gt</wheel>
   &lt/div&gt
       `,
   },

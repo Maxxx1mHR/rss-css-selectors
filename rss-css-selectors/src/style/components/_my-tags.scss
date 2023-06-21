@@ -39,8 +39,8 @@
   opacity: 1;
 }
 
-.round {
-  background-image: url('../../assets/icons/pirot/steering.png');
+.wheel {
+  background-image: url('../../assets/icons/pirot/wheel.png');
   border-radius: 100%;
 }
 
@@ -49,15 +49,15 @@
   color: $color-active;
 }
 
-.square {
+.map {
   background-image: url('../../assets/icons/pirot/map.png');
 }
 
-.border {
-  background-image: url('../../assets/icons/pirot/skull.png');
-}
+// .border {
+//   background-image: url('../../assets/icons/pirot/skull.png');
+// }
 
-.point {
+.spyglass {
   display: block;
   width: 90px;
   height: 30px;
@@ -70,7 +70,7 @@
   }
 }
 
-.blue {
+.sword {
   display: block;
   height: 40px;
   width: 100px;
@@ -84,7 +84,7 @@
   }
 }
 
-.rectangle {
+.bottle {
   display: block;
   height: 90px;
   width: 30px;
