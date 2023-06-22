@@ -13,6 +13,14 @@ class ElementCreator {
     if (param.textContent) {
       this.setTextContent(param.textContent);
     }
+    if (param.src && param.alt) {
+      this.setSrc(param.src);
+      this.setAlt(param.alt);
+    }
+  }
+
+  getElement() {
+    return this.element;
   }
 
   setCssClasses(cssClasses: string[]) {
@@ -29,15 +37,21 @@ class ElementCreator {
     }
   }
 
-  appendNodeToDom(domNode: HTMLElement) {
-    if (this.element) {
-      domNode.append(this.element);
+  setSrc(src: string) {
+    if (this.element instanceof HTMLImageElement) {
+      this.element.src = src;
     }
   }
 
-  prependNodeToDom(domNode: HTMLElement) {
+  setAlt(alt: string) {
+    if (this.element instanceof HTMLImageElement) {
+      this.element.alt = alt;
+    }
+  }
+
+  appendNodeToDom(domNode: HTMLElement) {
     if (this.element) {
-      domNode.prepend(this.element);
+      domNode.append(this.element);
     }
   }
 }

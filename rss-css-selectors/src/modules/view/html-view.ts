@@ -10,6 +10,7 @@ class HtmlView {
       tag: 'code',
       className: ['editor__code-html'],
     });
+    document.querySelector('.editor__code')!.innerHTML = '';
     code.appendNodeToDom(document.querySelector('.editor__code')!);
     code.setTextContent(data[level].dataHTMLViewer);
   }

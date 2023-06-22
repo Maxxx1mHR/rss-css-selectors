@@ -1,9 +1,15 @@
+// import { INews } from '../../../types/index';
+import placeholder from '../../assets/icons/left.svg';
+const img = new Image();
+img.src = placeholder;
+
 import { IDataLevel } from '../types/types';
 import ElementCreator from '../components/element-creator';
 
 class MenuView {
   constructor(data: IDataLevel[], level: number) {
     this.createView(data, level);
+    this.addEventListner();
   }
   addEventListner() {
     document.addEventListener('click', (event) => {
@@ -19,11 +25,36 @@ class MenuView {
   }
 
   createView(data: IDataLevel[], level: number) {
+    document.querySelector('.menu__header')!.innerHTML = '';
+    document.querySelector('.menu__description')!.innerHTML = '';
+    document.querySelector('.menu__example')!.innerHTML = '';
+    document.querySelector('.menu__levels-list')!.innerHTML = '';
+
     new ElementCreator({
       tag: 'div',
       className: ['menu__level'],
       textContent: `Level ${data[level].level} of ${data.length}`,
-    }).prependNodeToDom(document.querySelector('.menu__header')!);
+    }).appendNodeToDom(document.querySelector('.menu__header')!);
+
+    new ElementCreator({
+      tag: 'div',
+      className: ['menu__level-switch'],
+    }).appendNodeToDom(document.querySelector('.menu__header')!);
+
+    new ElementCreator({
+      tag: 'img',
+      className: ['menu__prev'],
+      src: img.src,
+      alt: 'left',
+    }).appendNodeToDom(document.querySelector('.menu__level-switch')!);
+
+    new ElementCreator({
+      tag: 'img',
+      className: ['menu__next'],
+      src: img.src,
+      alt: 'right',
+    }).appendNodeToDom(document.querySelector('.menu__level-switch')!);
+
     new ElementCreator({
       tag: 'div',
       className: ['menu__description-title'],
@@ -47,6 +78,12 @@ class MenuView {
       className: ['menu__description-correction'],
       textContent: data[level].correction,
     }).appendNodeToDom(document.querySelector('.menu__description')!);
+
+    new ElementCreator({
+      tag: 'div',
+      className: ['menu__example-title'],
+      textContent: 'Example',
+    }).appendNodeToDom(document.querySelector('.menu__example')!);
 
     new ElementCreator({
       tag: 'div',

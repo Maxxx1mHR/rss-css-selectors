@@ -13,4 +13,6 @@ export interface IElement {
   tag: string;
   className: string[];
   textContent?: string;
+  src?: string;
+  alt?: string;
 }
