@@ -1,47 +1,66 @@
 module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
-  },
-  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-  },
-  plugins: ['prettier', '@typescript-eslint'],
-  root: true,
-  rules: {
-    'prettier/prettier': 'error',
-    '@typescript-eslint/no-explicit-any': 'error',
-    '@typescript-eslint/no-inferrable-types': 'off',
-    '@typescript-eslint/array-type': [
-      'error',
-      {
-        default: 'array',
-      },
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier/recommended"
     ],
-    '@typescript-eslint/explicit-member-accessibility': [
-      'error',
-      {
-        accessibility: 'explicit',
-        overrides: {
-          accessors: 'explicit',
-          constructors: 'off',
-          methods: 'explicit',
-          properties: 'explicit',
-          parameterProperties: 'explicit',
-        },
-      },
+    "overrides": [
     ],
-    // 'max-lines-per-function': ['error', 40],
-    '@typescript-eslint/explicit-function-return-type': 'error',
-    '@typescript-eslint/consistent-type-assertions': 'error',
-    '@typescript-eslint/no-confusing-non-null-assertion': 'error',
-
-    indent: ['error', 2],
-    'linebreak-style': ['error'],
-    quotes: ['error', 'single'],
-    semi: ['error', 'always'],
-  },
-};
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "prettier",
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "prettier/prettier": "error",
+        "@typescript-eslint/no-explicit-any": "error",
+        "@typescript-eslint/no-inferrable-types": "off",
+        "@typescript-eslint/array-type": [
+          "error",
+          {
+            "default": "array",
+          },
+        ],
+        "@typescript-eslint/explicit-member-accessibility": [
+          "error",
+          {
+            "accessibility": "explicit",
+            "overrides": {
+              "accessors": "explicit",
+              "constructors": "off",
+              "methods": "explicit",
+              "properties": "explicit",
+              "parameterProperties": "explicit",
+            },
+          },
+        ],
+        // "max-lines-per-function": ["error", 40],
+        "@typescript-eslint/explicit-function-return-type": "error",
+        "@typescript-eslint/consistent-type-assertions": "error",
+        "@typescript-eslint/no-confusing-non-null-assertion": "error",
+        "indent": [
+            "error",
+            2
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ]
+    }
+}

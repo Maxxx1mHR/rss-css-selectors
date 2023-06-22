@@ -1,4 +1,3 @@
-// import { INews } from '../../../types/index';
 import placeholder from '../../assets/icons/left.svg';
 const img = new Image();
 img.src = placeholder;
@@ -11,7 +10,7 @@ class MenuView {
     this.createView(data, level);
     this.addEventListner();
   }
-  addEventListner() {
+  private addEventListner(): void {
     document.addEventListener('click', (event) => {
       if (event.target instanceof HTMLElement) {
         if (event.target.closest('.hamburger')) {
@@ -24,79 +23,134 @@ class MenuView {
     });
   }
 
-  createView(data: IDataLevel[], level: number) {
-    document.querySelector('.menu__header')!.innerHTML = '';
-    document.querySelector('.menu__description')!.innerHTML = '';
-    document.querySelector('.menu__example')!.innerHTML = '';
-    document.querySelector('.menu__levels-list')!.innerHTML = '';
+  private createView(data: IDataLevel[], level: number): void {
+    const menuHeader: HTMLElement | null = document.querySelector('.menu__header');
+    const menuDescription: HTMLElement | null = document.querySelector('.menu__description');
+    const menuExample: HTMLElement | null = document.querySelector('.menu__example');
+    const menuLevelsList: HTMLElement | null = document.querySelector('.menu__levels-list');
 
-    new ElementCreator({
+    if (menuHeader) {
+      menuHeader.innerHTML = '';
+    }
+    if (menuDescription) {
+      menuDescription.innerHTML = '';
+    }
+    if (menuExample) {
+      menuExample.innerHTML = '';
+    }
+    if (menuLevelsList) {
+      menuLevelsList.innerHTML = '';
+    }
+
+    const menuLevel = new ElementCreator({
       tag: 'div',
       className: ['menu__level'],
       textContent: `Level ${data[level].level} of ${data.length}`,
-    }).appendNodeToDom(document.querySelector('.menu__header')!);
+    });
 
-    new ElementCreator({
+    if (menuHeader) {
+      menuLevel.appendNodeToDom(menuHeader);
+    }
+
+    const menuLevelSwitch = new ElementCreator({
       tag: 'div',
       className: ['menu__level-switch'],
-    }).appendNodeToDom(document.querySelector('.menu__header')!);
+    });
 
-    new ElementCreator({
+    if (menuHeader) {
+      menuLevelSwitch.appendNodeToDom(menuHeader);
+    }
+
+    const menuPrev = new ElementCreator({
       tag: 'img',
       className: ['menu__prev'],
       src: img.src,
       alt: 'left',
-    }).appendNodeToDom(document.querySelector('.menu__level-switch')!);
+    });
 
-    new ElementCreator({
+    if (menuLevelSwitch) {
+      menuPrev.appendNodeToDom(menuLevelSwitch.getElement());
+    }
+
+    const menuNext = new ElementCreator({
       tag: 'img',
       className: ['menu__next'],
       src: img.src,
       alt: 'right',
-    }).appendNodeToDom(document.querySelector('.menu__level-switch')!);
+    });
 
-    new ElementCreator({
+    if (menuLevelSwitch) {
+      menuNext.appendNodeToDom(menuLevelSwitch.getElement());
+    }
+
+    const menuDescriptionTitle = new ElementCreator({
       tag: 'div',
       className: ['menu__description-title'],
       textContent: data[level].taskName,
-    }).appendNodeToDom(document.querySelector('.menu__description')!);
+    });
 
-    new ElementCreator({
+    if (menuDescription) {
+      menuDescriptionTitle.appendNodeToDom(menuDescription);
+    }
+
+    const menuDescriptionTask = new ElementCreator({
       tag: 'div',
       className: ['menu__description-task'],
       textContent: data[level].taskDescription,
-    }).appendNodeToDom(document.querySelector('.menu__description')!);
+    });
 
-    new ElementCreator({
+    if (menuDescription) {
+      menuDescriptionTask.appendNodeToDom(menuDescription);
+    }
+
+    const menuDescriptionAttribute = new ElementCreator({
       tag: 'div',
       className: ['menu__description-attribute'],
       textContent: data[level].attribute,
-    }).appendNodeToDom(document.querySelector('.menu__description')!);
+    });
+    if (menuDescription) {
+      menuDescriptionAttribute.appendNodeToDom(menuDescription);
+    }
 
-    new ElementCreator({
+    const menuDescriptionCorrection = new ElementCreator({
       tag: 'div',
       className: ['menu__description-correction'],
       textContent: data[level].correction,
-    }).appendNodeToDom(document.querySelector('.menu__description')!);
+    });
 
-    new ElementCreator({
+    if (menuDescription) {
+      menuDescriptionCorrection.appendNodeToDom(menuDescription);
+    }
+
+    const menuExampleTitle = new ElementCreator({
       tag: 'div',
       className: ['menu__example-title'],
       textContent: 'Example',
-    }).appendNodeToDom(document.querySelector('.menu__example')!);
+    });
 
-    new ElementCreator({
+    if (menuExample) {
+      menuExampleTitle.appendNodeToDom(menuExample);
+    }
+
+    const menuExampleSolution = new ElementCreator({
       tag: 'div',
       className: ['menu__example-solution'],
       textContent: data[level].example,
-    }).appendNodeToDom(document.querySelector('.menu__example')!);
+    });
+
+    if (menuExample) {
+      menuExampleSolution.appendNodeToDom(menuExample);
+    }
 
     for (let i = 0; i < data.length; i += 1) {
-      new ElementCreator({
+      const menuLevelsItem = new ElementCreator({
         tag: 'li',
         className: ['menu__levels-item'],
         textContent: `Level ${data[i].level} - ${data[i].taskName}`,
-      }).appendNodeToDom(document.querySelector('.menu__levels-list')!);
+      });
+      if (menuLevelsList) {
+        menuLevelsItem.appendNodeToDom(menuLevelsList);
+      }
     }
   }
 }

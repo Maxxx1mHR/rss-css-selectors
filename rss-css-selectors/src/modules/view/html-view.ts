@@ -5,14 +5,19 @@ class HtmlView {
   constructor(data: IDataLevel[], level: number) {
     this.createView(data, level);
   }
-  createView(data: IDataLevel[], level: number) {
+  private createView(data: IDataLevel[], level: number): void {
     const code = new ElementCreator({
       tag: 'code',
       className: ['editor__code-html'],
+      textContent: data[level].dataHTMLViewer,
     });
-    document.querySelector('.editor__code')!.innerHTML = '';
-    code.appendNodeToDom(document.querySelector('.editor__code')!);
-    code.setTextContent(data[level].dataHTMLViewer);
+    const editorCode = document.querySelector('.editor__code');
+    if (editorCode) {
+      editorCode.innerHTML = '';
+    }
+    if (editorCode instanceof HTMLElement) {
+      code.appendNodeToDom(editorCode);
+    }
   }
 }
 

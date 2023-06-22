@@ -1,13 +1,13 @@
 import { IElement } from '../types/types';
 
 class ElementCreator {
-  element: HTMLElement | null;
+  private element: HTMLElement | null;
   constructor(param: IElement) {
     this.element = null;
     this.createElement(param);
   }
 
-  createElement(param: IElement) {
+  private createElement(param: IElement): void {
     this.element = document.createElement(param.tag);
     this.setCssClasses(param.className);
     if (param.textContent) {
@@ -19,11 +19,11 @@ class ElementCreator {
     }
   }
 
-  getElement() {
+  public getElement(): HTMLElement | null {
     return this.element;
   }
 
-  setCssClasses(cssClasses: string[]) {
+  private setCssClasses(cssClasses: string[]): void {
     cssClasses.forEach((className) => {
       if (this.element) {
         this.element.classList.add(className);
@@ -31,26 +31,26 @@ class ElementCreator {
     });
   }
 
-  setTextContent(text: string) {
+  private setTextContent(text: string): void {
     if (this.element) {
       this.element.innerHTML = text;
     }
   }
 
-  setSrc(src: string) {
+  private setSrc(src: string): void {
     if (this.element instanceof HTMLImageElement) {
       this.element.src = src;
     }
   }
 
-  setAlt(alt: string) {
+  private setAlt(alt: string): void {
     if (this.element instanceof HTMLImageElement) {
       this.element.alt = alt;
     }
   }
 
-  appendNodeToDom(domNode: HTMLElement) {
-    if (this.element) {
+  public appendNodeToDom(domNode: HTMLElement | null): void {
+    if (this.element && domNode) {
       domNode.append(this.element);
     }
   }

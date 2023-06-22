@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // const CopyPlugin = require('copy-webpack-plugin');
+const EslingPlugin = require('eslint-webpack-plugin');
 
 const mode = process.env.NODE_ENV || 'development';
 const devMode = mode === 'development';
@@ -31,6 +32,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
     }),
+    new EslingPlugin({ extensions: 'ts' }),
     // new CopyPlugin({
     //   patterns: [{ from: 'static', to: './' }],
     // }),
