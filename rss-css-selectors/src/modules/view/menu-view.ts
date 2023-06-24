@@ -4,13 +4,16 @@ img.src = placeholder;
 
 import { IDataLevel } from '../types/types';
 import ElementCreator from '../components/element-creator';
+import App from '../components/app';
+import { dataGameLevels } from '../data/data-game-levels';
 
 class MenuView {
   constructor(data: IDataLevel[], level: number) {
     this.createView(data, level);
-    this.addEventListner();
+    this.menuAction();
+    this.switchLevel(level);
   }
-  private addEventListner(): void {
+  private menuAction(): void {
     document.addEventListener('click', (event) => {
       if (event.target instanceof HTMLElement) {
         if (event.target.closest('.hamburger')) {
@@ -21,6 +24,34 @@ class MenuView {
         }
       }
     });
+  }
+
+  private switchLevel(level: number): void {
+    const menuLevelSwitch = document.querySelector('.menu__level-switch');
+    if (menuLevelSwitch) {
+      menuLevelSwitch.addEventListener('click', (event) => {
+        if (event.target instanceof HTMLElement) {
+          const prevButton = event.target.closest('.menu__prev');
+          const nextButton = event.target.closest('.menu__next');
+          if (prevButton) {
+            level -= 1;
+            if (level < 0) {
+              console.log(level);
+              level = 0;
+            }
+            new App(dataGameLevels, level);
+          }
+          if (nextButton) {
+            level += 1;
+            if (level > dataGameLevels.length - 1) {
+              console.log(level);
+              level = dataGameLevels.length - 1;
+            }
+            new App(dataGameLevels, level);
+          }
+        }
+      });
+    }
   }
 
   private createView(data: IDataLevel[], level: number): void {

@@ -17,6 +17,12 @@ class ElementCreator {
       this.setSrc(param.src);
       this.setAlt(param.alt);
     }
+    if (param.id) {
+      this.setId(param.id);
+    }
+    if (param.type) {
+      this.setType(param.type);
+    }
   }
 
   public getElement(): HTMLElement | null {
@@ -46,6 +52,18 @@ class ElementCreator {
   private setAlt(alt: string): void {
     if (this.element instanceof HTMLImageElement) {
       this.element.alt = alt;
+    }
+  }
+
+  private setId(id: string): void {
+    if (this.element) {
+      this.element.id = id;
+    }
+  }
+
+  private setType(type: string): void {
+    if (this.element instanceof HTMLInputElement) {
+      this.element.type = type;
     }
   }
 

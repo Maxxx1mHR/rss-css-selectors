@@ -7,12 +7,15 @@ export interface IDataLevel {
   example: string;
   dataExampleLayout: string;
   dataHTMLViewer: string;
+  correctSeletor: string;
 }
 
 export interface IElement {
   tag: string;
   className: string[];
   textContent?: string;
+  id?: string;
+  type?: string;
   src?: string;
   alt?: string;
 }

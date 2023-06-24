@@ -11,10 +11,11 @@ export const dataGameLevels = [
       <wheel data-id="2" class="shape wheel" data-tooltip="<wheel></wheel>"></wheel>`,
     dataHTMLViewer: `
     &ltdiv class="boat"&gt
-      <wheel data-id="1" class="code">&wheel/&gt</wheel>
-      <wheel data-id="2" class="code">&wheel/&gt</wheel>
+      <wheel data-id="1" class="code">&ltwheel/&gt</wheel>
+      <wheel data-id="2" class="code">&ltwheel/&gt</wheel>
     &lt/div&gt
       `,
+    correctSeletor: 'wheel',
   },
   {
     level: 2,
@@ -29,11 +30,12 @@ export const dataGameLevels = [
     <map data-id="3" class="shape map" data-tooltip="<map></map>"></map>`,
     dataHTMLViewer: `
     &ltdiv class="boat"&gt
-      <map data-id="1" class="code">&map/&gt</map>
-      <wheel data-id="2" class="code">&wheel/&gt</wheel>
-      <map data-id="3" class="code">&map/&gt</map>
+      <map data-id="1" class="code">&ltmap/&gt</map>
+      <wheel data-id="2" class="code">&ltwheel/&gt</wheel>
+      <map data-id="3" class="code">&ltmap/&gt</map>
     &lt/div&gt
       `,
+    correctSeletor: 'map',
   },
   {
     level: 3,
@@ -48,11 +50,12 @@ export const dataGameLevels = [
       <map data-id="3" class="shape map" data-tooltip="<map></map>"></map>`,
     dataHTMLViewer: `
     &ltdiv class="boat"&gt
-      <wheel data-id="1" id="first" class="code">&wheel id="first"/&gt</wheel>
-      <wheel data-id="2" class="code">&wheel/&gt</wheel>
-      <map data-id="3" class="code">&map/&gt</map>
+      <wheel data-id="1" id="first" class="code">&ltwheel id="first"/&gt</wheel>
+      <wheel data-id="2" class="code">&ltwheel/&gt</wheel>
+      <map data-id="3" class="code">&ltmap/&gt</map>
     &lt/div&gt
       `,
+    correctSeletor: '#first',
   },
   {
     level: 4,
@@ -70,13 +73,14 @@ export const dataGameLevels = [
     <spyglass data-id="4" class="shape spyglass" data-tooltip="<spyglass></spyglass>"></spyglass>`,
     dataHTMLViewer: `
     &ltdiv class="boat"&gt
-      <map data-id="1" class="code">&map/&gt</map>
-      <wheel data-id="2" class="code">&wheel&gt
-        <spyglass data-id="3" class="code">&spyglass/&gt</spyglass>
+      <map data-id="1" class="code">&ltmap/&gt</map>
+      <wheel data-id="2" class="code">&ltwheel&gt
+        <spyglass data-id="3" class="code">&ltspyglass/&gt</spyglass>
       &lt/wheel&gt</wheel>
-      <spyglass data-id="4" class="code">&spyglass/&gt</spyglass>
+      <spyglass data-id="4" class="code">&ltspyglass/&gt</spyglass>
     &lt/div&gt
       `,
+    correctSeletor: 'wheel spyglass',
   },
   {
     level: 5,
@@ -97,16 +101,17 @@ export const dataGameLevels = [
   </wheel>`,
     dataHTMLViewer: `
     &ltdiv class="boat"&gt
-      <map data-id="1" class="code">&map&gt
-        <sword data-id="2" class="code">&sword/&gt</sword>
-      &map/&gt</map><wheel data-id="3" id="border" class="code">
-      &wheel id="border"&gt
-        <bottle data-id="4" class="code">&bottle/&gt</bottle>
+      <map data-id="1" class="code">&ltmap&gt
+        <sword data-id="2" class="code">&ltsword/&gt</sword>
+      &ltmap/&gt</map><wheel data-id="3" id="border" class="code">
+      &ltwheel id="border"&gt
+        <bottle data-id="4" class="code">&ltbottle/&gt</bottle>
       &lt/wheel&gt</wheel>
-      <wheel data-id="5" class="code">&wheel&gt
+      <wheel data-id="5" class="code">&ltwheel&gt
         <bottle data-id="6" class="code">&lt/bottle/&gt</bottle >
       &lt/wheel&gt</wheel>
     &lt/div&gt
       `,
+    correctSeletor: '#border bottle',
   },
 ];
