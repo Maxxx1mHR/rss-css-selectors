@@ -7,7 +7,9 @@ class CssView {
   constructor(data: IDataLevel[], level: number) {
     this.createView();
     this.clickButton(data, level);
+    this.pressButton(data, level);
   }
+
   private createView(): void {
     const input = new ElementCreator({
       tag: 'input',
@@ -21,6 +23,7 @@ class CssView {
       textContent: 'Enter',
       id: 'add',
     });
+
     const editorSelector = document.querySelector('.editor__selector');
     if (editorSelector) {
       editorSelector.innerHTML = '';
@@ -30,53 +33,123 @@ class CssView {
       addButton.appendNodeToDom(editorSelector);
     }
   }
+
   private clickButton(data: IDataLevel[], level: number): void {
     const addButton = document.querySelector('.editor__button');
-    const boat = document.querySelector('.boat');
+    // const boat = document.querySelector('.boat');
+    // const input = document.querySelector('.editor__input');
+
     if (addButton) {
       addButton.addEventListener('click', (event) => {
         if (event.target instanceof HTMLButtonElement) {
-          const input = document.querySelector('.editor__input');
-          if (input instanceof HTMLInputElement) {
-            if (boat) {
-              try {
-                console.log(input.value);
-                const cssSelector = boat.querySelectorAll(input.value);
-                console.log(cssSelector);
-                const dataSelector = boat.querySelectorAll(data[level].correctSeletor);
-                if (this.nodeListsAreEqual(cssSelector, dataSelector)) {
-                  level += 1;
-                  if (level > dataGameLevels.length - 1) {
-                    console.log(level);
-                    level = dataGameLevels.length - 1;
-                  }
-                  cssSelector.forEach((item) => {
-                    item.classList.add('animation-drop');
-                  });
-                  setTimeout(() => new App(dataGameLevels, level), 900);
-                } else {
-                  cssSelector.forEach((item) => {
-                    item.classList.add('animation-shake');
-                    item.addEventListener('animationend', () => {
-                      item.classList.remove('animation-shake');
-                    });
-                  });
-                }
-              } catch {
-                event.preventDefault();
-              }
-            }
+          this.getValueFromInput(data, level);
+          // if (input instanceof HTMLInputElement && boat) {
+          //   try {
+          //     const cssSelector = boat.querySelectorAll(input.value);
+          //     const dataSelector = boat.querySelectorAll(data[level].correctSeletor);
+          //     if (this.nodeListsAreEqual(cssSelector, dataSelector)) {
+          //       this.levelComplete(dataGameLevels, level);
+          //       this.addAnimation(cssSelector, 'animation-drop');
+          //     } else {
+          //       this.addAnimation(cssSelector, 'animation-shake');
+          //       this.removeAnimation(cssSelector, 'animation-shake');
+          //     }
+          //   } catch {
+          //     event.preventDefault();
+          //   }
+          // }
+        }
+      });
+    }
+  }
+
+  private pressButton(data: IDataLevel[], level: number): void {
+    const input = document.querySelector('.editor__input');
+
+    // const boat = document.querySelector('.boat');
+
+    if (input) {
+      input.addEventListener('keydown', (event) => {
+        if (event instanceof KeyboardEvent) {
+          if (event.key === 'Enter') {
+            this.getValueFromInput(data, level);
+
+            // if (input instanceof HTMLInputElement && boat) {
+            //   try {
+            //     const cssSelector = boat.querySelectorAll(input.value);
+            //     const dataSelector = boat.querySelectorAll(data[level].correctSeletor);
+            //     if (this.nodeListsAreEqual(cssSelector, dataSelector)) {
+            //       this.levelComplete(dataGameLevels, level);
+            //       this.addAnimation(cssSelector, 'animation-drop');
+            //     } else {
+            //       this.addAnimation(cssSelector, 'animation-shake');
+            //       this.removeAnimation(cssSelector, 'animation-shake');
+            //     }
+            //   } catch {
+            //     event.preventDefault();
+            //   }
+            // }
           }
         }
       });
     }
   }
+
   private nodeListsAreEqual(list1: NodeList, list2: NodeList): boolean {
     if (list1.length !== list2.length) {
       return false;
     }
     return Array.from(list1).every((node, index) => node === list2[index]);
   }
+
+  private levelComplete(data: IDataLevel[], level: number): void {
+    level += 1;
+    if (level > dataGameLevels.length - 1) {
+      level = dataGameLevels.length - 1;
+    }
+    setTimeout(() => new App(dataGameLevels, level), 900);
+  }
+
+  private addAnimation(selector: NodeList, animationName: string): void {
+    selector.forEach((item) => {
+      if (item instanceof HTMLElement) {
+        item.classList.add(animationName);
+      }
+    });
+  }
+
+  private removeAnimation(selector: NodeList, animationName: string): void {
+    selector.forEach((item) => {
+      if (item instanceof HTMLElement) {
+        item.addEventListener('animationend', () => {
+          item.classList.remove(animationName);
+        });
+      }
+    });
+  }
+
+  private getValueFromInput(data: IDataLevel[], level: number): void {
+    const boat = document.querySelector('.boat');
+    const input = document.querySelector('.editor__input');
+
+    if (input instanceof HTMLInputElement && boat) {
+      try {
+        const cssSelector = boat.querySelectorAll(input.value);
+        const dataSelector = boat.querySelectorAll(data[level].correctSeletor);
+        if (this.nodeListsAreEqual(cssSelector, dataSelector)) {
+          this.levelComplete(dataGameLevels, level);
+          this.addAnimation(cssSelector, 'animation-drop');
+        } else {
+          this.addAnimation(cssSelector, 'animation-shake');
+          this.removeAnimation(cssSelector, 'animation-shake');
+        }
+      } catch {
+        event?.preventDefault();
+      }
+    }
+  }
+
+  // private sendSelectorForCheck() {}
 }
 
 export default CssView;
