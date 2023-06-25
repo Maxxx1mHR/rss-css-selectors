@@ -1,4 +1,6 @@
+import App from '../components/app';
 import ElementCreator from '../components/element-creator';
+import { dataGameLevels } from '../data/data-game-levels';
 import { IDataLevel } from '../types/types';
 
 class CssView {
@@ -38,17 +40,33 @@ class CssView {
           if (input instanceof HTMLInputElement) {
             if (boat) {
               try {
+                console.log(input.value);
                 const cssSelector = boat.querySelectorAll(input.value);
+                console.log(cssSelector);
                 const dataSelector = boat.querySelectorAll(data[level].correctSeletor);
                 if (this.nodeListsAreEqual(cssSelector, dataSelector)) {
-                  console.log('1');
+                  level += 1;
+                  if (level > dataGameLevels.length - 1) {
+                    console.log(level);
+                    level = dataGameLevels.length - 1;
+                  }
+                  cssSelector.forEach((item) => {
+                    item.classList.add('animation-drop');
+                  });
+                  setTimeout(() => new App(dataGameLevels, level), 900);
+                } else {
+                  cssSelector.forEach((item) => {
+                    item.classList.add('animation-shake');
+                    item.addEventListener('animationend', () => {
+                      item.classList.remove('animation-shake');
+                    });
+                  });
                 }
               } catch {
                 event.preventDefault();
               }
             }
           }
-          // }
         }
       });
     }

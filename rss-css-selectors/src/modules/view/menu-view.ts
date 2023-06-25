@@ -36,7 +36,6 @@ class MenuView {
           if (prevButton) {
             level -= 1;
             if (level < 0) {
-              console.log(level);
               level = 0;
             }
             new App(dataGameLevels, level);
@@ -44,7 +43,6 @@ class MenuView {
           if (nextButton) {
             level += 1;
             if (level > dataGameLevels.length - 1) {
-              console.log(level);
               level = dataGameLevels.length - 1;
             }
             new App(dataGameLevels, level);

@@ -7,8 +7,8 @@ export const dataGameLevels = [
     correction:
       'Selects all elements of type <span>A</span>. Type refers to the type of tag, so <span>&ltdiv&gt</span>, <span>&ltp&gt</span> and <span>&ltul&gt</span> are all different element types.',
     example: '<span>div</span> selects all <span>&ltdiv&gt</span> elements',
-    dataExampleLayout: `<wheel data-id="1" class="shape wheel" data-tooltip="<wheel></wheel>"></wheel>
-      <wheel data-id="2" class="shape wheel" data-tooltip="<wheel></wheel>"></wheel>`,
+    dataExampleLayout: `<wheel data-id="1" class="shape wheel animation-rotation" data-tooltip="<wheel></wheel>"></wheel>
+      <wheel data-id="2" class="shape wheel animation-rotation" data-tooltip="<wheel></wheel>"></wheel>`,
     dataHTMLViewer: `
     &ltdiv class="boat"&gt
       <wheel data-id="1" class="code">&ltwheel/&gt</wheel>
@@ -25,9 +25,9 @@ export const dataGameLevels = [
     correction:
       'Selects all elements of type <span>A</span>. Type refers to the type of tag, so <span>&ltdiv&gt</span>, <span>&ltp&gt</span> and <span>&ltul&gt</span> are all different element types.',
     example: '<span>div</span> selects all <span>&ltdiv&gt</span> elements',
-    dataExampleLayout: `<map data-id="1" class="shape map"  data-tooltip="<map></map>"></map>
+    dataExampleLayout: `<map data-id="1" class="shape map animation-rotation"  data-tooltip="<map></map>"></map>
     <wheel data-id="2" class="shape wheel" data-tooltip="<wheel></wheel>"></wheel>
-    <map data-id="3" class="shape map" data-tooltip="<map></map>"></map>`,
+    <map data-id="3" class="shape map animation-rotation" data-tooltip="<map></map>"></map>`,
     dataHTMLViewer: `
     &ltdiv class="boat"&gt
       <map data-id="1" class="code">&ltmap/&gt</map>
@@ -45,7 +45,7 @@ export const dataGameLevels = [
     correction:
       'Selects the element with a specific <span>id</span>. You can also combine the ID selector with the type selector.',
     example: '<span>#cool</span> selects any element with <span>id="cool"</span> elements',
-    dataExampleLayout: `<wheel data-id="1" id="first" class="shape wheel first" data-tooltip='<wheel id="first"></wheel>'></wheel>
+    dataExampleLayout: `<wheel data-id="1" id="first" class="shape wheel first animation-rotation" data-tooltip='<wheel id="first"></wheel>'></wheel>
       <wheel data-id="2" class="shape wheel" data-tooltip="<wheel></wheel>"></wheel>
       <map data-id="3" class="shape map" data-tooltip="<map></map>"></map>`,
     dataHTMLViewer: `
@@ -68,7 +68,7 @@ export const dataGameLevels = [
       '<span>p strong </span> selects all <span>&ltstrong&gt</span> elements that are inside of any <span>&lp&gt</span>',
     dataExampleLayout: `<map data-id="1" class="shape map" data-tooltip="<map></map>"></map>
     <wheel data-id="2" class="shape wheel" data-tooltip="<wheel></wheel>">
-      <spyglass data-id="3" class="shape spyglass" data-tooltip="<spyglass></spyglass>"></spyglass>
+      <spyglass data-id="3" class="shape spyglass animation-rotation" data-tooltip="<spyglass></spyglass>"></spyglass>
     </wheel>
     <spyglass data-id="4" class="shape spyglass" data-tooltip="<spyglass></spyglass>"></spyglass>`,
     dataHTMLViewer: `
@@ -94,7 +94,7 @@ export const dataGameLevels = [
     <sword data-id="2" class="shape sword" data-tooltip="<sword></sword>"></sword>
   </map>
   <wheel data-id="3" id="border" class="shape wheel border" data-tooltip='<wheel id="border"></wheel>'>
-    <bottle data-id="4" class="shape bottle" data-tooltip="<bottle></bottle>"></bottle>
+    <bottle data-id="4" class="shape bottle animation-rotation" data-tooltip="<bottle></bottle>"></bottle>
   </wheel>
   <wheel data-id="5" class="shape wheel" data-tooltip="<wheel></wheel>">
     <bottle data-id="6" class="shape bottle" data-tooltip="<bottle></bottle>"></bottle >
