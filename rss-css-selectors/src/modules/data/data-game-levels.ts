@@ -7,7 +7,7 @@ export const dataGameLevels = [
     correction:
       'Selects all elements of type <span>A</span>. Type refers to the type of tag, so <span>&ltdiv&gt</span>, <span>&ltp&gt</span> and <span>&ltul&gt</span> are all different element types.',
     example: '<span>div</span> selects all <span>&ltdiv&gt</span> elements',
-    dataExampleLayout: `<wheel data-id="1" class="shape wheel animation-rotation" data-tooltip="<wheel></wheel>"></wheel>
+    dataExampleLayout: `<wheel data-id="1" data-level="0" class="shape wheel animation-rotation" data-tooltip="<wheel></wheel>"></wheel>
       <wheel data-id="2" class="shape wheel animation-rotation" data-tooltip="<wheel></wheel>"></wheel>`,
     dataHTMLViewer: `
     &ltdiv class="boat"&gt

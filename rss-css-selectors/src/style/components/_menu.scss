@@ -156,6 +156,7 @@
 }
 
 .menu__levels-item {
+  display: inline-block;
   position: relative;
   cursor: pointer;
   margin-bottom: 5px;
@@ -174,6 +175,10 @@
     left: -25px;
     background-size: cover;
   }
+}
+
+.menu__current-level {
+  background-color: rgba($color: $color-background, $alpha: 0.3);
 }
 
 .check_done {
