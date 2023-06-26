@@ -1,5 +1,6 @@
 export interface IDataLevel {
   level: number;
+  taskTitle: string;
   taskName: string;
   taskDescription: string;
   attribute: string;

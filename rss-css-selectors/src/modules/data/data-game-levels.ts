@@ -1,6 +1,7 @@
 export const dataGameLevels = [
   {
     level: 1,
+    taskTitle: 'Select the wheel',
     taskName: 'Type Selector',
     taskDescription: 'Select elements by their type',
     attribute: '<span>A</span>',
@@ -19,6 +20,7 @@ export const dataGameLevels = [
   },
   {
     level: 2,
+    taskTitle: 'Select the map',
     taskName: 'Type Selector',
     taskDescription: 'Select elements by their type',
     attribute: '<span>A</span>',
@@ -39,6 +41,7 @@ export const dataGameLevels = [
   },
   {
     level: 3,
+    taskTitle: 'Select the first wheel',
     taskName: 'ID Selector',
     taskDescription: 'Select elements with an ID  ',
     attribute: '<span>#id</span>',
@@ -59,6 +62,7 @@ export const dataGameLevels = [
   },
   {
     level: 4,
+    taskTitle: 'Select the spyglass on the wheel',
     taskName: 'Descendant Selector',
     taskDescription: 'Select an element inside another element',
     attribute: '<span>A  B</span>',
@@ -84,6 +88,7 @@ export const dataGameLevels = [
   },
   {
     level: 5,
+    taskTitle: 'Select the bottle on the wheel',
     taskName: 'No Name...',
     taskDescription: 'Combine the Descendant & ID Selectors',
     attribute: '<span>#id  A</span>',

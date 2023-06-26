@@ -6,19 +6,63 @@ class BoatView {
     this.createView(data, level);
     this.mouseoverEvent();
     this.mouseoutEvent();
+    this.helpButtonClick(data, level);
   }
 
   private createView(data: IDataLevel[], level: number): void {
-    const elementCreator = new ElementCreator({
+    const gameWrapper: HTMLElement | null = document.querySelector('.game__wrapper');
+
+    if (gameWrapper) {
+      gameWrapper.innerHTML = '';
+    }
+    const gameTask = new ElementCreator({
+      tag: 'h2',
+      className: ['game__task'],
+      textContent: data[level].taskTitle,
+    });
+
+    gameTask.appendNodeToDom(gameWrapper);
+
+    const gameHelp = new ElementCreator({
+      tag: 'div',
+      className: ['game__help'],
+      textContent: 'Help, I&#39m stuck!',
+    });
+
+    gameHelp.appendNodeToDom(gameWrapper);
+
+    const boatSurface = new ElementCreator({
+      tag: 'div',
+      className: ['boat-surface'],
+    });
+
+    boatSurface.appendNodeToDom(gameWrapper);
+
+    const boat = new ElementCreator({
       tag: 'div',
       className: ['boat'],
       textContent: data[level].dataExampleLayout,
     });
-    const boatSurface = document.querySelector('.boat-surface');
-    if (boatSurface instanceof HTMLElement) {
-      boatSurface.innerHTML = '';
-      elementCreator.appendNodeToDom(boatSurface);
+
+    if (boatSurface.getElement() instanceof HTMLElement) {
+      boat.appendNodeToDom(boatSurface.getElement());
     }
+    // const elementCreator = new ElementCreator({
+    //   tag: 'div',
+    //   className: ['boat'],
+    //   textContent: data[level].dataExampleLayout,
+    // });
+    // const boatSurface = document.querySelector('.boat-surface');
+    // if (boatSurface instanceof HTMLElement) {
+    //   boatSurface.innerHTML = '';
+    //   elementCreator.appendNodeToDom(boatSurface);
+    // }
+    // const gameTaskElementCreate = new ElementCreator({
+    //   tag: 'h2',
+    //   className: ['game__task'],
+    //   textContent: data[level].dataExampleLayout,
+    // });
+    // const gameWrapper = document.querySelector('.game__task');
   }
 
   private mouseoverEvent(): void {
@@ -55,6 +99,23 @@ class BoatView {
           code.classList.remove('lighting-code');
           document.querySelector(`.shape[data-id='${id}']`)?.classList.remove('hover', 'lighting-tag');
         }
+      }
+    });
+  }
+
+  private helpButtonClick(data: IDataLevel[], level: number): void {
+    const gameHelp = document.querySelector('.game__help');
+    gameHelp?.addEventListener('click', () => {
+      const input = document.querySelector('.editor__input');
+      if (input instanceof HTMLInputElement) {
+        let i = 0;
+        const timerId = setInterval(() => {
+          input.value += data[level].correctSeletor[i];
+          i++;
+          if (input.value.length === data[level].correctSeletor.length) {
+            clearInterval(timerId);
+          }
+        }, 200);
       }
     });
   }

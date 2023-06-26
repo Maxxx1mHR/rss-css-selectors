@@ -15,10 +15,11 @@ class MenuView {
     this.levelMenuSwith();
   }
   private menuAction(): void {
-    const menu = document.querySelector('.menu');
-    menu?.addEventListener('click', (event) => {
+    // const menu = document.querySelector('.menu');
+    document.addEventListener('click', (event) => {
       if (event.target instanceof HTMLElement) {
         if (event.target.closest('.hamburger')) {
+          console.log('123');
           document.querySelector('.menu')?.classList.add('active');
         }
         if (event.target.closest('.menu__close')) {

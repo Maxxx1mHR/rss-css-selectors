@@ -43,6 +43,7 @@ class CssView {
       addButton.addEventListener('click', (event) => {
         if (event.target instanceof HTMLButtonElement) {
           this.getValueFromInput(data, level);
+
           // if (input instanceof HTMLInputElement && boat) {
           //   try {
           //     const cssSelector = boat.querySelectorAll(input.value);
@@ -107,7 +108,11 @@ class CssView {
     if (level > dataGameLevels.length - 1) {
       level = dataGameLevels.length - 1;
     }
-    setTimeout(() => new App(dataGameLevels, level), 900);
+
+    setTimeout(() => {
+      new App(dataGameLevels, level);
+      this.switchCurrentLevel(level);
+    }, 900);
   }
 
   private addAnimation(selector: NodeList, animationName: string): void {
@@ -125,6 +130,14 @@ class CssView {
           item.classList.remove(animationName);
         });
       }
+    });
+  }
+
+  private switchCurrentLevel(level: number): void {
+    const menuLevelItem = document.querySelectorAll('.menu__levels-item');
+    menuLevelItem.forEach((item) => {
+      item.classList.remove('menu__current-level');
+      menuLevelItem[level].classList.add('menu__current-level');
     });
   }
 
