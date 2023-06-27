@@ -78,7 +78,9 @@ class BoatView {
         }
         if (code) {
           code.classList.add('lighting-code');
-          document.querySelector(`.shape[data-id='${id}']`)?.classList.add('hover', 'lighting-tag');
+          // document.querySelector(`.shape[data-id='${id}']`)?.classList.add('hover', 'lighting-tag');
+          document.querySelector(`.shape[data-id='${id}']`)?.classList.add('hover');
+          document.querySelector(`.shape-help[data-id='${id}']`)?.classList.add('shape-help-active');
         }
       }
     });
@@ -97,7 +99,9 @@ class BoatView {
         }
         if (code) {
           code.classList.remove('lighting-code');
-          document.querySelector(`.shape[data-id='${id}']`)?.classList.remove('hover', 'lighting-tag');
+          // document.querySelector(`.shape[data-id='${id}']`)?.classList.remove('hover', 'lighting-tag');
+          document.querySelector(`.shape[data-id='${id}']`)?.classList.remove('hover');
+          document.querySelector(`.shape-help[data-id='${id}']`)?.classList.remove('shape-help-active');
         }
       }
     });

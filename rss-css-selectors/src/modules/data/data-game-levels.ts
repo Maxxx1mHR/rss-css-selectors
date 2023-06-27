@@ -8,8 +8,16 @@ export const dataGameLevels = [
     correction:
       'Selects all elements of type <span>A</span>. Type refers to the type of tag, so <span>&ltdiv&gt</span>, <span>&ltp&gt</span> and <span>&ltul&gt</span> are all different element types.',
     example: '<span>div</span> selects all <span>&ltdiv&gt</span> elements',
-    dataExampleLayout: `<wheel data-id="1" data-level="0" class="shape wheel animation-rotation" data-tooltip="<wheel></wheel>"></wheel>
-      <wheel data-id="2" class="shape wheel animation-rotation" data-tooltip="<wheel></wheel>"></wheel>`,
+    dataExampleLayout: `
+    <div class="shape-wrapper">
+      <wheel data-level="0"  data-id="1" class="shape wheel animation-rotation" data-tooltip="<wheel></wheel>"></wheel>
+      <div data-id="1" class=shape-help>Help 123 This is test string got for all tags in this case </div>
+    </div>
+    <div class="shape-wrapper">
+      <wheel data-id="2" class="shape wheel animation-rotation" data-tooltip="<wheel></wheel>"></wheel>
+      <div  data-id="2" class=shape-help>Help 456</div>
+    </div
+      `,
     dataHTMLViewer: `
     &ltdiv class="boat"&gt
       <wheel data-id="1" class="code">&ltwheel/&gt</wheel>
@@ -95,21 +103,22 @@ export const dataGameLevels = [
     correction: 'You can combine any selector with the descendent selector.',
     example:
       '<span>#cool span</span> selects all <span>&ltspan&gt</span> elements  that are inside of elements with <span>id="cool"</span>',
-    dataExampleLayout: `<map data-id="1" class="shape map" data-tooltip="<map></map>">
-    <sword data-id="2" class="shape sword" data-tooltip="<sword></sword>"></sword>
-  </map>
-  <wheel data-id="3" id="border" class="shape wheel border" data-tooltip='<wheel id="border"></wheel>'>
-    <bottle data-id="4" class="shape bottle animation-rotation" data-tooltip="<bottle></bottle>"></bottle>
-  </wheel>
-  <wheel data-id="5" class="shape wheel" data-tooltip="<wheel></wheel>">
-    <bottle data-id="6" class="shape bottle" data-tooltip="<bottle></bottle>"></bottle >
-  </wheel>`,
+    dataExampleLayout: `
+    <map data-id="1" class="shape map" data-tooltip="<map></map>">
+      <sword data-id="2" class="shape sword" data-tooltip="<sword></sword>"></sword>
+    </map>
+    <wheel data-id="3" id="captain" class="shape wheel" data-tooltip='<wheel id="captain"></wheel>'>
+      <bottle data-id="4" class="shape bottle animation-rotation" data-tooltip="<bottle></bottle>"></bottle>
+    </wheel>
+    <wheel data-id="5" class="shape wheel" data-tooltip="<wheel></wheel>">
+      <bottle data-id="6" class="shape bottle" data-tooltip="<bottle></bottle>"></bottle >
+    </wheel>`,
     dataHTMLViewer: `
     &ltdiv class="boat"&gt
       <map data-id="1" class="code">&ltmap&gt
         <sword data-id="2" class="code">&ltsword/&gt</sword>
-      &ltmap/&gt</map><wheel data-id="3" id="border" class="code">
-      &ltwheel id="border"&gt
+      &ltmap/&gt</map><wheel data-id="3" id="captain" class="code">
+      &ltwheel id="captain"&gt
         <bottle data-id="4" class="code">&ltbottle/&gt</bottle>
       &lt/wheel&gt</wheel>
       <wheel data-id="5" class="code">&ltwheel&gt
@@ -117,7 +126,7 @@ export const dataGameLevels = [
       &lt/wheel&gt</wheel>
     &lt/div&gt
       `,
-    correctSeletor: '#border bottle',
+    correctSeletor: '#captain bottle',
   },
   {
     level: 6,
@@ -129,14 +138,14 @@ export const dataGameLevels = [
     example:
       '<span>#cool span</span> selects all <span>&ltspan&gt</span> elements that are inside of elements with <span>id="cool"</span>',
     dataExampleLayout: `
-    <wheel data-id="1" id="border" class="shape wheel border" data-tooltip='<wheel id="border"></wheel>'>
-    <spyglass data-id="2" data-attr="spyglass" class="shape spyglass animation-rotation" data-tooltip="<spyglass></spyglass>"></spyglass>
-    <spyglass data-id="3" class="shape spyglass" data-tooltip="<spyglass></spyglass>"></spyglass>
+    <wheel data-id="1" id="captain" class="shape wheel captain" data-tooltip='<wheel></wheel>'>
+      <spyglass data-id="2" data-attr="spyglass" class="shape spyglass animation-rotation" data-tooltip="<spyglass></spyglass>"></spyglass>
+      <spyglass data-id="3" class="shape spyglass" data-tooltip="<spyglass></spyglass>"></spyglass>
     </wheel>
     <map data-id="4" class="shape map" data-tooltip="<map></map>">
-      <sword data-id="5" data-attr="first-sword" class="shape sword animation-rotation" data-tooltip="<sword></sword>"></sword>
-      <sword data-id="6" data-attr="second" class="shape sword" data-tooltip="<sword></sword>"></sword>
-      <sword data-id="7" data-attr="sword-third" class="shape sword animation-rotation" data-tooltip="<sword></sword>"></sword>
+      <sword data-id="5" data-attr="first-sword" class="shape sword animation-rotation" data-tooltip='<sword data-attr="first-sword"></sword>'></sword>
+      <sword data-id="6" data-attr="second" class="shape sword" data-tooltip="<sword  data-attr='second"></sword>'></sword>
+      <sword data-id="7" data-attr="sword-third" class="shape sword animation-rotation" data-tooltip='<sword  data-attr="sword-third"></sword>'></sword>
     </map>
     <wheel data-id="8" class="shape wheel" data-tooltip="<wheel></wheel>">
       <bottle data-id="9" data-attr="frontend" class="shape bottle animation-rotation" data-tooltip="<bottle></bottle>"></bottle >
@@ -147,15 +156,23 @@ export const dataGameLevels = [
     `,
     dataHTMLViewer: `
     &ltdiv class="boat"&gt
-    <map data-id="1" class="code">&ltmap&gt
-    <sword data-id="2" class="code">&ltsword/&gt</sword>
-    &ltmap/&gt</map><wheel data-id="3" id="border" class="code">
-    &ltwheel id="border"&gt
-    <bottle data-id="4" class="code">&ltbottle/&gt</bottle>
-    &lt/wheel&gt</wheel>
+      <wheel data-id="1" class="code">&ltwheel&gt
+        <spyglass data-id="2" class="code">&ltspyglass/&gt</spyglass>
+        <spyglass data-id="3" class="code">&ltspyglass/&gt</spyglass>
+      &lt/wheel&gt</wheel>
+    <map data-id="4" class="code" data-tooltip="<map></map>">
+    &ltmap&gt
+    <sword data-id="5" data-attr="first-sword" class="code">&lt/sword data-attr="first-sword"&gt</sword>
+    <sword data-id="6" data-attr="second" class="code">&lt/sword data-attr="second"&gt</sword>
+    <sword data-id="7" data-attr="sword-third" class="code">&lt/sword data-attr="sword-third"&gt</sword>
+
+    &lt/map&gt
+    </map>
     <wheel data-id="5" class="code">&ltwheel&gt
-    <bottle data-id="6" class="code">&lt/bottle/&gt</bottle >
-    &lt/wheel&gt</wheel>
+    <bottle data-id="6" data-attr="frontend" class="code"></bottle >
+    <bottle data-id="7" data-attr="frontend" class="code"></bottle >
+    <bottle data-id="8" data-attr="frontend" class="code"></bottle >
+  &lt/wheel&gt</wheel>
     &lt/div&gt
     `,
     correctSeletor: 'spyglass[data-attr], sword[data-attr*="sword"], bottle[data-attr$="end"]',

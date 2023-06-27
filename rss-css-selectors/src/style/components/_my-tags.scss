@@ -12,23 +12,37 @@
   width: 120px;
   background-size: 120px 120px;
   background-repeat: no-repeat;
-  &::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    text-align: center;
-    white-space: nowrap;
-    left: 10px;
-    top: -70px;
-    background-color: $color-primary;
-    color: #fff;
-    padding: 0.5em;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    pointer-events: none;
-    opacity: 0;
-    transition: 1s;
-    @extend %font-add;
-    @include font($size: 1.6rem);
+  &:hover ~ .shape-help {
+    opacity: 1;
+    // display: block;
   }
+  // &::after {
+  //   content: attr(data-tooltip);
+  //   position: absolute;
+  //   // text-align: center;
+  //   // white-space: nowrap;
+  //   // animation: rotation 5s infinite linear reverse;
+  //   // top: 0px;
+  //   // left: 0px;
+  //   // height: 100%;
+  //   // // width: 100%;
+  //   // top: 0;
+  //   // left: 0;
+  //   // left: 10px;
+  //   // top: -70px;
+  //   // height: 100px;
+  //   // width: 100px;
+  //   // display: inline-block;
+  //   // background-color: $color-primary;
+  //   // color: #fff;
+  //   // padding: 0.5em;
+  //   // box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  //   // pointer-events: none;
+  //   // opacity: 0;
+  //   transition: 1s;
+  //   @extend %font-add;
+  //   @include font($size: 1.6rem);
+  // }
   @include media-tablet {
     height: 60px;
     width: 60px;
@@ -36,7 +50,19 @@
   }
 }
 
-.lighting-tag::after {
+.shape-help {
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  transition: all 1s;
+  opacity: 0;
+  pointer-events: none;
+  @extend %font-add;
+  @include font($size: 1.6rem, $color: $color-primary);
+  // background-color: red;
+}
+
+.shape-help-active {
   opacity: 1;
 }
 
