@@ -72,13 +72,13 @@ class BoatView {
         const shape = event.target.closest('.shape');
         const id = event.target.dataset.id;
         if (shape) {
-          shape.classList.add('hover');
-          document.querySelector(`.shape[data-id='${id}']`)?.classList.add('lighting-code', 'lighting-tag');
+          // shape.classList.add('hover');
+          document.querySelector(`.shape[data-id='${id}']`)?.classList.add('hover', 'lighting-code');
+          document.querySelector(`.shape-help[data-id='${id}']`)?.classList.add('shape-help-active');
           document.querySelector(`.code[data-id='${id}']`)?.classList.add('lighting-code');
         }
         if (code) {
           code.classList.add('lighting-code');
-          // document.querySelector(`.shape[data-id='${id}']`)?.classList.add('hover', 'lighting-tag');
           document.querySelector(`.shape[data-id='${id}']`)?.classList.add('hover');
           document.querySelector(`.shape-help[data-id='${id}']`)?.classList.add('shape-help-active');
         }
@@ -93,13 +93,13 @@ class BoatView {
         const shape = event.target.closest('.shape');
         const id = event.target.dataset.id;
         if (shape) {
-          shape.classList.remove('hover');
-          document.querySelector(`.shape[data-id='${id}']`)?.classList.remove('hover', 'lighting-code', 'lighting-tag');
+          // shape.classList.remove('hover');
+          document.querySelector(`.shape[data-id='${id}']`)?.classList.remove('hover', 'lighting-code');
+          document.querySelector(`.shape-help[data-id='${id}']`)?.classList.remove('shape-help-active');
           document.querySelector(`.code[data-id='${id}']`)?.classList.remove('lighting-code');
         }
         if (code) {
           code.classList.remove('lighting-code');
-          // document.querySelector(`.shape[data-id='${id}']`)?.classList.remove('hover', 'lighting-tag');
           document.querySelector(`.shape[data-id='${id}']`)?.classList.remove('hover');
           document.querySelector(`.shape-help[data-id='${id}']`)?.classList.remove('shape-help-active');
         }
