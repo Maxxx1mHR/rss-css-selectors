@@ -3,6 +3,12 @@ import './index.scss';
 import App from './modules/components/app';
 import { dataGameLevels } from './modules/data/data-game-levels';
 
-const level = 0;
+let level = 0;
 
-new App(dataGameLevels, level);
+if (localStorage.getItem('currentCssSelectorLevel') === null) {
+  +localStorage.setItem('currentCssSelectorLevel', String(0));
+  new App(dataGameLevels, level);
+} else {
+  level = JSON.parse(localStorage.getItem('currentCssSelectorLevel') || '{}');
+  new App(dataGameLevels, level);
+}

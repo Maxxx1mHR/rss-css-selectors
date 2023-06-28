@@ -175,7 +175,7 @@
   &::before {
     position: absolute;
     content: '';
-    background-image: url('../../assets/icons/check.svg');
+    background-image: url('../../assets/icons/interaction/check.svg');
     width: 20px;
     height: 20px;
     left: -25px;
@@ -189,6 +189,6 @@
 
 .check_done {
   &::before {
-    background-image: url('../../assets/icons/check-done.svg');
+    background-image: url('../../assets/icons/interaction/check-done.svg');
   }
 }

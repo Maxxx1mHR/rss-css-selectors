@@ -80,7 +80,7 @@
 .wheel {
   display: flex;
   justify-content: space-around;
-  background-image: url('../../assets/icons/pirot/wheel.png');
+  background-image: url('../../assets/icons/pirot/shapes/wheel.png');
   border-radius: 100%;
 }
 
@@ -95,7 +95,7 @@
   height: 140px;
   width: 140px;
   background-size: 140px 140px;
-  background-image: url('../../assets/icons/pirot/map.png');
+  background-image: url('../../assets/icons/pirot/shapes/map.png');
   @include media-tablet {
     height: 80px;
     width: 80px;
@@ -107,7 +107,7 @@
   display: block;
   width: 60px;
   height: 40px;
-  background-image: url('../../assets/icons/pirot/spyglass.png');
+  background-image: url('../../assets/icons/pirot/shapes/spyglass.png');
   background-size: 60px 40px;
   @include media-tablet {
     width: 40px;
@@ -120,7 +120,7 @@
   display: block;
   height: 20px;
   width: 50px;
-  background-image: url('../../assets/icons/pirot/sword.png');
+  background-image: url('../../assets/icons/pirot/shapes/sword.png');
   background-size: 50px 20px;
   @include media-tablet {
     height: 10px;
@@ -133,7 +133,7 @@
   display: block;
   height: 50px;
   width: 15px;
-  background-image: url('../../assets/icons/pirot/bottle.png');
+  background-image: url('../../assets/icons/pirot/shapes/bottle.png');
   background-size: 15px 50px;
   @include media-tablet {
     height: 30px;

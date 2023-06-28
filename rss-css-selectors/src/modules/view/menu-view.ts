@@ -1,4 +1,4 @@
-import placeholder from '../../assets/icons/left.svg';
+import placeholder from '../../assets/icons/interaction/left.svg';
 const img = new Image();
 img.src = placeholder;
 
@@ -47,6 +47,7 @@ class MenuView {
       level.addEventListener('click', (event) => {
         if (event.target instanceof HTMLElement) {
           if (event.target.closest('.menu__levels-item')) {
+            this.setCurrentLevelGame(+event.target.id - 1);
             new App(dataGameLevels, +event.target.id - 1);
             this.switchCurrentLevel(+event.target.id - 1);
           }
@@ -57,7 +58,7 @@ class MenuView {
 
   private switchLevel(level: number): void {
     const menuLevelSwitch = document.querySelector('.menu__level-switch');
-    document.querySelectorAll('.menu__levels-item')[0].classList.add('menu__current-level');
+    document.querySelectorAll('.menu__levels-item')[level].classList.add('menu__current-level');
     // console.log(menuLevelItem);
     if (menuLevelSwitch) {
       menuLevelSwitch.addEventListener('click', (event) => {
@@ -69,6 +70,9 @@ class MenuView {
             if (level < 0) {
               level = 0;
             }
+            this.setCurrentLevelGame(level);
+
+            // level = this.getCurrentLevelGame();
             new App(dataGameLevels, level);
             this.switchCurrentLevel(level);
           }
@@ -77,6 +81,8 @@ class MenuView {
             if (level > dataGameLevels.length - 1) {
               level = dataGameLevels.length - 1;
             }
+            this.setCurrentLevelGame(level);
+
             new App(dataGameLevels, level);
             this.switchCurrentLevel(level);
           }
@@ -87,11 +93,19 @@ class MenuView {
 
   private switchCurrentLevel(level: number): void {
     const menuLevelItem = document.querySelectorAll('.menu__levels-item');
-    console.log(menuLevelItem);
+    // console.log(menuLevelItem);
     menuLevelItem.forEach((item) => {
       item.classList.remove('menu__current-level');
       menuLevelItem[level].classList.add('menu__current-level');
     });
+  }
+
+  private getCurrentLevelGame(): number {
+    return JSON.parse(localStorage.getItem('currentCssSelectorLevel') || '{}');
+  }
+
+  private setCurrentLevelGame(level: number): void {
+    localStorage.setItem('currentCssSelectorLevel', String(level));
   }
 
   private createView(data: IDataLevel[], level: number): void {
