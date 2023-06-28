@@ -5,6 +5,7 @@
 
 .shape {
   // position: relative;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,6 +13,8 @@
   width: 120px;
   background-size: 120px 120px;
   background-repeat: no-repeat;
+  @extend %cursor-hover;
+
   // &:hover ~ .shape-help {
   // opacity: 1;
   // display: block;

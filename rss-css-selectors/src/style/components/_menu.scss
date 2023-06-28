@@ -5,7 +5,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  cursor: pointer;
+  @extend %cursor-hover;
+
   z-index: 1;
   img {
     width: 50px;
@@ -58,7 +59,8 @@
   display: none;
   top: 15px;
   right: 15px;
-  cursor: pointer;
+  @extend %cursor-hover;
+
   img {
     width: 50px;
     transition: 0.5s all;
@@ -90,7 +92,8 @@
 
 .menu__prev {
   width: 30px;
-  cursor: pointer;
+  @extend %cursor-hover;
+
   transition: 0.5s all;
   &:hover {
     scale: 1.2;
@@ -100,7 +103,8 @@
 .menu__next {
   width: 30px;
   transform: rotate(-180deg);
-  cursor: pointer;
+  @extend %cursor-hover;
+
   transition: 0.5s all;
   &:hover {
     scale: 1.2;
@@ -158,7 +162,9 @@
 .menu__levels-item {
   display: inline-block;
   position: relative;
-  cursor: pointer;
+  @extend %cursor-hover;
+  @extend %cursor-hover;
+
   margin-bottom: 5px;
   transition: 0.5s all;
   &:hover {

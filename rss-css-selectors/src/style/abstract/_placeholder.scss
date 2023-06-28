@@ -5,3 +5,9 @@
 %font-add {
   font-family: 'Nexa Script', sans-serif;
 }
+
+%cursor-hover {
+  &:hover {
+    cursor: url('../../assets/icons/pirot/cursor/gun.svg'), auto;
+  }
+}

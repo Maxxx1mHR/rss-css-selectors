@@ -11,10 +11,8 @@ export const dataGameLevels = [
     dataExampleLayout: `
       <wheel data-id="1" class="shape wheel animation-rotation"></wheel>
       <wheel data-id="2" class="shape wheel animation-rotation"></wheel>
-
       <div data-id="1" class=shape-help>&ltwheel&gt&lt/wheel&gt</div>
       <div data-id="2" class=shape-help>&ltwheel&gt&lt/wheel&gt</div>
-
       `,
     dataHTMLViewer: `
     &ltdiv class="boat"&gt
@@ -37,11 +35,9 @@ export const dataGameLevels = [
       <map data-id="1" class="shape map animation-rotation"></map>
       <wheel data-id="2" class="shape wheel"></wheel>
       <map data-id="3" class="shape map animation-rotation"></map>
-
       <div data-id="1" class=shape-help>&ltmap&gt&lt/map&gt</div>
       <div data-id="2" class=shape-help>&ltwheel&gt&lt/wheel&gt</div>
       <div data-id="3" class=shape-help>&ltmap&gt&lt/map&gt</div>
-
     `,
     dataHTMLViewer: `
     &ltdiv class="boat"&gt
@@ -65,7 +61,6 @@ export const dataGameLevels = [
       <wheel data-id="1" id="first" class="shape wheel first animation-rotation"></wheel>
       <wheel data-id="2" class="shape wheel"></wheel>
       <map data-id="3" class="shape map"></map>
-
       <div data-id="1" class=shape-help>&ltwheel id="first&gt&lt/wheel&gt</div>
       <div data-id="2" class=shape-help>&ltwheel&gt&lt/wheel&gt</div>
       <div data-id="3" class=shape-help>&ltmap&gt&lt/map&gt</div>
@@ -95,7 +90,6 @@ export const dataGameLevels = [
         <spyglass data-id="3" class="shape spyglass animation-rotation"></spyglass>
       </wheel>
       <spyglass data-id="4" class="shape spyglass"></spyglass>
-
       <div data-id="1" class=shape-help>&ltmap&gt&lt/map&gt</div>
       <div data-id="2" class=shape-help>&ltwheel&gt&lt/wheel&gt</div>
       <div data-id="3" class=shape-help>&ltspyglass&gt&lt/spyglass&gt</div>
@@ -131,15 +125,12 @@ export const dataGameLevels = [
       <wheel data-id="5" class="shape wheel">
           <bottle data-id="6" class="shape bottle"></bottle>
       </wheel>
-
       <div data-id="1" class=shape-help>&ltmap&gt&lt/map&gt</div>
       <div data-id="2" class=shape-help>&ltsword&gt&lt/sword&gt</div>
       <div data-id="3" class=shape-help>&ltwheel id="captain"&gt&lt/wheel&gt</div>
       <div data-id="4" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
       <div data-id="5" class=shape-help>&ltwheel&gt&lt/wheel&gt</div>
       <div data-id="6" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
-
-
     `,
     dataHTMLViewer: `
     &ltdiv class="boat"&gt
@@ -196,8 +187,6 @@ export const dataGameLevels = [
       <div data-id="10" class=shape-help>&ltbottle data-attr="bottle"&gt&lt/bottle&gt</div>
       <div data-id="11" class=shape-help>&ltbottle  data-attr="backend"&gt&lt/bottle&gt</div>
       <div data-id="12" class=shape-help>&ltspyglass data-attr="spyglass"&gt&lt/spyglass&gt</div>
-
-
     `,
     dataHTMLViewer: `
     &ltdiv class="boat"&gt
@@ -303,15 +292,13 @@ export const dataGameLevels = [
   },
   {
     level: 9,
-    taskTitle: 'Select the bottle on the wheel',
-    taskName: 'No Name...',
-    taskDescription: 'Combine the Descendant & ID Selectors',
-    attribute: '<span>#id A</span>',
-    correction: 'You can combine any selector with the descendent selector.',
-    example:
-      '<span>#cool span</span> selects all <span>&ltspan&gt</span> elements that are inside of elements with <span>id="cool"</span>',
+    taskTitle: 'Select bottles from two to three',
+    taskName: 'Nth сhild range',
+    taskDescription: 'Select an elements in a given range',
+    attribute: '<span>:nth-child(n):nth-child(-n)</span>',
+    correction: 'Selects the range nth children element in another element.',
+    example: '<span>:nth-child(n+3):nth-child(-n+8)</span> selects elements in the range from 3 to 8',
     dataExampleLayout: `
-
       <map data-id="1" class="shape map">
         <wheel data-id="2" class="shape wheel">
             <bottle data-id="3" class="shape bottle"></bottle>
@@ -328,7 +315,6 @@ export const dataGameLevels = [
             <bottle data-id="12" class="shape bottle"></bottle>
         </wheel>
       </map>
-
       <div data-id="1" class=shape-help>&ltmap&gt&lt/map&gt</div>
       <div data-id="2" class=shape-help>&ltwheel&gt&lt/wheel&gt</div>
       <div data-id="3" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
@@ -341,9 +327,6 @@ export const dataGameLevels = [
       <div data-id="10" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
       <div data-id="11" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
       <div data-id="12" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
-
-
-
     `,
     dataHTMLViewer: `
     &ltdiv class="boat"&gt
@@ -369,15 +352,15 @@ export const dataGameLevels = [
   },
   {
     level: 10,
-    taskTitle: 'Select the bottle on the wheel',
-    taskName: 'No Name...',
-    taskDescription: 'Combine the Descendant & ID Selectors',
-    attribute: '<span>#id A</span>',
-    correction: 'You can combine any selector with the descendent selector.',
+    taskTitle: 'Select even and odd items',
+    taskName: 'Nth of Type Selector',
+    taskDescription: 'Combine nth of type selector',
+    attribute: ':nth-of-type(even) | :nth-of-type(odd)',
+    correction:
+      'Selects a specific element based on its type and order in another element - or even or odd instances of that element.',
     example:
-      '<span>#cool span</span> selects all <span>&ltspan&gt</span> elements that are inside of elements with <span>id="cool"</span>',
+      '<span>(even)</span> — keyword, selects even elements of the list, as if we set <span>(2n)</span>. <span>(odd)</span> is a keyword, selects odd elements as if we had given <span>(2n+1)</span>.',
     dataExampleLayout: `
-
     <div data-id="1" class=shape-help>&ltmap&gt&lt/map&gt</div>
     <div data-id="2" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
     <div data-id="3" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
@@ -391,7 +374,6 @@ export const dataGameLevels = [
     <div data-id="11" class=shape-help>&ltspyglass&gt&lt/spyglass&gt</div>
     <div data-id="12" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
     <div data-id="13" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
-
     <map data-id="1" class="shape map">
         <bottle data-id="2" class="shape bottle"></bottle>
         <bottle data-id="3" class="shape bottle animation-rotation"></bottle>
@@ -408,7 +390,6 @@ export const dataGameLevels = [
         <bottle data-id="12" class="shape bottle"></bottle>
         <bottle data-id="13" class="shape bottle animation-rotation"></bottle>
     </wheel>
-
   `,
     dataHTMLViewer: `
     &ltdiv class="boat"&gt

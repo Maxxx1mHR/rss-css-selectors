@@ -3,6 +3,7 @@
   width: 100%;
   justify-content: space-between;
   border: 10px solid $color-border-dark;
+
   @extend %font-prim;
   @include font(1.6rem, $color-light-text);
   @include media-tablet {
@@ -63,12 +64,16 @@
 }
 
 .editor__input {
+  @extend %cursor-hover;
+
   margin-left: 10px;
   width: 100%;
   height: 30px;
 }
 
 .editor__button {
+  @extend %cursor-hover;
+
   margin-left: 10px;
   width: 70px;
   height: 20px;
@@ -86,6 +91,8 @@
 }
 
 .editor__code-html {
+  @extend %cursor-hover;
+
   @extend %font-add;
   letter-spacing: 1.5px;
 }
