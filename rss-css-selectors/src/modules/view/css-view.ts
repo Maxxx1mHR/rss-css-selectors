@@ -148,6 +148,7 @@ class CssView {
     if (input instanceof HTMLInputElement && boat) {
       try {
         const cssSelector = boat.querySelectorAll(input.value);
+        console.log(cssSelector);
         const dataSelector = boat.querySelectorAll(data[level].correctSeletor);
         if (this.nodeListsAreEqual(cssSelector, dataSelector)) {
           this.levelComplete(dataGameLevels, level);

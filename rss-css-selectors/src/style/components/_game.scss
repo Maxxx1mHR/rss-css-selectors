@@ -22,8 +22,9 @@
 }
 
 .game__help {
-  // position: relative;
+  position: relative;
   padding: 5px 10px;
+  margin-bottom: 20px;
   display: inline-block;
   cursor: pointer;
   @extend %font-prim;

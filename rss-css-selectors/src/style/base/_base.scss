@@ -16,8 +16,8 @@ body {
 
 .container {
   padding: 20px 40px 0 40px;
-  @include media-tablet {
-    padding: 0 20px;
+  @include media-laptop-large {
+    padding: 0 10px;
   }
 }
 

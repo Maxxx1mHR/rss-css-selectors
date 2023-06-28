@@ -58,9 +58,11 @@
   width: 300px;
   font-size: 20px;
   position: absolute;
-  top: 0px;
+  top: -10px;
+  left: 20px;
   transition: all 1s;
   opacity: 0;
+  // display: none;
   pointer-events: none;
   @extend %font-add;
   @include font($size: 1.6rem, $color: $color-primary);
@@ -68,6 +70,7 @@
 }
 
 .shape-help-active {
+  // display: block;
   opacity: 1;
 }
 
@@ -98,11 +101,11 @@
 }
 
 .spyglass {
-  // display: block;
+  display: block;
   width: 60px;
-  height: 20px;
+  height: 40px;
   background-image: url('../../assets/icons/pirot/spyglass.png');
-  background-size: 60px 20px;
+  background-size: 60px 40px;
   @include media-tablet {
     width: 40px;
     height: 20px;

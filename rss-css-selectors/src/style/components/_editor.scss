@@ -8,6 +8,9 @@
   @include media-tablet {
     flex-direction: column;
   }
+  @include media-laptop-large {
+    font-size: 1.4rem;
+  }
 }
 
 .editor__header {
@@ -79,6 +82,7 @@
 
 .editor__code {
   margin-top: -18px;
+  margin-left: -14px;
 }
 
 .editor__code-html {
