@@ -111,7 +111,7 @@ class BoatView {
     const gameHelp = document.querySelector('.game__help');
     gameHelp?.addEventListener('click', () => {
       const input = document.querySelector('.editor__input');
-      if (input instanceof HTMLInputElement) {
+      if (input instanceof HTMLInputElement && input.value === '') {
         let i = 0;
         const timerId = setInterval(() => {
           input.value += data[level].correctSeletor[i];

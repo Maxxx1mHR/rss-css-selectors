@@ -65,35 +65,35 @@ class CssView {
   }
 
   private pressButton(data: IDataLevel[], level: number): void {
-    const input = document.querySelector('.editor__input');
+    // const input = document.querySelector('.editor');
 
     // const boat = document.querySelector('.boat');
 
-    if (input) {
-      input.addEventListener('keydown', (event) => {
-        if (event instanceof KeyboardEvent) {
-          if (event.key === 'Enter') {
-            this.getValueFromInput(data, level);
+    // if (input) {
+    document.addEventListener('keydown', (event) => {
+      if (event instanceof KeyboardEvent) {
+        if (event.key === 'Enter') {
+          this.getValueFromInput(data, level);
 
-            // if (input instanceof HTMLInputElement && boat) {
-            //   try {
-            //     const cssSelector = boat.querySelectorAll(input.value);
-            //     const dataSelector = boat.querySelectorAll(data[level].correctSeletor);
-            //     if (this.nodeListsAreEqual(cssSelector, dataSelector)) {
-            //       this.levelComplete(dataGameLevels, level);
-            //       this.addAnimation(cssSelector, 'animation-drop');
-            //     } else {
-            //       this.addAnimation(cssSelector, 'animation-shake');
-            //       this.removeAnimation(cssSelector, 'animation-shake');
-            //     }
-            //   } catch {
-            //     event.preventDefault();
-            //   }
-            // }
-          }
+          // if (input instanceof HTMLInputElement && boat) {
+          //   try {
+          //     const cssSelector = boat.querySelectorAll(input.value);
+          //     const dataSelector = boat.querySelectorAll(data[level].correctSeletor);
+          //     if (this.nodeListsAreEqual(cssSelector, dataSelector)) {
+          //       this.levelComplete(dataGameLevels, level);
+          //       this.addAnimation(cssSelector, 'animation-drop');
+          //     } else {
+          //       this.addAnimation(cssSelector, 'animation-shake');
+          //       this.removeAnimation(cssSelector, 'animation-shake');
+          //     }
+          //   } catch {
+          //     event.preventDefault();
+          //   }
+          // }
         }
-      });
-    }
+      }
+    });
+    // }
   }
 
   private nodeListsAreEqual(list1: NodeList, list2: NodeList): boolean {
@@ -108,11 +108,16 @@ class CssView {
     if (level > dataGameLevels.length - 1) {
       level = dataGameLevels.length - 1;
     }
+    this.setCurrentLevelGame(level);
 
     setTimeout(() => {
       new App(dataGameLevels, level);
       this.switchCurrentLevel(level);
     }, 900);
+  }
+
+  private setCurrentLevelGame(level: number): void {
+    localStorage.setItem('currentCssSelectorLevel', String(level));
   }
 
   private addAnimation(selector: NodeList, animationName: string): void {
