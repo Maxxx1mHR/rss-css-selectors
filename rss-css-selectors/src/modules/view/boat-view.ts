@@ -106,6 +106,7 @@ class BoatView {
       }
     });
   }
+  // public arrayLevelsWithUseHelp: number[] = [];
 
   private helpButtonClick(data: IDataLevel[], level: number): void {
     const gameHelp = document.querySelector('.game__help');
@@ -113,6 +114,8 @@ class BoatView {
       const input = document.querySelector('.editor__input');
       if (input instanceof HTMLInputElement && input.value === '') {
         let i = 0;
+        this.addHelpClass(level);
+
         const timerId = setInterval(() => {
           input.value += data[level].correctSeletor[i];
           i++;
@@ -122,6 +125,19 @@ class BoatView {
         }, 200);
       }
     });
+  }
+
+  private addHelpClass(level: number): void {
+    document.querySelectorAll('.menu__levels-item')[level].classList.add('with_help');
+    if (localStorage.getItem('levelsWithUseHelp') === null) {
+      localStorage.setItem('levelsWithUseHelp', JSON.stringify([level]));
+    } else {
+      const levelsHelp = JSON.parse(localStorage.getItem('levelsWithUseHelp') || '[]');
+      if (!levelsHelp.includes(level)) {
+        levelsHelp.push(level);
+        localStorage.setItem('levelsWithUseHelp', JSON.stringify(levelsHelp));
+      }
+    }
   }
 }
 export default BoatView;

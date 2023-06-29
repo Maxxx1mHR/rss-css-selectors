@@ -29,7 +29,7 @@ class ElementCreator {
     return this.element;
   }
 
-  private setCssClasses(cssClasses: string[]): void {
+  public setCssClasses(cssClasses: string[]): void {
     cssClasses.forEach((className) => {
       if (this.element) {
         this.element.classList.add(className);

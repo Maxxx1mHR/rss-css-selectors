@@ -11,7 +11,7 @@ class MenuView {
   constructor(data: IDataLevel[], level: number) {
     this.createView(data, level);
     this.menuAction();
-    this.switchLevel(level);
+    this.switchLevel(data, level);
     this.levelMenuSwith();
   }
   private menuAction(): void {
@@ -56,7 +56,7 @@ class MenuView {
     });
   }
 
-  private switchLevel(level: number): void {
+  private switchLevel(data: IDataLevel[], level: number): void {
     const menuLevelSwitch = document.querySelector('.menu__level-switch');
     document.querySelectorAll('.menu__levels-item')[level].classList.add('menu__current-level');
     // console.log(menuLevelItem);
@@ -75,6 +75,8 @@ class MenuView {
             // level = this.getCurrentLevelGame();
             new App(dataGameLevels, level);
             this.switchCurrentLevel(level);
+            // const cssView = new CssView(data, level);
+            // console.log(cssView.testArray);
           }
           if (nextButton) {
             level += 1;
@@ -237,6 +239,10 @@ class MenuView {
       if (menuLevelsList) {
         menuLevelsItem.appendNodeToDom(menuLevelsList);
       }
+    }
+    const levelsHelp = JSON.parse(localStorage.getItem('levelsWithUseHelp') || '[]');
+    for (let i = 0; i < levelsHelp.length; i++) {
+      document.querySelectorAll('.menu__levels-item')[levelsHelp[i]].classList.add('with_help');
     }
   }
 }

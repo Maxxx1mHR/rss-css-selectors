@@ -115,6 +115,7 @@
   margin-bottom: 10px;
   line-height: 2.6rem;
   border-bottom: 2px solid $color-border-dark;
+  height: 450px;
 }
 
 .menu__description {
@@ -155,7 +156,7 @@
 }
 .menu__levels-list {
   list-style-type: none;
-  padding-left: 25px;
+  padding-left: 40px;
   @include font($size: 1.6rem, $color: $color-dark-text);
 }
 
@@ -190,5 +191,22 @@
 .check_done {
   &::before {
     background-image: url('../../assets/icons/interaction/check-done.svg');
+  }
+}
+
+.with_help {
+  &::before {
+    background-image: url('../../assets/icons/interaction/check-done-help.svg');
+  }
+  &:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: -45px;
+    width: 20px;
+    height: 20px;
+    background-image: url('../../assets/icons/interaction/with-help.png');
+    // background-size: 20px 20px;
+    background-size: cover;
   }
 }

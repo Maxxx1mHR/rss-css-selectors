@@ -105,13 +105,13 @@ class CssView {
 
   private levelComplete(data: IDataLevel[], level: number): void {
     level += 1;
-    if (level > dataGameLevels.length - 1) {
-      level = dataGameLevels.length - 1;
+    if (level > data.length - 1) {
+      level = data.length - 1;
     }
     this.setCurrentLevelGame(level);
 
     setTimeout(() => {
-      new App(dataGameLevels, level);
+      new App(data, level);
       this.switchCurrentLevel(level);
     }, 900);
   }
