@@ -108,7 +108,7 @@ class BoatView {
   }
   // public arrayLevelsWithUseHelp: number[] = [];
 
-  private helpButtonClick(data: IDataLevel[], level: number): void {
+  public helpButtonClick(data: IDataLevel[], level: number): void {
     const gameHelp = document.querySelector('.game__help');
     gameHelp?.addEventListener('click', () => {
       const input = document.querySelector('.editor__input');
@@ -127,15 +127,16 @@ class BoatView {
     });
   }
 
-  private addHelpClass(level: number): void {
-    document.querySelectorAll('.menu__levels-item')[level].classList.add('with_help');
-    if (localStorage.getItem('levelsWithUseHelp') === null) {
+  public addHelpClass(level: number): void {
+    const levelsComplete = JSON.parse(localStorage.getItem('completedLevels') || '[]');
+    const levelsHelp = JSON.parse(localStorage.getItem('levelsWithUseHelp') || '[]');
+    if (localStorage.getItem('levelsWithUseHelp') === null && !levelsComplete.includes(level)) {
       localStorage.setItem('levelsWithUseHelp', JSON.stringify([level]));
     } else {
-      const levelsHelp = JSON.parse(localStorage.getItem('levelsWithUseHelp') || '[]');
-      if (!levelsHelp.includes(level)) {
+      if (!levelsHelp.includes(level) && !levelsComplete.includes(level)) {
         levelsHelp.push(level);
         localStorage.setItem('levelsWithUseHelp', JSON.stringify(levelsHelp));
+        // document.querySelectorAll('.menu__levels-item')[level].classList.add('with_help');
       }
     }
   }

@@ -151,9 +151,27 @@
 .menu__example-solution {
   @include font($size: 1.6rem, $color: $color-dark-text);
 }
-.menu__levels-title {
+
+.menu__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 10px;
 }
+
+.menu__levels-title {
+  // margin-bottom: 10px;
+}
+
+.menu__reset {
+  width: 35px;
+  @extend %cursor-hover;
+  transition: all 0.5s;
+  &:hover {
+    scale: 1.1;
+  }
+}
+
 .menu__levels-list {
   list-style-type: none;
   padding-left: 40px;

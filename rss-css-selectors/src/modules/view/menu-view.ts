@@ -1,6 +1,8 @@
-import placeholder from '../../assets/icons/interaction/left.svg';
+import left from '../../assets/icons/interaction/left.svg';
+// import reset from '../../assets/icons/interaction/reset.png';
+// impo
 const img = new Image();
-img.src = placeholder;
+// img.src = left;
 
 import { IDataLevel } from '../types/types';
 import ElementCreator from '../components/element-creator';
@@ -13,6 +15,7 @@ class MenuView {
     this.menuAction();
     this.switchLevel(data, level);
     this.levelMenuSwith();
+    // this.resetProgress();
   }
   private menuAction(): void {
     // const menu = document.querySelector('.menu');
@@ -110,11 +113,22 @@ class MenuView {
     localStorage.setItem('currentCssSelectorLevel', String(level));
   }
 
+  // private resetProgress(): void {
+  //   document.addEventListener('click', (event) => {
+  //     if (event.target instanceof HTMLElement) {
+  //       if (event.target.closest('.menu__reset')) {
+  //         console.log('123');
+  //       }
+  //     }
+  //   });
+  // }
+
   private createView(data: IDataLevel[], level: number): void {
     const menuHeader: HTMLElement | null = document.querySelector('.menu__header');
     const menuDescription: HTMLElement | null = document.querySelector('.menu__description');
     const menuExample: HTMLElement | null = document.querySelector('.menu__example');
     const menuLevelsList: HTMLElement | null = document.querySelector('.menu__levels-list');
+    // const menuWrapper: HTMLElement | null = document.querySelector('.menu__wrapper');
 
     if (menuHeader) {
       menuHeader.innerHTML = '';
@@ -128,6 +142,9 @@ class MenuView {
     if (menuLevelsList) {
       menuLevelsList.innerHTML = '';
     }
+    // if (menuWrapper) {
+    //   menuWrapper.innerHTML = '';
+    // }
 
     const menuLevel = new ElementCreator({
       tag: 'div',
@@ -151,7 +168,7 @@ class MenuView {
     const menuPrev = new ElementCreator({
       tag: 'img',
       className: ['menu__prev'],
-      src: img.src,
+      src: (img.src = left),
       alt: 'left',
     });
 
@@ -162,7 +179,7 @@ class MenuView {
     const menuNext = new ElementCreator({
       tag: 'img',
       className: ['menu__next'],
-      src: img.src,
+      src: (img.src = left),
       alt: 'right',
     });
 
@@ -229,6 +246,16 @@ class MenuView {
       menuExampleSolution.appendNodeToDom(menuExample);
     }
 
+    // const menuReset = new ElementCreator({
+    //   tag: 'img',
+    //   className: ['menu__reset'],
+    //   src: (img.src = reset),
+    //   alt: 'reset',
+    // });
+    // if (menuWrapper) {
+    //   menuReset.appendNodeToDom(menuWrapper);
+    // }
+
     for (let i = 0; i < data.length; i += 1) {
       const menuLevelsItem = new ElementCreator({
         tag: 'li',
@@ -243,6 +270,10 @@ class MenuView {
     const levelsHelp = JSON.parse(localStorage.getItem('levelsWithUseHelp') || '[]');
     for (let i = 0; i < levelsHelp.length; i++) {
       document.querySelectorAll('.menu__levels-item')[levelsHelp[i]].classList.add('with_help');
+    }
+    const levelsComplete = JSON.parse(localStorage.getItem('completedLevels') || '[]');
+    for (let i = 0; i < levelsComplete.length; i++) {
+      document.querySelectorAll('.menu__levels-item')[levelsComplete[i]].classList.add('check_done');
     }
   }
 }

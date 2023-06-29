@@ -119,14 +119,15 @@ class CssView {
   }
 
   private addCheckClass(level: number): void {
-    document.querySelectorAll('.menu__levels-item')[level].classList.add('check_done');
-    if (localStorage.getItem('completedLevels') === null) {
+    const levelsComplete = JSON.parse(localStorage.getItem('completedLevels') || '[]');
+    const levelsHelp = JSON.parse(localStorage.getItem('levelsWithUseHelp') || '[]');
+    if (localStorage.getItem('completedLevels') === null && !levelsHelp.includes(level)) {
       localStorage.setItem('completedLevels', JSON.stringify([level]));
     } else {
-      const levelsComplete = JSON.parse(localStorage.getItem('completedLevels') || '[]');
-      if (!levelsComplete.includes(level)) {
+      if (!levelsComplete.includes(level) && !levelsHelp.includes(level)) {
         levelsComplete.push(level);
         localStorage.setItem('completedLevels', JSON.stringify(levelsComplete));
+        // document.querySelectorAll('.menu__levels-item')[level].classList.add('check_done');
       }
     }
   }
