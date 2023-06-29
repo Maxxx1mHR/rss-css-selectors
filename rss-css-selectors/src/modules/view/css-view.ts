@@ -104,6 +104,8 @@ class CssView {
   }
 
   private levelComplete(data: IDataLevel[], level: number): void {
+    this.addCheckClass(level);
+
     level += 1;
     if (level > data.length - 1) {
       level = data.length - 1;
@@ -114,6 +116,19 @@ class CssView {
       new App(data, level);
       this.switchCurrentLevel(level);
     }, 900);
+  }
+
+  private addCheckClass(level: number): void {
+    document.querySelectorAll('.menu__levels-item')[level].classList.add('check_done');
+    if (localStorage.getItem('completedLevels') === null) {
+      localStorage.setItem('completedLevels', JSON.stringify([level]));
+    } else {
+      const levelsComplete = JSON.parse(localStorage.getItem('completedLevels') || '[]');
+      if (!levelsComplete.includes(level)) {
+        levelsComplete.push(level);
+        localStorage.setItem('completedLevels', JSON.stringify(levelsComplete));
+      }
+    }
   }
 
   private setCurrentLevelGame(level: number): void {
