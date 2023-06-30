@@ -1,7 +1,9 @@
 import left from '../../assets/icons/interaction/left.svg';
 import reset from '../../assets/icons/interaction/reset.png';
 import settingIcon from '../../assets/icons/interaction/settings.png';
-import closeIcon from '../../assets/icons/interaction/close.png';
+// import closeIcon from '../../assets/icons/interaction/close.png';
+import closeIcon from '../../assets/icons/pirot/shapes/skull.png';
+
 // impo
 const img = new Image();
 // img.src = left;
