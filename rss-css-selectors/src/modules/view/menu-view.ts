@@ -1,5 +1,7 @@
 import left from '../../assets/icons/interaction/left.svg';
 // import reset from '../../assets/icons/interaction/reset.png';
+import settingIcon from '../../assets/icons/interaction/settings.png';
+import closeIcon from '../../assets/icons/interaction/close.png';
 // impo
 const img = new Image();
 // img.src = left;
@@ -12,25 +14,45 @@ import { dataGameLevels } from '../data/data-game-levels';
 class MenuView {
   constructor(data: IDataLevel[], level: number) {
     this.createView(data, level);
-    this.menuAction();
+    // this.menuAction();
     this.switchLevel(data, level);
     this.levelMenuSwith();
     // this.resetProgress();
+    this.openSettings();
+    this.closeSetting();
   }
   private menuAction(): void {
     // const menu = document.querySelector('.menu');
-    document.addEventListener('click', (event) => {
-      if (event.target instanceof HTMLElement) {
-        if (event.target.closest('.hamburger')) {
-          console.log('123');
-          document.querySelector('.menu')?.classList.add('active');
-        }
-        if (event.target.closest('.menu__close')) {
-          document.querySelector('.menu')?.classList.remove('active');
-        }
-      }
+    // const hamburger = document.querySelector('.hamburger');
+    // document.addEventListener('click', (event) => {
+    //   if (event.target instanceof HTMLElement) {
+    //     if (event.target.closest('.hamburger')) {
+    //       console.log('123');
+    //       document.querySelector('.menu')?.classList.add('active');
+    //     }
+    //     if (event.target.closest('.menu__close')) {
+    //       document.querySelector('.menu')?.classList.remove('active');
+    //     }
+    //   }
+    // });
+  }
+
+  private openSettings(): void {
+    const hamburger = document.querySelector('.settings__open');
+    hamburger?.addEventListener('click', () => {
+      console.log('6');
+      document.querySelector('.menu')?.classList.add('active');
     });
   }
+  private closeSetting(): void {
+    const close = document.querySelector('.close');
+    close?.addEventListener('click', () => {
+      console.log('7');
+      document.querySelector('.menu')?.classList.remove('active');
+    });
+  }
+
+  // private menuSettings(): void {}
 
   // private levelMenuSwith(): void {
   //   const levels = document.querySelector('.menu__levels-list');
@@ -50,9 +72,11 @@ class MenuView {
       level.addEventListener('click', (event) => {
         if (event.target instanceof HTMLElement) {
           if (event.target.closest('.menu__levels-item')) {
+            document.querySelector('.menu')?.classList.remove('active');
             this.setCurrentLevelGame(+event.target.id - 1);
-            new App(dataGameLevels, +event.target.id - 1);
+            // new App(dataGameLevels, +event.target.id - 1);
             this.switchCurrentLevel(+event.target.id - 1);
+            console.log('5');
           }
         }
       });
@@ -129,6 +153,8 @@ class MenuView {
     const menuExample: HTMLElement | null = document.querySelector('.menu__example');
     const menuLevelsList: HTMLElement | null = document.querySelector('.menu__levels-list');
     // const menuWrapper: HTMLElement | null = document.querySelector('.menu__wrapper');
+    const settings: HTMLElement | null = document.querySelector('.settings');
+    const menuClose: HTMLElement | null = document.querySelector('.menu__close');
 
     if (menuHeader) {
       menuHeader.innerHTML = '';
@@ -145,6 +171,23 @@ class MenuView {
     // if (menuWrapper) {
     //   menuWrapper.innerHTML = '';
     // }
+    if (settings) {
+      settings.innerHTML = '';
+    }
+    if (menuClose) {
+      menuClose.innerHTML = '';
+    }
+
+    const hamburger = new ElementCreator({
+      tag: 'img',
+      className: ['settings__open'],
+      src: (img.src = settingIcon),
+      alt: 'settings',
+    });
+
+    if (settings) {
+      hamburger.appendNodeToDom(settings);
+    }
 
     const menuLevel = new ElementCreator({
       tag: 'div',
@@ -244,6 +287,17 @@ class MenuView {
 
     if (menuExample) {
       menuExampleSolution.appendNodeToDom(menuExample);
+    }
+
+    const close = new ElementCreator({
+      tag: 'img',
+      className: ['close'],
+      src: (img.src = closeIcon),
+      alt: 'close',
+    });
+
+    if (menuClose) {
+      close.appendNodeToDom(menuClose);
     }
 
     // const menuReset = new ElementCreator({
