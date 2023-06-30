@@ -60,7 +60,6 @@
   top: 15px;
   right: 15px;
   @extend %cursor-hover;
-
   img {
     width: 50px;
     transition: 0.5s all;
@@ -72,6 +71,7 @@
     display: block;
   }
 }
+
 .menu__list {
   list-style-type: none;
   padding-left: 35px;
