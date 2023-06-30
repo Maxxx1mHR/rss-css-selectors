@@ -11,7 +11,6 @@ body {
 body {
   display: flex;
   justify-content: space-between;
-  // height: 100%;
   cursor: url('../../assets/icons/pirot/cursor/hook.svg'), auto;
 }
 
@@ -30,23 +29,18 @@ body {
   overflow-y: scroll;
   max-height: 100vh;
 }
-//Скролл
+
 .wrap::-webkit-scrollbar {
-  width: 12px; /* ширина scrollbar */
-}
-.wrap::-webkit-scrollbar-track {
-  // background: rgb(141, 0, 0); /* цвет дорожки */
+  width: 12px;
 }
 .wrap::-webkit-scrollbar-thumb {
-  background-color: $color-primary-light; /* цвет плашки */
-  border-radius: 20px; /* закругления плашки */
-  border: 3px solid $color-border-dark; /* padding вокруг плашки */
+  background-color: $color-primary-light;
+  border-radius: 20px;
+  border: 3px solid $color-border-dark;
 }
-
 .main {
   flex: 1 0 auto;
 }
-
 .footer {
   flex: 0 0 auto;
 }

@@ -1,11 +1,8 @@
 .hover {
   filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
-  // border: 2px solid white;
 }
 
 .shape {
-  // position: relative;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,47 +11,11 @@
   background-size: 120px 120px;
   background-repeat: no-repeat;
   @extend %cursor-hover;
-
-  // &:hover ~ .shape-help {
-  // opacity: 1;
-  // display: block;
-  // }
-  // &::after {
-  //   content: attr(data-tooltip);
-  //   position: absolute;
-  //   // text-align: center;
-  //   // white-space: nowrap;
-  //   // animation: rotation 5s infinite linear reverse;
-  //   // top: 0px;
-  //   // left: 0px;
-  //   // height: 100%;
-  //   // // width: 100%;
-  //   // top: 0;
-  //   // left: 0;
-  //   // left: 10px;
-  //   // top: -70px;
-  //   // height: 100px;
-  //   // width: 100px;
-  //   // display: inline-block;
-  //   // background-color: $color-primary;
-  //   // color: #fff;
-  //   // padding: 0.5em;
-  //   // box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  //   // pointer-events: none;
-  //   // opacity: 0;
-  //   transition: 1s;
-  //   @extend %font-add;
-  //   @include font($size: 1.6rem);
-  // }
   @include media-tablet {
     height: 80px;
     width: 80px;
     background-size: 80px 80px;
   }
-}
-
-.shape__wrapper {
-  // position: relative;
 }
 
 .shape-help {
@@ -65,15 +26,12 @@
   left: 20px;
   transition: all 1s;
   opacity: 0;
-  // display: none;
   pointer-events: none;
   @extend %font-add;
   @include font($size: 1.6rem, $color: $color-primary);
-  // background-color: red;
 }
 
 .shape-help-active {
-  // display: block;
   opacity: 1;
 }
 

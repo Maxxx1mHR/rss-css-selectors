@@ -1,12 +1,8 @@
 import left from '../../assets/icons/interaction/left.svg';
 import reset from '../../assets/icons/interaction/reset.png';
 import settingIcon from '../../assets/icons/interaction/settings.png';
-// import closeIcon from '../../assets/icons/interaction/close.png';
 import closeIcon from '../../assets/icons/pirot/shapes/skull.png';
-
-// impo
 const img = new Image();
-// img.src = left;
 
 import { IDataLevel } from '../types/types';
 import ElementCreator from '../components/element-creator';
@@ -16,31 +12,15 @@ import { dataGameLevels } from '../data/data-game-levels';
 class MenuView {
   constructor(data: IDataLevel[], level: number) {
     this.createView(data, level);
-    // this.menuAction();
+
     this.switchLevel(data, level);
     this.levelMenuSwith();
-    // this.resetProgress();
+
     this.openSettings();
     this.closeSetting();
     this.resetProgress();
     this.closeModal();
   }
-  private menuAction(): void {
-    // const menu = document.querySelector('.menu');
-    // const hamburger = document.querySelector('.hamburger');
-    // document.addEventListener('click', (event) => {
-    //   if (event.target instanceof HTMLElement) {
-    //     if (event.target.closest('.hamburger')) {
-    //       console.log('123');
-    //       document.querySelector('.menu')?.classList.add('active');
-    //     }
-    //     if (event.target.closest('.menu__close')) {
-    //       document.querySelector('.menu')?.classList.remove('active');
-    //     }
-    //   }
-    // });
-  }
-
   private openSettings(): void {
     const hamburger = document.querySelector('.settings__open');
     hamburger?.addEventListener('click', () => {
@@ -59,7 +39,6 @@ class MenuView {
   private resetProgress(): void {
     const close = document.querySelector('.menu__reset');
     close?.addEventListener('click', () => {
-      // console.log('123');
       localStorage.removeItem('currentCssSelectorLevel');
       localStorage.removeItem('levelsWithUseHelp');
       localStorage.removeItem('completedLevels');
@@ -73,20 +52,6 @@ class MenuView {
       document.querySelector('.modal')?.classList.remove('modal__active');
     });
   }
-
-  // private menuSettings(): void {}
-
-  // private levelMenuSwith(): void {
-  //   const levels = document.querySelector('.menu__levels-list');
-  //   levels?.addEventListener('click', (event) => {
-  //     if (event.target instanceof HTMLElement) {
-  //       if (event.target.closest('.menu__levels-item')) {
-  //         this.switchCurrentLevel(+event.target.id - 1);
-  //         new App(dataGameLevels, +event.target.id - 1);
-  //       }
-  //     }
-  //   });
-  // }
 
   private levelMenuSwith(): void {
     const levels = document.querySelectorAll('.menu__levels-item');
@@ -108,7 +73,6 @@ class MenuView {
   private switchLevel(data: IDataLevel[], level: number): void {
     const menuLevelSwitch = document.querySelector('.menu__level-switch');
     document.querySelectorAll('.menu__levels-item')[level].classList.add('menu__current-level');
-    // console.log(menuLevelItem);
     if (menuLevelSwitch) {
       menuLevelSwitch.addEventListener('click', (event) => {
         if (event.target instanceof HTMLElement) {
@@ -121,11 +85,8 @@ class MenuView {
             }
             this.setCurrentLevelGame(level);
 
-            // level = this.getCurrentLevelGame();
             new App(dataGameLevels, level);
             this.switchCurrentLevel(level);
-            // const cssView = new CssView(data, level);
-            // console.log(cssView.testArray);
           }
           if (nextButton) {
             level += 1;
@@ -144,7 +105,7 @@ class MenuView {
 
   private switchCurrentLevel(level: number): void {
     const menuLevelItem = document.querySelectorAll('.menu__levels-item');
-    // console.log(menuLevelItem);
+
     menuLevelItem.forEach((item) => {
       item.classList.remove('menu__current-level');
       menuLevelItem[level].classList.add('menu__current-level');

@@ -47,22 +47,6 @@ class BoatView {
     if (boatSurface.getElement() instanceof HTMLElement) {
       boat.appendNodeToDom(boatSurface.getElement());
     }
-    // const elementCreator = new ElementCreator({
-    //   tag: 'div',
-    //   className: ['boat'],
-    //   textContent: data[level].dataExampleLayout,
-    // });
-    // const boatSurface = document.querySelector('.boat-surface');
-    // if (boatSurface instanceof HTMLElement) {
-    //   boatSurface.innerHTML = '';
-    //   elementCreator.appendNodeToDom(boatSurface);
-    // }
-    // const gameTaskElementCreate = new ElementCreator({
-    //   tag: 'h2',
-    //   className: ['game__task'],
-    //   textContent: data[level].dataExampleLayout,
-    // });
-    // const gameWrapper = document.querySelector('.game__task');
   }
 
   private mouseoverEvent(): void {
@@ -72,7 +56,6 @@ class BoatView {
         const shape = event.target.closest('.shape');
         const id = event.target.dataset.id;
         if (shape) {
-          // shape.classList.add('hover');
           document.querySelector(`.shape[data-id='${id}']`)?.classList.add('hover', 'lighting-code');
           document.querySelector(`.shape-help[data-id='${id}']`)?.classList.add('shape-help-active');
           document.querySelector(`.code[data-id='${id}']`)?.classList.add('lighting-code');
@@ -93,7 +76,6 @@ class BoatView {
         const shape = event.target.closest('.shape');
         const id = event.target.dataset.id;
         if (shape) {
-          // shape.classList.remove('hover');
           document.querySelector(`.shape[data-id='${id}']`)?.classList.remove('hover', 'lighting-code');
           document.querySelector(`.shape-help[data-id='${id}']`)?.classList.remove('shape-help-active');
           document.querySelector(`.code[data-id='${id}']`)?.classList.remove('lighting-code');
@@ -106,7 +88,6 @@ class BoatView {
       }
     });
   }
-  // public arrayLevelsWithUseHelp: number[] = [];
 
   public helpButtonClick(data: IDataLevel[], level: number): void {
     const gameHelp = document.querySelector('.game__help');
@@ -115,7 +96,6 @@ class BoatView {
       if (input instanceof HTMLInputElement && input.value === '') {
         let i = 0;
         this.addHelpClass(level);
-
         const timerId = setInterval(() => {
           input.value += data[level].correctSeletor[i];
           i++;
@@ -136,7 +116,6 @@ class BoatView {
       if (!levelsHelp.includes(level) && !levelsComplete.includes(level)) {
         levelsHelp.push(level);
         localStorage.setItem('levelsWithUseHelp', JSON.stringify(levelsHelp));
-        // document.querySelectorAll('.menu__levels-item')[level].classList.add('with_help');
       }
     }
   }

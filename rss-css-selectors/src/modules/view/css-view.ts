@@ -36,64 +36,24 @@ class CssView {
 
   private clickButton(data: IDataLevel[], level: number): void {
     const addButton = document.querySelector('.editor__button');
-    // const boat = document.querySelector('.boat');
-    // const input = document.querySelector('.editor__input');
 
     if (addButton) {
       addButton.addEventListener('click', (event) => {
         if (event.target instanceof HTMLButtonElement) {
           this.getValueFromInput(data, level);
-
-          // if (input instanceof HTMLInputElement && boat) {
-          //   try {
-          //     const cssSelector = boat.querySelectorAll(input.value);
-          //     const dataSelector = boat.querySelectorAll(data[level].correctSeletor);
-          //     if (this.nodeListsAreEqual(cssSelector, dataSelector)) {
-          //       this.levelComplete(dataGameLevels, level);
-          //       this.addAnimation(cssSelector, 'animation-drop');
-          //     } else {
-          //       this.addAnimation(cssSelector, 'animation-shake');
-          //       this.removeAnimation(cssSelector, 'animation-shake');
-          //     }
-          //   } catch {
-          //     event.preventDefault();
-          //   }
-          // }
         }
       });
     }
   }
 
   private pressButton(data: IDataLevel[], level: number): void {
-    // const input = document.querySelector('.editor');
-
-    // const boat = document.querySelector('.boat');
-
-    // if (input) {
     document.addEventListener('keydown', (event) => {
       if (event instanceof KeyboardEvent) {
         if (event.key === 'Enter') {
           this.getValueFromInput(data, level);
-
-          // if (input instanceof HTMLInputElement && boat) {
-          //   try {
-          //     const cssSelector = boat.querySelectorAll(input.value);
-          //     const dataSelector = boat.querySelectorAll(data[level].correctSeletor);
-          //     if (this.nodeListsAreEqual(cssSelector, dataSelector)) {
-          //       this.levelComplete(dataGameLevels, level);
-          //       this.addAnimation(cssSelector, 'animation-drop');
-          //     } else {
-          //       this.addAnimation(cssSelector, 'animation-shake');
-          //       this.removeAnimation(cssSelector, 'animation-shake');
-          //     }
-          //   } catch {
-          //     event.preventDefault();
-          //   }
-          // }
         }
       }
     });
-    // }
   }
 
   private nodeListsAreEqual(list1: NodeList, list2: NodeList): boolean {
@@ -133,7 +93,6 @@ class CssView {
       if (!levelsComplete.includes(level) && !levelsHelp.includes(level)) {
         levelsComplete.push(level);
         localStorage.setItem('completedLevels', JSON.stringify(levelsComplete));
-        // document.querySelectorAll('.menu__levels-item')[level].classList.add('check_done');
       }
     }
   }
@@ -189,8 +148,6 @@ class CssView {
       }
     }
   }
-
-  // private sendSelectorForCheck() {}
 }
 
 export default CssView;
