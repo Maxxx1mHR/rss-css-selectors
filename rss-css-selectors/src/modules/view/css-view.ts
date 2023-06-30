@@ -105,6 +105,12 @@ class CssView {
 
   private levelComplete(data: IDataLevel[], level: number): void {
     this.addCheckClass(level);
+    const levelsCompleted =
+      +JSON.parse(localStorage.getItem('completedLevels') || '[]').length +
+      +JSON.parse(localStorage.getItem('levelsWithUseHelp') || '[]').length;
+    if (levelsCompleted === data.length) {
+      document.querySelector('.modal')?.classList.add('modal__active');
+    }
 
     level += 1;
     if (level > data.length - 1) {

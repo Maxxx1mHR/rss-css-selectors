@@ -22,7 +22,8 @@ class MenuView {
     // this.resetProgress();
     this.openSettings();
     this.closeSetting();
-    this.resetProgress(level);
+    this.resetProgress();
+    this.closeModal();
   }
   private menuAction(): void {
     // const menu = document.querySelector('.menu');
@@ -55,14 +56,21 @@ class MenuView {
     });
   }
 
-  private resetProgress(level: number): void {
+  private resetProgress(): void {
     const close = document.querySelector('.menu__reset');
     close?.addEventListener('click', () => {
       // console.log('123');
-      // localStorage.removeItem('currentCssSelectorLevel');
+      localStorage.removeItem('currentCssSelectorLevel');
       localStorage.removeItem('levelsWithUseHelp');
       localStorage.removeItem('completedLevels');
-      new App(dataGameLevels, level);
+      new App(dataGameLevels, 0);
+    });
+  }
+
+  private closeModal(): void {
+    const modalButton = document.querySelector('.modal__button');
+    modalButton?.addEventListener('click', () => {
+      document.querySelector('.modal')?.classList.remove('modal__active');
     });
   }
 

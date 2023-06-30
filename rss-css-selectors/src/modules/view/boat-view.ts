@@ -122,7 +122,7 @@ class BoatView {
           if (input.value.length === data[level].correctSeletor.length) {
             clearInterval(timerId);
           }
-        }, 200);
+        }, 20);
       }
     });
   }
