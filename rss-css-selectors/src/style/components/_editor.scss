@@ -64,19 +64,29 @@
 }
 
 .editor__input {
+  border: 2px solid $color-border-dark;
   @extend %cursor-hover;
-
   margin-left: 10px;
   width: 100%;
   height: 30px;
+  &:focus {
+    outline: none;
+    border: 2px solid $color-active;
+  }
 }
 
 .editor__button {
   @extend %cursor-hover;
-
   margin-left: 10px;
   width: 70px;
-  height: 20px;
+  height: 30px;
+  background-color: $color-primary;
+  color: $color-dark-text;
+  border: 3px solid $color-border-dark;
+  transition: all 0.7s;
+  &:hover {
+    color: $color-light-text;
+  }
 }
 
 .editor__list {

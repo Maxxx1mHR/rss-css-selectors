@@ -40,6 +40,8 @@ class CssView {
     if (addButton) {
       addButton.addEventListener('click', (event) => {
         if (event.target instanceof HTMLButtonElement) {
+          console.log('test');
+
           this.getValueFromInput(data, level);
         }
       });
@@ -47,9 +49,15 @@ class CssView {
   }
 
   private pressButton(data: IDataLevel[], level: number): void {
-    document.addEventListener('keydown', (event) => {
-      if (event instanceof KeyboardEvent) {
-        if (event.key === 'Enter') {
+    const input = document.querySelector('.editor__input');
+    if (input instanceof HTMLInputElement) {
+      input.focus();
+    }
+
+    input?.addEventListener('keydown', (event) => {
+      if (event instanceof KeyboardEvent && input instanceof HTMLInputElement) {
+        if (event.key === 'Enter' && input.value.trim().length !== 0) {
+          console.log('test');
           this.getValueFromInput(data, level);
         }
       }
@@ -69,7 +77,9 @@ class CssView {
       +JSON.parse(localStorage.getItem('completedLevels') || '[]').length +
       +JSON.parse(localStorage.getItem('levelsWithUseHelp') || '[]').length;
     if (levelsCompleted === data.length) {
-      document.querySelector('.modal')?.classList.add('modal__active');
+      setTimeout(() => {
+        document.querySelector('.modal')?.classList.add('modal__active');
+      }, 900);
     }
 
     level += 1;
@@ -134,7 +144,7 @@ class CssView {
     if (input instanceof HTMLInputElement && boat) {
       try {
         const cssSelector = boat.querySelectorAll(input.value);
-        console.log(cssSelector);
+        console.log('Test', cssSelector);
         const dataSelector = boat.querySelectorAll(data[level].correctSeletor);
         if (this.nodeListsAreEqual(cssSelector, dataSelector)) {
           this.levelComplete(dataGameLevels, level);
