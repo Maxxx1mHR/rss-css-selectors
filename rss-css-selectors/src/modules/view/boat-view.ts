@@ -4,8 +4,11 @@ import { IDataLevel } from '../types/types';
 class BoatView {
   constructor(data: IDataLevel[], level: number) {
     this.createView(data, level);
-    this.mouseoverEvent();
-    this.mouseoutEvent();
+    // this.mouseoverEvent();
+    // this.mouseoutEvent();
+
+    this.mouseoverShape();
+    this.mouseoutShape();
     this.helpButtonClick(data, level);
   }
 
@@ -56,45 +59,69 @@ class BoatView {
     }
   }
 
-  private mouseoverEvent(): void {
-    document.addEventListener('mouseover', (event) => {
+  private mouseoverShape(): void {
+    const boat = document.querySelector('.boat-surface');
+    boat?.addEventListener('mouseover', (event) => {
       if (event.target instanceof HTMLElement) {
-        const code = event.target.closest('.code');
-        const shape = event.target.closest('.shape');
         const id = event.target.dataset.id;
-        if (shape) {
-          document.querySelector(`.shape[data-id='${id}']`)?.classList.add('hover', 'lighting-code');
-          document.querySelector(`.shape-help[data-id='${id}']`)?.classList.add('shape-help-active');
-          document.querySelector(`.code[data-id='${id}']`)?.classList.add('lighting-code');
-        }
-        if (code) {
-          code.classList.add('lighting-code');
-          document.querySelector(`.shape[data-id='${id}']`)?.classList.add('hover');
-          document.querySelector(`.shape-help[data-id='${id}']`)?.classList.add('shape-help-active');
-        }
+        document.querySelector(`.shape[data-id='${id}']`)?.classList.add('hover', 'lighting-code');
+        document.querySelector(`.shape-help[data-id='${id}']`)?.classList.add('shape-help-active');
+        document.querySelector(`.code[data-id='${id}']`)?.classList.add('lighting-code');
       }
     });
   }
 
-  private mouseoutEvent(): void {
-    document.addEventListener('mouseout', (event) => {
+  private mouseoutShape(): void {
+    const boat = document.querySelector('.boat-surface');
+    boat?.addEventListener('mouseout', (event) => {
       if (event.target instanceof HTMLElement) {
-        const code = event.target.closest('.code');
-        const shape = event.target.closest('.shape');
         const id = event.target.dataset.id;
-        if (shape) {
-          document.querySelector(`.shape[data-id='${id}']`)?.classList.remove('hover', 'lighting-code');
-          document.querySelector(`.shape-help[data-id='${id}']`)?.classList.remove('shape-help-active');
-          document.querySelector(`.code[data-id='${id}']`)?.classList.remove('lighting-code');
-        }
-        if (code) {
-          code.classList.remove('lighting-code');
-          document.querySelector(`.shape[data-id='${id}']`)?.classList.remove('hover');
-          document.querySelector(`.shape-help[data-id='${id}']`)?.classList.remove('shape-help-active');
-        }
+        document.querySelector(`.shape[data-id='${id}']`)?.classList.remove('hover', 'lighting-code');
+        document.querySelector(`.shape-help[data-id='${id}']`)?.classList.remove('shape-help-active');
+        document.querySelector(`.code[data-id='${id}']`)?.classList.remove('lighting-code');
       }
     });
   }
+
+  // private mouseoverEvent(): void {
+  //   document.addEventListener('mouseover', (event) => {
+  //     if (event.target instanceof HTMLElement) {
+  //       const code = event.target.closest('.code');
+  //       const shape = event.target.closest('.shape');
+  //       const id = event.target.dataset.id;
+  //       if (shape) {
+  //         document.querySelector(`.shape[data-id='${id}']`)?.classList.add('hover', 'lighting-code');
+  //         document.querySelector(`.shape-help[data-id='${id}']`)?.classList.add('shape-help-active');
+  //         document.querySelector(`.code[data-id='${id}']`)?.classList.add('lighting-code');
+  //       }
+  //       if (code) {
+  //         code.classList.add('lighting-code');
+  //         document.querySelector(`.shape[data-id='${id}']`)?.classList.add('hover');
+  //         document.querySelector(`.shape-help[data-id='${id}']`)?.classList.add('shape-help-active');
+  //       }
+  //     }
+  //   });
+  // }
+
+  // private mouseoutEvent(): void {
+  //   document.addEventListener('mouseout', (event) => {
+  //     if (event.target instanceof HTMLElement) {
+  //       const code = event.target.closest('.code');
+  //       const shape = event.target.closest('.shape');
+  //       const id = event.target.dataset.id;
+  //       if (shape) {
+  //         document.querySelector(`.shape[data-id='${id}']`)?.classList.remove('hover', 'lighting-code');
+  //         document.querySelector(`.shape-help[data-id='${id}']`)?.classList.remove('shape-help-active');
+  //         document.querySelector(`.code[data-id='${id}']`)?.classList.remove('lighting-code');
+  //       }
+  //       if (code) {
+  //         code.classList.remove('lighting-code');
+  //         document.querySelector(`.shape[data-id='${id}']`)?.classList.remove('hover');
+  //         document.querySelector(`.shape-help[data-id='${id}']`)?.classList.remove('shape-help-active');
+  //       }
+  //     }
+  //   });
+  // }
 
   public helpButtonClick(data: IDataLevel[], level: number): void {
     const gameHelp = document.querySelector('.game__help');
