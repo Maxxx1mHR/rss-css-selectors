@@ -50,18 +50,18 @@ class CssView {
 
   private pressButton(data: IDataLevel[], level: number): void {
     const input = document.querySelector('.editor__input');
-    if (input instanceof HTMLInputElement) {
-      input.focus();
-    }
-
-    input?.addEventListener('keydown', (event) => {
-      if (event instanceof KeyboardEvent && input instanceof HTMLInputElement) {
-        if (event.key === 'Enter' && input.value.trim().length !== 0) {
-          console.log('test123');
-          this.getValueFromInput(data, level);
+    const func = (event: Event): void => {
+      if (event instanceof KeyboardEvent) {
+        if (event instanceof KeyboardEvent && input instanceof HTMLInputElement) {
+          if (event.key === 'Enter' && input.value.trim().length !== 0) {
+            console.log('test123');
+            this.getValueFromInput(data, level);
+          }
         }
       }
-    });
+      document.removeEventListener('keydown', func);
+    };
+    document.addEventListener('keydown', func);
   }
 
   private nodeListsAreEqual(list1: NodeList, list2: NodeList): boolean {
