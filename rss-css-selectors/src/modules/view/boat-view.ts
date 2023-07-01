@@ -44,8 +44,15 @@ class BoatView {
       textContent: data[level].dataExampleLayout,
     });
 
+    const cssHelp = new ElementCreator({
+      tag: 'div',
+      className: ['boat__css-help'],
+      textContent: data[level].dataHelpCss,
+    });
+
     if (boatSurface.getElement() instanceof HTMLElement) {
       boat.appendNodeToDom(boatSurface.getElement());
+      cssHelp.appendNodeToDom(boatSurface.getElement());
     }
   }
 

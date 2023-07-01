@@ -40,7 +40,7 @@ class CssView {
     if (addButton) {
       addButton.addEventListener('click', (event) => {
         if (event.target instanceof HTMLButtonElement) {
-          console.log('test');
+          // console.log('test');
 
           this.getValueFromInput(data, level);
         }
@@ -57,7 +57,7 @@ class CssView {
     input?.addEventListener('keydown', (event) => {
       if (event instanceof KeyboardEvent && input instanceof HTMLInputElement) {
         if (event.key === 'Enter' && input.value.trim().length !== 0) {
-          console.log('test');
+          console.log('test123');
           this.getValueFromInput(data, level);
         }
       }
@@ -144,16 +144,43 @@ class CssView {
     if (input instanceof HTMLInputElement && boat) {
       try {
         const cssSelector = boat.querySelectorAll(input.value);
-        console.log('Test', cssSelector);
+        // console.log('css', cssSelector.length);
+        // console.log('cssSel', cssSelector);
+        // const something = document.querySelectorAll(input.value);
+        // console.log('Test', cssSelector);
         const dataSelector = boat.querySelectorAll(data[level].correctSeletor);
+        // console.log('data', dataSelector);
         if (this.nodeListsAreEqual(cssSelector, dataSelector)) {
           this.levelComplete(dataGameLevels, level);
           this.addAnimation(cssSelector, 'animation-drop');
-        } else {
+        }
+        // else {
+        //   this.addAnimation(cssSelector, 'animation-shake');
+        //   this.removeAnimation(cssSelector, 'animation-shake');
+        // }
+        else if (cssSelector && cssSelector.length !== 0 && !this.nodeListsAreEqual(cssSelector, dataSelector)) {
+          console.log('true');
           this.addAnimation(cssSelector, 'animation-shake');
           this.removeAnimation(cssSelector, 'animation-shake');
+        } else {
+          const editor = document.querySelectorAll('.editor');
+          this.addAnimation(editor, 'animation-shake');
+          this.removeAnimation(editor, 'animation-shake');
         }
       } catch {
+        console.log('catch');
+        // const cssSelector = boat.querySelectorAll(input.value);
+        const editor = document.querySelectorAll('.editor');
+
+        // if (cssSelector) {
+        // this.addAnimation(cssSelector, 'animation-shake');
+        // this.removeAnimation(cssSelector, 'animation-shake');
+        // } else {
+        this.addAnimation(editor, 'animation-shake');
+        this.removeAnimation(editor, 'animation-shake');
+
+        // }
+        return;
         event?.preventDefault();
       }
     }

@@ -7,6 +7,7 @@ export interface IDataLevel {
   correction: string;
   example: string;
   dataExampleLayout: string;
+  dataHelpCss: string;
   dataHTMLViewer: string;
   correctSeletor: string;
 }

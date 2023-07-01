@@ -10,10 +10,9 @@ export const dataGameLevels = [
     example: '<span>div</span> selects all <span>&ltdiv&gt</span> elements',
     dataExampleLayout: `
       <wheel data-id="1" class="shape wheel animation-rotation"></wheel>
-      <wheel data-id="2" class="shape wheel animation-rotation"></wheel>
-      <div data-id="1" class=shape-help>&ltwheel&gt&lt/wheel&gt</div>
-      <div data-id="2" class=shape-help>&ltwheel&gt&lt/wheel&gt</div>
-      `,
+      <wheel data-id="2" class="shape wheel animation-rotation"></wheel>`,
+    dataHelpCss: `<div data-id="1" class=shape-help>&ltwheel&gt&lt/wheel&gt</div>
+    <div data-id="2" class=shape-help>&ltwheel&gt&lt/wheel&gt</div>`,
     dataHTMLViewer: `
     &ltdiv class="boat"&gt
         <wheel data-id="1" class="code">&ltwheel/&gt</wheel>
@@ -34,11 +33,11 @@ export const dataGameLevels = [
     dataExampleLayout: `
       <map data-id="1" class="shape map animation-rotation"></map>
       <wheel data-id="2" class="shape wheel"></wheel>
-      <map data-id="3" class="shape map animation-rotation"></map>
-      <div data-id="1" class=shape-help>&ltmap&gt&lt/map&gt</div>
-      <div data-id="2" class=shape-help>&ltwheel&gt&lt/wheel&gt</div>
-      <div data-id="3" class=shape-help>&ltmap&gt&lt/map&gt</div>
-    `,
+      <map data-id="3" class="shape map animation-rotation"></map>`,
+    dataHelpCss: `
+    <div data-id="1" class=shape-help>&ltmap&gt&lt/map&gt</div>
+    <div data-id="2" class=shape-help>&ltwheel&gt&lt/wheel&gt</div>
+    <div data-id="3" class=shape-help>&ltmap&gt&lt/map&gt</div>`,
     dataHTMLViewer: `
     &ltdiv class="boat"&gt
         <map data-id="1" class="code">&ltmap/&gt</map>
@@ -60,11 +59,11 @@ export const dataGameLevels = [
     dataExampleLayout: `
       <wheel data-id="1" id="first" class="shape wheel first animation-rotation"></wheel>
       <wheel data-id="2" class="shape wheel"></wheel>
-      <map data-id="3" class="shape map"></map>
+      <map data-id="3" class="shape map"></map>`,
+    dataHelpCss: `
       <div data-id="1" class=shape-help>&ltwheel id="first&gt&lt/wheel&gt</div>
       <div data-id="2" class=shape-help>&ltwheel&gt&lt/wheel&gt</div>
-      <div data-id="3" class=shape-help>&ltmap&gt&lt/map&gt</div>
-      `,
+      <div data-id="3" class=shape-help>&ltmap&gt&lt/map&gt</div>`,
     dataHTMLViewer: `
     &ltdiv class="boat"&gt
         <wheel data-id="1" id="first" class="code">&ltwheel id="first"/&gt</wheel>
@@ -90,11 +89,12 @@ export const dataGameLevels = [
         <spyglass data-id="3" class="shape spyglass animation-rotation"></spyglass>
       </wheel>
       <spyglass data-id="4" class="shape spyglass"></spyglass>
-      <div data-id="1" class=shape-help>&ltmap&gt&lt/map&gt</div>
-      <div data-id="2" class=shape-help>&ltwheel&gt&lt/wheel&gt</div>
-      <div data-id="3" class=shape-help>&ltspyglass&gt&lt/spyglass&gt</div>
-      <div data-id="4" class=shape-help>&ltspyglass&gt&lt/spyglass&gt</div>
     `,
+    dataHelpCss: `
+    <div data-id="1" class=shape-help>&ltmap&gt&lt/map&gt</div>
+    <div data-id="2" class=shape-help>&ltwheel&gt&lt/wheel&gt</div>
+    <div data-id="3" class=shape-help>&ltspyglass&gt&lt/spyglass&gt</div>
+    <div data-id="4" class=shape-help>&ltspyglass&gt&lt/spyglass&gt</div>`,
     dataHTMLViewer: `
     &ltdiv class="boat"&gt
         <map data-id="1" class="code">&ltmap/&gt</map>
@@ -125,13 +125,13 @@ export const dataGameLevels = [
       <wheel data-id="5" class="shape wheel">
           <bottle data-id="6" class="shape bottle"></bottle>
       </wheel>
-      <div data-id="1" class=shape-help>&ltmap&gt&lt/map&gt</div>
-      <div data-id="2" class=shape-help>&ltsword&gt&lt/sword&gt</div>
-      <div data-id="3" class=shape-help>&ltwheel id="captain"&gt&lt/wheel&gt</div>
-      <div data-id="4" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
-      <div data-id="5" class=shape-help>&ltwheel&gt&lt/wheel&gt</div>
-      <div data-id="6" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
     `,
+    dataHelpCss: `      <div data-id="1" class=shape-help>&ltmap&gt&lt/map&gt</div>
+    <div data-id="2" class=shape-help>&ltsword&gt&lt/sword&gt</div>
+    <div data-id="3" class=shape-help>&ltwheel id="captain"&gt&lt/wheel&gt</div>
+    <div data-id="4" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
+    <div data-id="5" class=shape-help>&ltwheel&gt&lt/wheel&gt</div>
+    <div data-id="6" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>`,
     dataHTMLViewer: `
     &ltdiv class="boat"&gt
         <map data-id="1" class="code">&ltmap&gt
@@ -158,7 +158,6 @@ export const dataGameLevels = [
     example:
       '<span>a[href*="w3schools"]</span> selects every <span>&lta&gt</span> element whose href attribute value contains the substring <span>"w3schools"<span>',
     dataExampleLayout: `
-
       <wheel data-id="1" class="shape wheel">
           <spyglass data-id="2" data-attr="spyglass" class="shape spyglass animation-rotation"></spyglass>
           <spyglass data-id="3" class="shape spyglass"></spyglass>
@@ -174,20 +173,19 @@ export const dataGameLevels = [
           <bottle data-id="11" data-attr="backend" class="shape bottle animation-rotation"></bottle>
       </wheel>
       <spyglass data-id="12" data-attr="spyglass" class="shape spyglass animation-rotation"></spyglass>
-
-      <div data-id="1" class=shape-help>&ltwheel&gt&lt/wheel&gt</div>
-      <div data-id="2" class=shape-help>&ltspyglass data-attr="spyglass"&gt&lt/spyglass&gt</div>
-      <div data-id="3" class=shape-help>&ltspyglass&gt&lt/spyglass&gt</div>
-      <div data-id="4" class=shape-help>&ltmap&gt&lt/map&gt</div>
-      <div data-id="5" class=shape-help>&ltsword data-attr="first-sword"&gt&lt/sword&gt</div>
-      <div data-id="6" class=shape-help>&ltsword data-attr="second"&gt&lt/sword&gt</div>
-      <div data-id="7" class=shape-help>&ltsword data-attr="sword-third"&gt&lt/sword&gt</div>
-      <div data-id="8" class=shape-help>&ltwheel&gt&lt/wheel&gt</div>
-      <div data-id="9" class=shape-help>&ltbottle data-attr="frontend"&gt&lt/bottle&gt</div>
-      <div data-id="10" class=shape-help>&ltbottle data-attr="bottle"&gt&lt/bottle&gt</div>
-      <div data-id="11" class=shape-help>&ltbottle  data-attr="backend"&gt&lt/bottle&gt</div>
-      <div data-id="12" class=shape-help>&ltspyglass data-attr="spyglass"&gt&lt/spyglass&gt</div>
     `,
+    dataHelpCss: `<div data-id="1" class=shape-help>&ltwheel&gt&lt/wheel&gt</div>
+    <div data-id="2" class=shape-help>&ltspyglass data-attr="spyglass"&gt&lt/spyglass&gt</div>
+    <div data-id="3" class=shape-help>&ltspyglass&gt&lt/spyglass&gt</div>
+    <div data-id="4" class=shape-help>&ltmap&gt&lt/map&gt</div>
+    <div data-id="5" class=shape-help>&ltsword data-attr="first-sword"&gt&lt/sword&gt</div>
+    <div data-id="6" class=shape-help>&ltsword data-attr="second"&gt&lt/sword&gt</div>
+    <div data-id="7" class=shape-help>&ltsword data-attr="sword-third"&gt&lt/sword&gt</div>
+    <div data-id="8" class=shape-help>&ltwheel&gt&lt/wheel&gt</div>
+    <div data-id="9" class=shape-help>&ltbottle data-attr="frontend"&gt&lt/bottle&gt</div>
+    <div data-id="10" class=shape-help>&ltbottle data-attr="bottle"&gt&lt/bottle&gt</div>
+    <div data-id="11" class=shape-help>&ltbottle  data-attr="backend"&gt&lt/bottle&gt</div>
+    <div data-id="12" class=shape-help>&ltspyglass data-attr="spyglass"&gt&lt/spyglass&gt</div>`,
     dataHTMLViewer: `
     &ltdiv class="boat"&gt
         <wheel data-id="1" class="code">&ltwheel&gt
@@ -228,14 +226,14 @@ export const dataGameLevels = [
           <bottle data-id="6" data-attr="frontend" class="shape bottle animation-rotation"></bottle>
           <bottle data-id="7" data-attr="frontend" class="shape bottle"></bottle>
     </wheel>
-    <div data-id="1" class=shape-help>&ltmap&gt&lt/map&gt</div>
+    `,
+    dataHelpCss: `<div data-id="1" class=shape-help>&ltmap&gt&lt/map&gt</div>
     <div data-id="2" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
     <div data-id="3" class=shape-help>&ltwheel&gt&lt/wheel&gt</div>
     <div data-id="4" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
     <div data-id="5" class=shape-help>&ltwheel&gt&lt/wheel&gt</div>
     <div data-id="6" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
-    <div data-id="7" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
-    `,
+    <div data-id="7" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>`,
     dataHTMLViewer: `
     &ltdiv class="boat"&gt
         <map data-id="1" class="code">&ltmap&gt
@@ -269,13 +267,13 @@ export const dataGameLevels = [
           <spyglass data-id="5" class="shape spyglass"></spyglass>
           <spyglass data-id="6" class="shape spyglass animation-rotation"></spyglass>
       </map>
-      <div data-id="1" class=shape-help>&ltmap&gt&lt/map&gt</div>
-      <div data-id="2" class=shape-help>&ltspyglass&gt&lt/spyglass&gt</div>
-      <div data-id="3" class=shape-help>&ltspyglass&gt&lt/spyglass&gt</div>
-      <div data-id="4" class=shape-help>&ltmap&gt&lt/map&gt</div>
-      <div data-id="5" class=shape-help>&ltspyglass&gt&lt/spyglass&gt</div>
-      <div data-id="6" class=shape-help>&ltspyglass&gt&lt/spyglass&gt</div>
     `,
+    dataHelpCss: `<div data-id="1" class=shape-help>&ltmap&gt&lt/map&gt</div>
+    <div data-id="2" class=shape-help>&ltspyglass&gt&lt/spyglass&gt</div>
+    <div data-id="3" class=shape-help>&ltspyglass&gt&lt/spyglass&gt</div>
+    <div data-id="4" class=shape-help>&ltmap&gt&lt/map&gt</div>
+    <div data-id="5" class=shape-help>&ltspyglass&gt&lt/spyglass&gt</div>
+    <div data-id="6" class=shape-help>&ltspyglass&gt&lt/spyglass&gt</div>`,
     dataHTMLViewer: `
     &ltdiv class="boat"&gt
         <map data-id="1" class="code">&ltmap&gt
@@ -315,19 +313,19 @@ export const dataGameLevels = [
             <bottle data-id="12" class="shape bottle"></bottle>
         </wheel>
       </map>
-      <div data-id="1" class=shape-help>&ltmap&gt&lt/map&gt</div>
-      <div data-id="2" class=shape-help>&ltwheel&gt&lt/wheel&gt</div>
-      <div data-id="3" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
-      <div data-id="4" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
-      <div data-id="5" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
-      <div data-id="6" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
-      <div data-id="7" class=shape-help>&ltmap&gt&lt/map&gt</div>
-      <div data-id="8" class=shape-help>&ltwheel #id="captain"&gt&lt/wheel&gt</div>
-      <div data-id="9" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
-      <div data-id="10" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
-      <div data-id="11" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
-      <div data-id="12" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
     `,
+    dataHelpCss: `<div data-id="1" class=shape-help>&ltmap&gt&lt/map&gt</div>
+    <div data-id="2" class=shape-help>&ltwheel&gt&lt/wheel&gt</div>
+    <div data-id="3" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
+    <div data-id="4" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
+    <div data-id="5" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
+    <div data-id="6" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
+    <div data-id="7" class=shape-help>&ltmap&gt&lt/map&gt</div>
+    <div data-id="8" class=shape-help>&ltwheel #id="captain"&gt&lt/wheel&gt</div>
+    <div data-id="9" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
+    <div data-id="10" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
+    <div data-id="11" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
+    <div data-id="12" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>`,
     dataHTMLViewer: `
     &ltdiv class="boat"&gt
         <map data-id="1" class="code">&ltmap&gt
@@ -361,19 +359,6 @@ export const dataGameLevels = [
     example:
       '<span>(even)</span> — keyword, selects even elements of the list, as if we set <span>(2n)</span>. <span>(odd)</span> is a keyword, selects odd elements as if we had given <span>(2n+1)</span>.',
     dataExampleLayout: `
-    <div data-id="1" class=shape-help>&ltmap&gt&lt/map&gt</div>
-    <div data-id="2" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
-    <div data-id="3" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
-    <div data-id="4" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
-    <div data-id="5" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
-    <div data-id="6" class=shape-help>&ltwheel id="captain"&gt&lt/wheel&gt</div>
-    <div data-id="7" class=shape-help>&ltbottle &gt&lt/bottle&gt</div>
-    <div data-id="8" class=shape-help>&ltbottle &gt&lt/bottle&gt</div>
-    <div data-id="9" class=shape-help>&ltbottle &gt&lt/bottle&gt</div>
-    <div data-id="10" class=shape-help>&ltwheel&gt&lt/wheel&gt</div>
-    <div data-id="11" class=shape-help>&ltspyglass&gt&lt/spyglass&gt</div>
-    <div data-id="12" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
-    <div data-id="13" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
     <map data-id="1" class="shape map">
         <bottle data-id="2" class="shape bottle"></bottle>
         <bottle data-id="3" class="shape bottle animation-rotation"></bottle>
@@ -389,8 +374,21 @@ export const dataGameLevels = [
         <spyglass pyglass data-id="11" class="shape spyglass animation-rotation"></spyglass>
         <bottle data-id="12" class="shape bottle"></bottle>
         <bottle data-id="13" class="shape bottle animation-rotation"></bottle>
-    </wheel>
-  `,
+    </wheel>`,
+    dataHelpCss: `
+    <div data-id="1" class=shape-help>&ltmap&gt&lt/map&gt</div>
+  <div data-id="2" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
+  <div data-id="3" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
+  <div data-id="4" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
+  <div data-id="5" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
+  <div data-id="6" class=shape-help>&ltwheel id="captain"&gt&lt/wheel&gt</div>
+  <div data-id="7" class=shape-help>&ltbottle &gt&lt/bottle&gt</div>
+  <div data-id="8" class=shape-help>&ltbottle &gt&lt/bottle&gt</div>
+  <div data-id="9" class=shape-help>&ltbottle &gt&lt/bottle&gt</div>
+  <div data-id="10" class=shape-help>&ltwheel&gt&lt/wheel&gt</div>
+  <div data-id="11" class=shape-help>&ltspyglass&gt&lt/spyglass&gt</div>
+  <div data-id="12" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>
+  <div data-id="13" class=shape-help>&ltbottle&gt&lt/bottle&gt</div>`,
     dataHTMLViewer: `
     &ltdiv class="boat"&gt
         <map data-id="1" class="code">&ltmap&gt
