@@ -10,6 +10,10 @@
   margin-bottom: 40px;
   @extend %font-prim;
   @include font($size: 3rem, $color: $color-primary, $weight: 700);
+  @include media-laptop-height {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
 }
 
 .game__task {
@@ -17,6 +21,9 @@
   text-align: center;
   @extend %font-prim;
   @include font($size: 2.4rem, $color: $color-primary, $weight: 700);
+  @include media-laptop-height {
+    font-size: 1.6rem;
+  }
 }
 
 .game__help {
@@ -44,6 +51,9 @@
     &::before {
       width: 86%;
     }
+  }
+  @include media-laptop-height {
+    font-size: 1.4rem;
   }
 }
 

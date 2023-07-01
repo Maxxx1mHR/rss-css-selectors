@@ -1,3 +1,9 @@
+.footer {
+  @include media-laptop-height {
+    display: none;
+  }
+}
+
 .footer__wrapper {
   display: flex;
   justify-content: space-between;
@@ -6,7 +12,7 @@
 }
 
 .footer__img-git {
-  width: 100px;
+  width: 90px;
   @extend %cursor-hover;
   @include media-tablet {
     width: 60px;

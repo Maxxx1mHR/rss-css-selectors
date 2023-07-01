@@ -22,3 +22,15 @@
     @content;
   }
 }
+
+@mixin media-laptop-height {
+  @media (max-height: $laptop-height) {
+    @content;
+  }
+}
+
+// @mixin media-tablet-height {
+//   @media (max-height: $height-medium) {
+//     @content;
+//   }
+// }

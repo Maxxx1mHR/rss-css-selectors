@@ -1,13 +1,13 @@
 .boat-surface {
   position: relative;
   width: 650px;
-  height: 200px;
+  height: 190px;
   background-image: url('../../assets/img/background/boat.png');
   background-repeat: no-repeat;
-  background-size: 650px 200px;
+  background-size: 650px 190px;
   @include media-tablet {
     width: 430px;
-    background-size: 430px 200px;
+    background-size: 430px 190px;
   }
 }
 

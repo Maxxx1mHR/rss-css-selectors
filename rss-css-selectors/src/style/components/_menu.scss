@@ -45,10 +45,18 @@
   padding: 20px 20px;
   transition: all 0.6s;
   z-index: 1;
+  height: 100%;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
   span {
     color: $color-primary;
     background-color: $color-background;
     padding: 2px 5px;
+  }
+  @include media-laptop-height {
+    padding: 5px 10px;
   }
 }
 
@@ -68,6 +76,13 @@
   @include media-laptop {
     display: block;
   }
+  @include media-laptop-height {
+    img {
+      width: 40px;
+    }
+    top: 5px;
+    right: 10px;
+  }
 }
 
 .menu__list {
@@ -81,6 +96,9 @@
   align-items: center;
   width: 250px;
   margin-bottom: 20px;
+  @include media-laptop-height {
+    margin-bottom: 5px;
+  }
 }
 
 .menu__level-switch {
@@ -113,6 +131,9 @@
   line-height: 2.6rem;
   border-bottom: 2px solid $color-border-dark;
   height: 450px;
+  @include media-laptop-height {
+    height: 390px;
+  }
 }
 
 .menu__description {

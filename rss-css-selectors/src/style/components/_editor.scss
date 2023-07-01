@@ -12,6 +12,9 @@
   @include media-laptop-large {
     font-size: 1.4rem;
   }
+  @include media-laptop-height {
+    font-size: 1.4rem;
+  }
 }
 
 .editor__header {
@@ -56,6 +59,9 @@
   display: flex;
   padding: 20px;
   @extend %font-add;
+  @include media-laptop-height {
+    padding: 10px;
+  }
 }
 
 .editor__selector {
