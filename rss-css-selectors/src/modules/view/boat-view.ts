@@ -4,9 +4,6 @@ import { IDataLevel } from '../types/types';
 class BoatView {
   constructor(data: IDataLevel[], level: number) {
     this.createView(data, level);
-    // this.mouseoverEvent();
-    // this.mouseoutEvent();
-
     this.mouseoverShape();
     this.mouseoutShape();
     this.helpButtonClick(data, level);
@@ -83,46 +80,6 @@ class BoatView {
     });
   }
 
-  // private mouseoverEvent(): void {
-  //   document.addEventListener('mouseover', (event) => {
-  //     if (event.target instanceof HTMLElement) {
-  //       const code = event.target.closest('.code');
-  //       const shape = event.target.closest('.shape');
-  //       const id = event.target.dataset.id;
-  //       if (shape) {
-  //         document.querySelector(`.shape[data-id='${id}']`)?.classList.add('hover', 'lighting-code');
-  //         document.querySelector(`.shape-help[data-id='${id}']`)?.classList.add('shape-help-active');
-  //         document.querySelector(`.code[data-id='${id}']`)?.classList.add('lighting-code');
-  //       }
-  //       if (code) {
-  //         code.classList.add('lighting-code');
-  //         document.querySelector(`.shape[data-id='${id}']`)?.classList.add('hover');
-  //         document.querySelector(`.shape-help[data-id='${id}']`)?.classList.add('shape-help-active');
-  //       }
-  //     }
-  //   });
-  // }
-
-  // private mouseoutEvent(): void {
-  //   document.addEventListener('mouseout', (event) => {
-  //     if (event.target instanceof HTMLElement) {
-  //       const code = event.target.closest('.code');
-  //       const shape = event.target.closest('.shape');
-  //       const id = event.target.dataset.id;
-  //       if (shape) {
-  //         document.querySelector(`.shape[data-id='${id}']`)?.classList.remove('hover', 'lighting-code');
-  //         document.querySelector(`.shape-help[data-id='${id}']`)?.classList.remove('shape-help-active');
-  //         document.querySelector(`.code[data-id='${id}']`)?.classList.remove('lighting-code');
-  //       }
-  //       if (code) {
-  //         code.classList.remove('lighting-code');
-  //         document.querySelector(`.shape[data-id='${id}']`)?.classList.remove('hover');
-  //         document.querySelector(`.shape-help[data-id='${id}']`)?.classList.remove('shape-help-active');
-  //       }
-  //     }
-  //   });
-  // }
-
   public helpButtonClick(data: IDataLevel[], level: number): void {
     const gameHelp = document.querySelector('.game__help');
     gameHelp?.addEventListener('click', () => {
@@ -142,16 +99,19 @@ class BoatView {
   }
 
   public addHelpClass(level: number): void {
-    const levelsComplete = JSON.parse(localStorage.getItem('completedLevels') || '[]');
-    const levelsHelp = JSON.parse(localStorage.getItem('levelsWithUseHelp') || '[]');
+    const levelsComplete = getLocalStorageArray('completedLevels');
+    const levelsHelp = getLocalStorageArray('levelsWithUseHelp');
     if (localStorage.getItem('levelsWithUseHelp') === null && !levelsComplete.includes(level)) {
       localStorage.setItem('levelsWithUseHelp', JSON.stringify([level]));
-    } else {
-      if (!levelsHelp.includes(level) && !levelsComplete.includes(level)) {
-        levelsHelp.push(level);
-        localStorage.setItem('levelsWithUseHelp', JSON.stringify(levelsHelp));
-      }
+    } else if (!levelsHelp.includes(level) && !levelsComplete.includes(level)) {
+      levelsHelp.push(level);
+      localStorage.setItem('levelsWithUseHelp', JSON.stringify(levelsHelp));
     }
   }
 }
+
+export function getLocalStorageArray(key: string): Storage {
+  return JSON.parse(localStorage.getItem(key) || '[]');
+}
+
 export default BoatView;

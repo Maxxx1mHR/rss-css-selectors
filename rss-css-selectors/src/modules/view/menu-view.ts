@@ -24,14 +24,12 @@ class MenuView {
   private openSettings(): void {
     const hamburger = document.querySelector('.settings__open');
     hamburger?.addEventListener('click', () => {
-      console.log('6');
       document.querySelector('.menu')?.classList.add('active');
     });
   }
   private closeSetting(): void {
     const close = document.querySelector('.close');
     close?.addEventListener('click', () => {
-      console.log('7');
       document.querySelector('.menu')?.classList.remove('active');
     });
   }
@@ -63,7 +61,6 @@ class MenuView {
             this.setCurrentLevelGame(+event.target.id - 1);
             new App(dataGameLevels, +event.target.id - 1);
             this.switchCurrentLevel(+event.target.id - 1);
-            console.log('5');
           }
         }
       });
@@ -129,27 +126,9 @@ class MenuView {
     const settings: HTMLElement | null = document.querySelector('.settings');
     const menuClose: HTMLElement | null = document.querySelector('.menu__close');
 
-    if (menuHeader) {
-      menuHeader.innerHTML = '';
-    }
-    if (menuDescription) {
-      menuDescription.innerHTML = '';
-    }
-    if (menuExample) {
-      menuExample.innerHTML = '';
-    }
-    if (menuLevelsList) {
-      menuLevelsList.innerHTML = '';
-    }
-    if (menuWrapper) {
-      menuWrapper.innerHTML = '';
-    }
-    if (settings) {
-      settings.innerHTML = '';
-    }
-    if (menuClose) {
-      menuClose.innerHTML = '';
-    }
+    [menuHeader, menuDescription, menuExample, menuLevelsList, menuWrapper, settings, menuClose].forEach((element) => {
+      if (element) element.innerHTML = '';
+    });
 
     const hamburger = new ElementCreator({
       tag: 'img',

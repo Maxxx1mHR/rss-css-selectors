@@ -6,8 +6,8 @@ import { IDataLevel } from '../types/types';
 class CssView {
   constructor(data: IDataLevel[], level: number) {
     this.createView();
-    this.clickButton(data, level);
-    this.pressButton(data, level);
+    this.addOnEnterClickListener(data, level);
+    this.addOnEnterPressListener(data, level);
   }
 
   private createView(): void {
@@ -34,28 +34,26 @@ class CssView {
     }
   }
 
-  private clickButton(data: IDataLevel[], level: number): void {
+  private addOnEnterClickListener(data: IDataLevel[], level: number): void {
     const addButton = document.querySelector('.editor__button');
-
-    if (addButton) {
-      addButton.addEventListener('click', (event) => {
-        if (event.target instanceof HTMLButtonElement) {
-          this.getValueFromInput(data, level);
-        }
-      });
-    }
+    addButton?.addEventListener('click', () => {
+      this.getValueFromInput(data, level);
+    });
   }
 
-  private pressButton(data: IDataLevel[], level: number): void {
+  private addOnEnterPressListener(data: IDataLevel[], level: number): void {
     const input = document.querySelector('.editor__input');
     if (input instanceof HTMLInputElement) {
       input.focus();
     }
     input?.addEventListener('keydown', (event) => {
-      if (event instanceof KeyboardEvent && input instanceof HTMLInputElement) {
-        if (event.key === 'Enter' && input.value.trim().length !== 0) {
-          this.getValueFromInput(data, level);
-        }
+      if (
+        event instanceof KeyboardEvent &&
+        input instanceof HTMLInputElement &&
+        event.key === 'Enter' &&
+        input.value.trim().length !== 0
+      ) {
+        this.getValueFromInput(data, level);
       }
     });
   }
@@ -95,11 +93,9 @@ class CssView {
     const levelsHelp = JSON.parse(localStorage.getItem('levelsWithUseHelp') || '[]');
     if (localStorage.getItem('completedLevels') === null && !levelsHelp.includes(level)) {
       localStorage.setItem('completedLevels', JSON.stringify([level]));
-    } else {
-      if (!levelsComplete.includes(level) && !levelsHelp.includes(level)) {
-        levelsComplete.push(level);
-        localStorage.setItem('completedLevels', JSON.stringify(levelsComplete));
-      }
+    } else if (!levelsComplete.includes(level) && !levelsHelp.includes(level)) {
+      levelsComplete.push(level);
+      localStorage.setItem('completedLevels', JSON.stringify(levelsComplete));
     }
   }
 
@@ -141,11 +137,12 @@ class CssView {
       try {
         const cssSelector = boat.querySelectorAll(input.value);
         const dataSelector = boat.querySelectorAll(data[level].correctSeletor);
+        const incorrectSelector =
+          cssSelector && cssSelector.length !== 0 && !this.nodeListsAreEqual(cssSelector, dataSelector);
         if (this.nodeListsAreEqual(cssSelector, dataSelector)) {
           this.levelComplete(dataGameLevels, level);
           this.addAnimation(cssSelector, 'animation-drop');
-        } else if (cssSelector && cssSelector.length !== 0 && !this.nodeListsAreEqual(cssSelector, dataSelector)) {
-          console.log('true');
+        } else if (incorrectSelector) {
           this.addAnimation(cssSelector, 'animation-shake');
           this.removeAnimation(cssSelector, 'animation-shake');
         } else {
@@ -157,10 +154,7 @@ class CssView {
         const editor = document.querySelectorAll('.editor');
         this.addAnimation(editor, 'animation-shake');
         this.removeAnimation(editor, 'animation-shake');
-
-        // }
         return;
-        event?.preventDefault();
       }
     }
   }
