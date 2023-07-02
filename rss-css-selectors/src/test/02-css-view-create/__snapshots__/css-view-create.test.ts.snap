@@ -1,0 +1,689 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render block boat for each level renders level 0 correctly 1`] = `
+<code
+  class="editor__code-html"
+>
+  
+    &lt;div class="boat"&gt;
+        
+  <wheel
+    class="code"
+    data-id="1"
+  >
+    &lt;wheel/&gt;
+  </wheel>
+  
+        
+  <wheel
+    class="code"
+    data-id="2"
+  >
+    &lt;wheel/&gt;
+  </wheel>
+  
+    &lt;/div&gt;
+      
+</code>
+`;
+
+exports[`render block boat for each level renders level 1 correctly 1`] = `
+<code
+  class="editor__code-html"
+>
+  
+    &lt;div class="boat"&gt;
+        
+  <map
+    class="code"
+    data-id="1"
+  >
+    &lt;map/&gt;
+  </map>
+  
+        
+  <wheel
+    class="code"
+    data-id="2"
+  >
+    &lt;wheel/&gt;
+  </wheel>
+  
+        
+  <map
+    class="code"
+    data-id="3"
+  >
+    &lt;map/&gt;
+  </map>
+  
+    &lt;/div&gt;
+      
+</code>
+`;
+
+exports[`render block boat for each level renders level 2 correctly 1`] = `
+<code
+  class="editor__code-html"
+>
+  
+    &lt;div class="boat"&gt;
+        
+  <wheel
+    class="code"
+    data-id="1"
+    id="first"
+  >
+    &lt;wheel id="first"/&gt;
+  </wheel>
+  
+        
+  <wheel
+    class="code"
+    data-id="2"
+  >
+    &lt;wheel/&gt;
+  </wheel>
+  
+        
+  <map
+    class="code"
+    data-id="3"
+  >
+    &lt;map/&gt;
+  </map>
+  
+    &lt;/div&gt;
+      
+</code>
+`;
+
+exports[`render block boat for each level renders level 3 correctly 1`] = `
+<code
+  class="editor__code-html"
+>
+  
+    &lt;div class="boat"&gt;
+        
+  <map
+    class="code"
+    data-id="1"
+  >
+    &lt;map/&gt;
+  </map>
+  
+        
+  <wheel
+    class="code"
+    data-id="2"
+  >
+    &lt;wheel&gt;
+            
+    <spyglass
+      class="code"
+      data-id="3"
+    >
+      &lt;spyglass/&gt;
+    </spyglass>
+    
+        &lt;/wheel&gt;
+  </wheel>
+  
+        
+  <spyglass
+    class="code"
+    data-id="4"
+  >
+    &lt;spyglass/&gt;
+  </spyglass>
+  
+    &lt;/div&gt;
+      
+</code>
+`;
+
+exports[`render block boat for each level renders level 4 correctly 1`] = `
+<code
+  class="editor__code-html"
+>
+  
+    &lt;div class="boat"&gt;
+        
+  <map
+    class="code"
+    data-id="1"
+  >
+    &lt;map&gt;
+            
+    <sword
+      class="code"
+      data-id="2"
+    >
+      &lt;sword/&gt;
+    </sword>
+    
+        &lt;/map&gt;
+  </map>
+  <wheel
+    class="code"
+    data-id="3"
+    id="captain"
+  >
+    
+        &lt;wheel id="captain"&gt;
+            
+    <bottle
+      class="code"
+      data-id="4"
+    >
+      &lt;bottle/&gt;
+    </bottle>
+    
+        &lt;/wheel&gt;
+  </wheel>
+  
+        
+  <wheel
+    class="code"
+    data-id="5"
+  >
+    &lt;wheel&gt;
+            
+    <bottle
+      class="code"
+      data-id="6"
+    >
+      &lt;bottle/&gt;
+    </bottle>
+    
+        &lt;/wheel&gt;
+  </wheel>
+  
+    &lt;/div&gt;
+      
+</code>
+`;
+
+exports[`render block boat for each level renders level 5 correctly 1`] = `
+<code
+  class="editor__code-html"
+>
+  
+    &lt;div class="boat"&gt;
+        
+  <wheel
+    class="code"
+    data-id="1"
+  >
+    &lt;wheel&gt;
+            
+    <spyglass
+      class="code"
+      data-attr="spyglass"
+      data-id="2"
+    >
+      &lt;spyglass data-attr="spyglass"/&gt;
+    </spyglass>
+    
+            
+    <spyglass
+      class="code"
+      data-id="3"
+    >
+      &lt;spyglass /&gt;
+    </spyglass>
+    
+        &lt;/wheel&gt;
+  </wheel>
+  
+        
+  <map
+    class="code"
+    data-id="4"
+  >
+    &lt;map&gt;
+            
+    <sword
+      class="code"
+      data-attr="first-sword"
+      data-id="5"
+    >
+      &lt;sword data-attr="first-sword"/&gt;
+    </sword>
+    
+            
+    <sword
+      class="code"
+      data-attr="second"
+      data-id="6"
+    >
+      &lt;sword data-attr="second"/&gt;
+    </sword>
+    
+            
+    <sword
+      class="code"
+      data-attr="sword-third"
+      data-id="7"
+    >
+      &lt;sword data-attr="sword-third"/&gt;
+    </sword>
+    
+        &lt;/map&gt;
+        
+  </map>
+  <wheel
+    class="code"
+    data-id="8"
+  >
+    &lt;wheel&gt;
+            
+    <bottle
+      class="code"
+      data-attr="frontend"
+      data-id="9"
+    >
+      &lt;bottle data-attr="frontend"/&gt;
+    </bottle>
+    
+            
+    <bottle
+      class="code"
+      data-attr="bottle"
+      data-id="10"
+    >
+      &lt;bottle data-attr="bottle"/&gt;
+    </bottle>
+    
+            
+    <bottle
+      class="code"
+      data-attr="backend"
+      data-id="11"
+    >
+      &lt;bottle data-attr="backend"/&gt;
+    </bottle>
+    
+        &lt;/wheel&gt;
+        
+  </wheel>
+  <spyglass
+    class="code"
+    data-attr="spyglass"
+    data-id="12"
+  >
+    &lt;spyglass data-attr="spyglass"/&gt;
+  </spyglass>
+  
+    &lt;/div&gt;
+    
+</code>
+`;
+
+exports[`render block boat for each level renders level 6 correctly 1`] = `
+<code
+  class="editor__code-html"
+>
+  
+    &lt;div class="boat"&gt;
+        
+  <map
+    class="code"
+    data-id="1"
+  >
+    &lt;map&gt;
+            
+    <bottle
+      class="code"
+      data-id="2"
+    >
+      &lt;bottle/&gt;
+    </bottle>
+    
+        &lt;/map&gt;
+  </map>
+  
+        
+  <wheel
+    class="code"
+    data-id="3"
+  >
+    &lt;wheel&gt;
+            
+    <bottle
+      class="code"
+      data-id="4"
+    >
+      &lt;bottle/&gt;
+    </bottle>
+    
+        &lt;/wheel&gt;
+  </wheel>
+  
+        
+  <wheel
+    class="code"
+    data-id="5"
+  >
+    &lt;wheel&gt;
+            
+    <bottle
+      class="code"
+      data-id="6"
+    >
+      &lt;bottle/&gt;
+    </bottle>
+    
+            
+    <bottle
+      class="code"
+      data-id="7"
+    >
+      &lt;bottle/&gt;
+    </bottle>
+    
+        &lt;/wheel&gt;
+  </wheel>
+  
+    &lt;/div&gt;
+    
+</code>
+`;
+
+exports[`render block boat for each level renders level 7 correctly 1`] = `
+<code
+  class="editor__code-html"
+>
+  
+    &lt;div class="boat"&gt;
+        
+  <map
+    class="code"
+    data-id="1"
+  >
+    &lt;map&gt;
+            
+    <spyglass
+      class="code"
+      data-id="2"
+    >
+      &lt;spyglass/&gt;
+    </spyglass>
+    
+            
+    <spyglass
+      class="code"
+      data-id="3"
+    >
+      &lt;spyglass/&gt;
+    </spyglass>
+    
+        &lt;/map&gt;
+  </map>
+  
+        
+  <map
+    class="code"
+    data-id="4"
+  >
+    &lt;map&gt;
+            
+    <spyglass
+      class="code"
+      data-id="5"
+    >
+      &lt;spyglass/&gt;
+    </spyglass>
+    
+            
+    <spyglass
+      class="code"
+      data-id="6"
+    >
+      &lt;spyglass/&gt;
+    </spyglass>
+    
+        &lt;/map&gt;
+  </map>
+  
+    &lt;/div&gt;
+    
+</code>
+`;
+
+exports[`render block boat for each level renders level 8 correctly 1`] = `
+<code
+  class="editor__code-html"
+>
+  
+    &lt;div class="boat"&gt;
+        
+  <map
+    class="code"
+    data-id="1"
+  >
+    &lt;map&gt;
+            
+    <wheel
+      class="code"
+      data-id="2"
+    >
+      &lt;wheel&gt;
+                
+      <bottle
+        class="code"
+        data-attr="frontend"
+        data-id="3"
+      >
+        &lt;bottle/&gt;
+      </bottle>
+      
+                
+      <bottle
+        class="code"
+        data-attr="bottle"
+        data-id="4"
+      >
+        &lt;bottle/&gt;
+      </bottle>
+      
+                
+      <bottle
+        class="code"
+        data-attr="backend"
+        data-id="5"
+      >
+        &lt;bottle/&gt;
+      </bottle>
+      
+                
+      <bottle
+        class="code"
+        data-attr="backend"
+        data-id="6"
+      >
+        &lt;bottle/&gt;
+      </bottle>
+      
+            &lt;/wheel&gt;
+    </wheel>
+    
+        &lt;/map&gt;
+  </map>
+  
+        
+  <map
+    class="code"
+    data-id="7"
+  >
+    &lt;map&gt;
+            
+    <wheel
+      class="code"
+      data-id="8"
+    >
+      &lt;wheel id="#captain"&gt;
+                
+      <bottle
+        class="code"
+        data-attr="frontend"
+        data-id="9"
+      >
+        &lt;bottle/&gt;
+      </bottle>
+      
+                
+      <bottle
+        class="code"
+        data-attr="bottle"
+        data-id="10"
+      >
+        &lt;bottle/&gt;
+      </bottle>
+      
+                
+      <bottle
+        class="code"
+        data-attr="backend"
+        data-id="11"
+      >
+        &lt;bottle/&gt;
+      </bottle>
+      
+                
+      <bottle
+        class="code"
+        data-attr="backend"
+        data-id="12"
+      >
+        &lt;bottle/&gt;
+      </bottle>
+      
+            &lt;/wheel&gt;
+        
+    </wheel>
+    &lt;/map&gt;
+  </map>
+  
+    &lt;/div&gt;
+    
+</code>
+`;
+
+exports[`render block boat for each level renders level 9 correctly 1`] = `
+<code
+  class="editor__code-html"
+>
+  
+    &lt;div class="boat"&gt;
+        
+  <map
+    class="code"
+    data-id="1"
+  >
+    &lt;map&gt;
+            
+    <bottle
+      class="code"
+      data-id="2"
+    >
+      &lt;bottle/&gt;
+    </bottle>
+    
+            
+    <bottle
+      class="code"
+      data-id="3"
+    >
+      &lt;bottle/&gt;
+    </bottle>
+    
+            
+    <bottle
+      class="code"
+      data-id="4"
+    >
+      &lt;bottle/&gt;
+    </bottle>
+    
+            
+    <bottle
+      class="code"
+      data-id="5"
+    >
+      &lt;bottle/&gt;
+    </bottle>
+    
+        &lt;/map&gt;
+  </map>
+  
+        
+  <wheel
+    class="code"
+    data-id="6"
+  >
+    &lt;wheel id="captain"&gt;
+            
+    <bottle
+      class="code"
+      data-id="7"
+    >
+      &lt;bottle/&gt;
+    </bottle>
+    
+            
+    <bottle
+      class="code"
+      data-id="8"
+    >
+      &lt;bottle/&gt;
+    </bottle>
+    
+            
+    <bottle
+      class="code"
+      data-id="9"
+    >
+      &lt;bottle/&gt;
+    </bottle>
+    
+        &lt;/wheel&gt;
+  </wheel>
+  
+        
+  <wheel
+    class="code"
+    data-id="10"
+  >
+    &lt;wheel&gt;
+            
+    <spyglass
+      class="code"
+      data-id="11"
+    >
+      &lt;spyglass/&gt;
+    </spyglass>
+    
+            
+    <bottle
+      class="code"
+      data-id="12"
+    >
+      &lt;bottle/&gt;
+    </bottle>
+    
+            
+    <bottle
+      class="code"
+      data-id="13"
+    >
+      &lt;bottle/&gt;
+    </bottle>
+    
+        &lt;/wheel&gt;
+  </wheel>
+  
+    &lt;/div&gt;
+    
+</code>
+`;
