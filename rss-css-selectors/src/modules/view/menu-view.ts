@@ -12,10 +12,8 @@ import { dataGameLevels } from '../data/data-game-levels';
 class MenuView {
   constructor(data: IDataLevel[], level: number) {
     this.createView(data, level);
-
     this.switchLevel(data, level);
     this.levelMenuSwith();
-
     this.openSettings();
     this.closeSetting();
     this.resetProgress();
@@ -82,17 +80,17 @@ class MenuView {
             }
             this.setCurrentLevelGame(level);
 
-            new App(dataGameLevels, level);
+            new App(data, level);
             this.switchCurrentLevel(level);
           }
           if (nextButton) {
             level += 1;
-            if (level > dataGameLevels.length - 1) {
-              level = dataGameLevels.length - 1;
+            if (level > data.length - 1) {
+              level = data.length - 1;
             }
             this.setCurrentLevelGame(level);
 
-            new App(dataGameLevels, level);
+            new App(data, level);
             this.switchCurrentLevel(level);
           }
         }
@@ -109,11 +107,7 @@ class MenuView {
     });
   }
 
-  private getCurrentLevelGame(): number {
-    return JSON.parse(localStorage.getItem('currentCssSelectorLevel') || '{}');
-  }
-
-  private setCurrentLevelGame(level: number): void {
+  private setCurrentLevelGame<T>(level: T): void {
     localStorage.setItem('currentCssSelectorLevel', String(level));
   }
 
