@@ -7,7 +7,7 @@ class HtmlView {
     this.mouseoverCode();
     this.mouseoutCode();
   }
-  private createView(data: IDataLevel[], level: number): void {
+  public createView(data: IDataLevel[], level: number): HTMLElement | null {
     const code = new ElementCreator({
       tag: 'code',
       className: ['editor__code-html'],
@@ -20,6 +20,7 @@ class HtmlView {
     if (editorCode instanceof HTMLElement) {
       code.appendNodeToDom(editorCode);
     }
+    return code.getElement();
   }
 
   private mouseoverCode(): void {

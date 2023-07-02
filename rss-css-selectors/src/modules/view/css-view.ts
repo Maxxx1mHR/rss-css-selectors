@@ -10,7 +10,7 @@ class CssView {
     this.addOnEnterPressListener(data, level);
   }
 
-  private createView(): void {
+  public createView(): (HTMLElement | null)[] {
     const input = new ElementCreator({
       tag: 'input',
       className: ['editor__input'],
@@ -32,6 +32,7 @@ class CssView {
       input.appendNodeToDom(editorSelector);
       addButton.appendNodeToDom(editorSelector);
     }
+    return [input.getElement(), addButton.getElement()];
   }
 
   private addOnEnterClickListener(data: IDataLevel[], level: number): void {
