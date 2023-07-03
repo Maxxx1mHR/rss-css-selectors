@@ -1,27 +1,26 @@
-import fs from 'fs'; // node js встроенный интерфейс, чтобы загрузить контент твоего файла HTML
-import { fireEvent } from '@testing-library/dom'; // установил либу @testing-library/user-event, чтобы симулировать действия
-import { dataGameLevels } from '../../modules/data/data-game-levels'; // беру твои исходные уровни, чтобы загенерить лодку
-import BoatView from '../../modules/view/boat-view'; // беру твой модуль для создания лодки
+import fs from 'fs';
+import { fireEvent } from '@testing-library/dom';
+import { dataGameLevels } from '../../modules/data/data-game-levels';
+import BoatView from '../../modules/view/boat-view';
 
-describe('render block boat for each level', () => {
+describe('render block boat', () => {
   it('check wheel hover', () => {
-    document.body.innerHTML = fs.readFileSync('src/index.html').toString(); // хватаю твой хтмл файл и пихаю в бади
+    document.body.innerHTML = fs.readFileSync('src/index.html').toString();
 
     const level = 0;
-    +localStorage.setItem('currentCssSelectorLevel', String(0)); // симулирую твой index.ts
-    new BoatView(dataGameLevels, level); // выполняю отрисовку лодки
-    expect(document.body).toMatchSnapshot(); // чекаю отрисовку. в файле снэпшота сможешь увидеть появившиеся дивы с классами .wheel, которых нет в исходном html, значит new BoatView отработал корректно
+    +localStorage.setItem('currentCssSelectorLevel', String(0));
+    new BoatView(dataGameLevels, level);
+    expect(document.body).toMatchSnapshot();
 
-    expect(document.querySelector('.wheel.hover')).toBeFalsy(); //проверяю без ховера, что класса hover нет
-    expect(document.querySelector('.wheel')).toBeTruthy(); // но элемент с wheel долженбыть
+    expect(document.querySelector('.wheel.hover')).toBeFalsy();
+    expect(document.querySelector('.wheel')).toBeTruthy();
 
-    const firstWheel = document.querySelector('.wheel'); // получаю эту ноду
+    const firstWheel = document.querySelector('.wheel');
 
     if (firstWheel) {
-      // проверка просто для TypeScript
-      fireEvent(firstWheel, new MouseEvent('mouseover', { bubbles: true, cancelable: true })); // имитирую ховер
+      fireEvent(firstWheel, new MouseEvent('mouseover', { bubbles: true, cancelable: true }));
     }
 
-    expect(document.querySelector('.wheel.hover')).toBeTruthy(); // ожидаю, что теперь у нас есть элемент с .hover классом, ведь мы навели мышь
+    expect(document.querySelector('.wheel.hover')).toBeTruthy();
   });
 });

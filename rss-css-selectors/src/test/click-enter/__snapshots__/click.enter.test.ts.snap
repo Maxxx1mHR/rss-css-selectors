@@ -1,0 +1,2155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render block boat and css editor check click enter. selector from input wrong 1`] = `
+<body>
+  
+
+  
+    
+  <meta
+    charset="UTF-8"
+  />
+  
+    
+  <meta
+    content="IE=edge"
+    http-equiv="X-UA-Compatible"
+  />
+  
+    
+  <meta
+    content="width=device-width, initial-scale=1.0"
+    name="viewport"
+  />
+  
+    
+  <title>
+    RSS-CSS-Selectors
+  </title>
+  
+    
+  <link
+    href="./assets/icons/favicon.ico"
+    rel="shortcut icon"
+    type="image/x-icon"
+  />
+  
+    
+  <link
+    href="./assets/icons/favicon.ico"
+    rel="icon"
+    type="image/x-icon"
+  />
+  
+  
+  
+    
+  <div
+    class="modal"
+  >
+    
+      
+    <div
+      class="modal__wrapper"
+    >
+      
+        
+      <img
+        alt="complete"
+        class="modal__img"
+        src="assets/img/complete.jpg"
+      />
+      
+        
+      <button
+        class="modal__button"
+      >
+        
+          
+        <img
+          alt="close modal"
+          class="modal__skull-close"
+          src="assets/icons/pirot/shapes/skull.png"
+        />
+        
+        
+      </button>
+      
+      
+    </div>
+    
+    
+  </div>
+  
+    
+  <div
+    class="settings"
+  />
+  
+    
+  <div
+    class="wrap"
+  >
+    
+      
+    <main
+      class="main"
+    >
+      
+        
+      <div
+        class="container"
+      >
+        
+          
+        <h1
+          class="game__title"
+        >
+          RSS-CSS-Selectors
+        </h1>
+        
+          
+        <div
+          class="game"
+        >
+          
+            
+          <div
+            class="game__wrapper"
+          >
+            <h2
+              class="game__task"
+            >
+              Select the wheel
+            </h2>
+            <div
+              class="game__help"
+            >
+              Help, I'm stuck!
+            </div>
+            <div
+              class="boat-surface"
+            >
+              <div
+                class="boat"
+              >
+                
+      
+                <wheel
+                  class="shape wheel animation-rotation"
+                  data-id="1"
+                />
+                
+      
+                <wheel
+                  class="shape wheel animation-rotation"
+                  data-id="2"
+                />
+              </div>
+              <div
+                class="boat__css-help"
+              >
+                <div
+                  class="shape-help"
+                  data-id="1"
+                >
+                  &lt;wheel&gt;&lt;/wheel&gt;
+                </div>
+                
+    
+                <div
+                  class="shape-help"
+                  data-id="2"
+                >
+                  &lt;wheel&gt;&lt;/wheel&gt;
+                </div>
+              </div>
+            </div>
+          </div>
+          
+            
+          <div
+            class="editor"
+          >
+            
+              
+            <div
+              class="editor__css"
+            >
+              
+                
+              <div
+                class="editor__header"
+              >
+                
+                  
+                <div
+                  class="editor__header-name"
+                >
+                  CSS Editor
+                </div>
+                
+                  
+                <div
+                  class="editor__header-extension"
+                >
+                  style.css
+                </div>
+                
+                
+              </div>
+              
+                
+              <div
+                class="editor__code-wrapper"
+              >
+                
+                  
+                <div
+                  class="editor__numbers"
+                >
+                  
+                    
+                  <ul
+                    class="editor__list"
+                  >
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      1
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      2
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      3
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      4
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      5
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      6
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      7
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      8
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      9
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      10
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      11
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      12
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      13
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      14
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      15
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      16
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      17
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      18
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      19
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      20
+                    </li>
+                    
+                    
+                  </ul>
+                  
+                  
+                </div>
+                
+                  
+                <div
+                  class="editor__selector"
+                >
+                  <input
+                    class="editor__input"
+                    id="css"
+                    type="text"
+                  />
+                  <button
+                    class="editor__button"
+                    id="add"
+                  >
+                    Enter
+                  </button>
+                </div>
+                
+                
+              </div>
+              
+              
+            </div>
+            
+              
+            <div
+              class="editor__html"
+            >
+              
+                
+              <div
+                class="editor__header"
+              >
+                
+                  
+                <div
+                  class="editor__header-name"
+                >
+                  HTML Viewer
+                </div>
+                
+                  
+                <div
+                  class="editor__header-extension"
+                >
+                  table.html
+                </div>
+                
+                
+              </div>
+              
+                
+              <div
+                class="editor__code-wrapper"
+              >
+                
+                  
+                <div
+                  class="editor__numbers"
+                >
+                  
+                    
+                  <ul
+                    class="editor__list"
+                  >
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      1
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      2
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      3
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      4
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      5
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      6
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      7
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      8
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      9
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      10
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      11
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      12
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      13
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      14
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      15
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      16
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      17
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      18
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      19
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      20
+                    </li>
+                    
+                    
+                  </ul>
+                  
+                  
+                </div>
+                
+                  
+                <pre
+                  class="editor__code"
+                />
+                
+                
+              </div>
+              
+              
+            </div>
+            
+            
+          </div>
+          
+          
+        </div>
+        
+        
+      </div>
+      
+      
+    </main>
+    
+      
+    <footer
+      class="footer"
+    >
+      
+        
+      <div
+        class="container footer__wrapper"
+      >
+        
+          
+        <a
+          href="https://github.com/Maxxx1mHR"
+        >
+          
+            
+          <img
+            alt="GitHub"
+            class="footer__img-git"
+            src="assets/icons/interaction/github.png"
+          />
+          
+          
+        </a>
+        
+          
+        <div
+          class="footer__year"
+        >
+          2023
+        </div>
+        
+          
+        <a
+          href="https://rs.school/js/"
+        >
+          
+            
+          <img
+            alt="rs school"
+            class="footer__img-rsschool"
+            src="assets/icons/interaction/rs_school_js.svg"
+          />
+          
+          
+        </a>
+        
+        
+      </div>
+      
+      
+    </footer>
+    
+    
+  </div>
+  
+    
+  <div
+    class="menu"
+  >
+    
+      
+    <div
+      class="menu__block"
+    >
+      
+        
+      <div
+        class="menu__header"
+      />
+      
+        
+      <div
+        class="menu__task"
+      >
+        
+          
+        <div
+          class="menu__description"
+        />
+        
+          
+        <div
+          class="menu__example"
+        />
+        
+        
+      </div>
+      
+        
+      <div
+        class="menu__levels"
+      >
+        
+          
+        <div
+          class="menu__wrapper"
+        />
+        
+          
+        <ul
+          class="menu__levels-list"
+        />
+        
+        
+      </div>
+      
+        
+      <div
+        class="menu__close"
+      />
+      
+      
+    </div>
+    
+    
+  </div>
+  
+  
+
+
+</body>
+`;
+
+exports[`render block boat and css editor check press enter. selector from input wrong 1`] = `
+<body>
+  
+
+  
+    
+  <meta
+    charset="UTF-8"
+  />
+  
+    
+  <meta
+    content="IE=edge"
+    http-equiv="X-UA-Compatible"
+  />
+  
+    
+  <meta
+    content="width=device-width, initial-scale=1.0"
+    name="viewport"
+  />
+  
+    
+  <title>
+    RSS-CSS-Selectors
+  </title>
+  
+    
+  <link
+    href="./assets/icons/favicon.ico"
+    rel="shortcut icon"
+    type="image/x-icon"
+  />
+  
+    
+  <link
+    href="./assets/icons/favicon.ico"
+    rel="icon"
+    type="image/x-icon"
+  />
+  
+  
+  
+    
+  <div
+    class="modal"
+  >
+    
+      
+    <div
+      class="modal__wrapper"
+    >
+      
+        
+      <img
+        alt="complete"
+        class="modal__img"
+        src="assets/img/complete.jpg"
+      />
+      
+        
+      <button
+        class="modal__button"
+      >
+        
+          
+        <img
+          alt="close modal"
+          class="modal__skull-close"
+          src="assets/icons/pirot/shapes/skull.png"
+        />
+        
+        
+      </button>
+      
+      
+    </div>
+    
+    
+  </div>
+  
+    
+  <div
+    class="settings"
+  />
+  
+    
+  <div
+    class="wrap"
+  >
+    
+      
+    <main
+      class="main"
+    >
+      
+        
+      <div
+        class="container"
+      >
+        
+          
+        <h1
+          class="game__title"
+        >
+          RSS-CSS-Selectors
+        </h1>
+        
+          
+        <div
+          class="game"
+        >
+          
+            
+          <div
+            class="game__wrapper"
+          >
+            <h2
+              class="game__task"
+            >
+              Select the wheel
+            </h2>
+            <div
+              class="game__help"
+            >
+              Help, I'm stuck!
+            </div>
+            <div
+              class="boat-surface"
+            >
+              <div
+                class="boat"
+              >
+                
+      
+                <wheel
+                  class="shape wheel animation-rotation"
+                  data-id="1"
+                />
+                
+      
+                <wheel
+                  class="shape wheel animation-rotation"
+                  data-id="2"
+                />
+              </div>
+              <div
+                class="boat__css-help"
+              >
+                <div
+                  class="shape-help"
+                  data-id="1"
+                >
+                  &lt;wheel&gt;&lt;/wheel&gt;
+                </div>
+                
+    
+                <div
+                  class="shape-help"
+                  data-id="2"
+                >
+                  &lt;wheel&gt;&lt;/wheel&gt;
+                </div>
+              </div>
+            </div>
+          </div>
+          
+            
+          <div
+            class="editor"
+          >
+            
+              
+            <div
+              class="editor__css"
+            >
+              
+                
+              <div
+                class="editor__header"
+              >
+                
+                  
+                <div
+                  class="editor__header-name"
+                >
+                  CSS Editor
+                </div>
+                
+                  
+                <div
+                  class="editor__header-extension"
+                >
+                  style.css
+                </div>
+                
+                
+              </div>
+              
+                
+              <div
+                class="editor__code-wrapper"
+              >
+                
+                  
+                <div
+                  class="editor__numbers"
+                >
+                  
+                    
+                  <ul
+                    class="editor__list"
+                  >
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      1
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      2
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      3
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      4
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      5
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      6
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      7
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      8
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      9
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      10
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      11
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      12
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      13
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      14
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      15
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      16
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      17
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      18
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      19
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      20
+                    </li>
+                    
+                    
+                  </ul>
+                  
+                  
+                </div>
+                
+                  
+                <div
+                  class="editor__selector"
+                >
+                  <input
+                    class="editor__input"
+                    id="css"
+                    type="text"
+                  />
+                  <button
+                    class="editor__button"
+                    id="add"
+                  >
+                    Enter
+                  </button>
+                </div>
+                
+                
+              </div>
+              
+              
+            </div>
+            
+              
+            <div
+              class="editor__html"
+            >
+              
+                
+              <div
+                class="editor__header"
+              >
+                
+                  
+                <div
+                  class="editor__header-name"
+                >
+                  HTML Viewer
+                </div>
+                
+                  
+                <div
+                  class="editor__header-extension"
+                >
+                  table.html
+                </div>
+                
+                
+              </div>
+              
+                
+              <div
+                class="editor__code-wrapper"
+              >
+                
+                  
+                <div
+                  class="editor__numbers"
+                >
+                  
+                    
+                  <ul
+                    class="editor__list"
+                  >
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      1
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      2
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      3
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      4
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      5
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      6
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      7
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      8
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      9
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      10
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      11
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      12
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      13
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      14
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      15
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      16
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      17
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      18
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      19
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      20
+                    </li>
+                    
+                    
+                  </ul>
+                  
+                  
+                </div>
+                
+                  
+                <pre
+                  class="editor__code"
+                />
+                
+                
+              </div>
+              
+              
+            </div>
+            
+            
+          </div>
+          
+          
+        </div>
+        
+        
+      </div>
+      
+      
+    </main>
+    
+      
+    <footer
+      class="footer"
+    >
+      
+        
+      <div
+        class="container footer__wrapper"
+      >
+        
+          
+        <a
+          href="https://github.com/Maxxx1mHR"
+        >
+          
+            
+          <img
+            alt="GitHub"
+            class="footer__img-git"
+            src="assets/icons/interaction/github.png"
+          />
+          
+          
+        </a>
+        
+          
+        <div
+          class="footer__year"
+        >
+          2023
+        </div>
+        
+          
+        <a
+          href="https://rs.school/js/"
+        >
+          
+            
+          <img
+            alt="rs school"
+            class="footer__img-rsschool"
+            src="assets/icons/interaction/rs_school_js.svg"
+          />
+          
+          
+        </a>
+        
+        
+      </div>
+      
+      
+    </footer>
+    
+    
+  </div>
+  
+    
+  <div
+    class="menu"
+  >
+    
+      
+    <div
+      class="menu__block"
+    >
+      
+        
+      <div
+        class="menu__header"
+      />
+      
+        
+      <div
+        class="menu__task"
+      >
+        
+          
+        <div
+          class="menu__description"
+        />
+        
+          
+        <div
+          class="menu__example"
+        />
+        
+        
+      </div>
+      
+        
+      <div
+        class="menu__levels"
+      >
+        
+          
+        <div
+          class="menu__wrapper"
+        />
+        
+          
+        <ul
+          class="menu__levels-list"
+        />
+        
+        
+      </div>
+      
+        
+      <div
+        class="menu__close"
+      />
+      
+      
+    </div>
+    
+    
+  </div>
+  
+  
+
+
+</body>
+`;
+
+exports[`render block boat and css editor check selector from input right 1`] = `
+<body>
+  
+
+  
+    
+  <meta
+    charset="UTF-8"
+  />
+  
+    
+  <meta
+    content="IE=edge"
+    http-equiv="X-UA-Compatible"
+  />
+  
+    
+  <meta
+    content="width=device-width, initial-scale=1.0"
+    name="viewport"
+  />
+  
+    
+  <title>
+    RSS-CSS-Selectors
+  </title>
+  
+    
+  <link
+    href="./assets/icons/favicon.ico"
+    rel="shortcut icon"
+    type="image/x-icon"
+  />
+  
+    
+  <link
+    href="./assets/icons/favicon.ico"
+    rel="icon"
+    type="image/x-icon"
+  />
+  
+  
+  
+    
+  <div
+    class="modal"
+  >
+    
+      
+    <div
+      class="modal__wrapper"
+    >
+      
+        
+      <img
+        alt="complete"
+        class="modal__img"
+        src="assets/img/complete.jpg"
+      />
+      
+        
+      <button
+        class="modal__button"
+      >
+        
+          
+        <img
+          alt="close modal"
+          class="modal__skull-close"
+          src="assets/icons/pirot/shapes/skull.png"
+        />
+        
+        
+      </button>
+      
+      
+    </div>
+    
+    
+  </div>
+  
+    
+  <div
+    class="settings"
+  />
+  
+    
+  <div
+    class="wrap"
+  >
+    
+      
+    <main
+      class="main"
+    >
+      
+        
+      <div
+        class="container"
+      >
+        
+          
+        <h1
+          class="game__title"
+        >
+          RSS-CSS-Selectors
+        </h1>
+        
+          
+        <div
+          class="game"
+        >
+          
+            
+          <div
+            class="game__wrapper"
+          >
+            <h2
+              class="game__task"
+            >
+              Select the wheel
+            </h2>
+            <div
+              class="game__help"
+            >
+              Help, I'm stuck!
+            </div>
+            <div
+              class="boat-surface"
+            >
+              <div
+                class="boat"
+              >
+                
+      
+                <wheel
+                  class="shape wheel animation-rotation"
+                  data-id="1"
+                />
+                
+      
+                <wheel
+                  class="shape wheel animation-rotation"
+                  data-id="2"
+                />
+              </div>
+              <div
+                class="boat__css-help"
+              >
+                <div
+                  class="shape-help"
+                  data-id="1"
+                >
+                  &lt;wheel&gt;&lt;/wheel&gt;
+                </div>
+                
+    
+                <div
+                  class="shape-help"
+                  data-id="2"
+                >
+                  &lt;wheel&gt;&lt;/wheel&gt;
+                </div>
+              </div>
+            </div>
+          </div>
+          
+            
+          <div
+            class="editor"
+          >
+            
+              
+            <div
+              class="editor__css"
+            >
+              
+                
+              <div
+                class="editor__header"
+              >
+                
+                  
+                <div
+                  class="editor__header-name"
+                >
+                  CSS Editor
+                </div>
+                
+                  
+                <div
+                  class="editor__header-extension"
+                >
+                  style.css
+                </div>
+                
+                
+              </div>
+              
+                
+              <div
+                class="editor__code-wrapper"
+              >
+                
+                  
+                <div
+                  class="editor__numbers"
+                >
+                  
+                    
+                  <ul
+                    class="editor__list"
+                  >
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      1
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      2
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      3
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      4
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      5
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      6
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      7
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      8
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      9
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      10
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      11
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      12
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      13
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      14
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      15
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      16
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      17
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      18
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      19
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      20
+                    </li>
+                    
+                    
+                  </ul>
+                  
+                  
+                </div>
+                
+                  
+                <div
+                  class="editor__selector"
+                >
+                  <input
+                    class="editor__input"
+                    id="css"
+                    type="text"
+                  />
+                  <button
+                    class="editor__button"
+                    id="add"
+                  >
+                    Enter
+                  </button>
+                </div>
+                
+                
+              </div>
+              
+              
+            </div>
+            
+              
+            <div
+              class="editor__html"
+            >
+              
+                
+              <div
+                class="editor__header"
+              >
+                
+                  
+                <div
+                  class="editor__header-name"
+                >
+                  HTML Viewer
+                </div>
+                
+                  
+                <div
+                  class="editor__header-extension"
+                >
+                  table.html
+                </div>
+                
+                
+              </div>
+              
+                
+              <div
+                class="editor__code-wrapper"
+              >
+                
+                  
+                <div
+                  class="editor__numbers"
+                >
+                  
+                    
+                  <ul
+                    class="editor__list"
+                  >
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      1
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      2
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      3
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      4
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      5
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      6
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      7
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      8
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      9
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      10
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      11
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      12
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      13
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      14
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      15
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      16
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      17
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      18
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      19
+                    </li>
+                    
+                      
+                    <li
+                      class="editor__item"
+                    >
+                      20
+                    </li>
+                    
+                    
+                  </ul>
+                  
+                  
+                </div>
+                
+                  
+                <pre
+                  class="editor__code"
+                />
+                
+                
+              </div>
+              
+              
+            </div>
+            
+            
+          </div>
+          
+          
+        </div>
+        
+        
+      </div>
+      
+      
+    </main>
+    
+      
+    <footer
+      class="footer"
+    >
+      
+        
+      <div
+        class="container footer__wrapper"
+      >
+        
+          
+        <a
+          href="https://github.com/Maxxx1mHR"
+        >
+          
+            
+          <img
+            alt="GitHub"
+            class="footer__img-git"
+            src="assets/icons/interaction/github.png"
+          />
+          
+          
+        </a>
+        
+          
+        <div
+          class="footer__year"
+        >
+          2023
+        </div>
+        
+          
+        <a
+          href="https://rs.school/js/"
+        >
+          
+            
+          <img
+            alt="rs school"
+            class="footer__img-rsschool"
+            src="assets/icons/interaction/rs_school_js.svg"
+          />
+          
+          
+        </a>
+        
+        
+      </div>
+      
+      
+    </footer>
+    
+    
+  </div>
+  
+    
+  <div
+    class="menu"
+  >
+    
+      
+    <div
+      class="menu__block"
+    >
+      
+        
+      <div
+        class="menu__header"
+      />
+      
+        
+      <div
+        class="menu__task"
+      >
+        
+          
+        <div
+          class="menu__description"
+        />
+        
+          
+        <div
+          class="menu__example"
+        />
+        
+        
+      </div>
+      
+        
+      <div
+        class="menu__levels"
+      >
+        
+          
+        <div
+          class="menu__wrapper"
+        />
+        
+          
+        <ul
+          class="menu__levels-list"
+        />
+        
+        
+      </div>
+      
+        
+      <div
+        class="menu__close"
+      />
+      
+      
+    </div>
+    
+    
+  </div>
+  
+  
+
+
+</body>
+`;
