@@ -28,9 +28,8 @@
     @content;
   }
 }
-
-// @mixin media-tablet-height {
-//   @media (max-height: $height-medium) {
-//     @content;
-//   }
-// }
+@mixin media-tablet-height {
+  @media (max-height: $tablet-height) {
+    @content;
+  }
+}
