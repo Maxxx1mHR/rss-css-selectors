@@ -140,7 +140,12 @@ class CssView {
         const dataSelector = boat.querySelectorAll(data[level].correctSeletor);
         const incorrectSelector =
           cssSelector && cssSelector.length !== 0 && !this.nodeListsAreEqual(cssSelector, dataSelector);
-        if (this.nodeListsAreEqual(cssSelector, dataSelector)) {
+        if (input.value === '.animation-rotation') {
+          const editor = document.querySelectorAll('.editor');
+          this.addAnimation(editor, 'animation-shake');
+          this.removeAnimation(editor, 'animation-shake');
+          return;
+        } else if (this.nodeListsAreEqual(cssSelector, dataSelector)) {
           this.levelComplete(dataGameLevels, level);
           this.addAnimation(cssSelector, 'animation-drop');
         } else if (incorrectSelector) {
