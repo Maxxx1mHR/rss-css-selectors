@@ -4,7 +4,7 @@
 The simulator consists of several game levels. Each level includes an example layout and html code that corresponds to the current level. Some elements of the layout are highlighted using animation. The user's task is to write a css selector that corresponds to all selected layout elements.
 
 
-## [Deploy](https://maxxx1mhr.github.io/momentum/momentum/)
+## [Deploy](https://maxxx1mhr.github.io/rss-css-selectors/rss-css-selectors/)
 
 <img  src="https://github.com/Maxxx1mHR/rss-css-selectors/assets/44443884/1c68880d-616a-4a6e-93f1-e32e1f009648" alt="deploy screenshot pc" width="590">
 <img  src="https://github.com/Maxxx1mHR/rss-css-selectors/assets/44443884/b3f11d90-1558-4048-beb4-7f73bcc48396" alt="deploy screenshot mobile" width="220">  
